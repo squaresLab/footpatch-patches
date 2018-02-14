@@ -1,0 +1,853 @@
+Found 279 issues
+
+source/org/jfree/chart/ChartFactory.java:245: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 245
+
+source/org/jfree/chart/ChartFactory.java:245: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:276: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 276
+
+source/org/jfree/chart/ChartFactory.java:276: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:335: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 335
+
+source/org/jfree/chart/ChartFactory.java:335: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:458: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 458
+
+source/org/jfree/chart/ChartFactory.java:458: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:554: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:554: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 554
+
+source/org/jfree/chart/ChartFactory.java:585: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:585: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 585
+
+source/org/jfree/chart/ChartFactory.java:630: warning: ANALYSIS_STOPS (backend/rearrange.ml:1291:57-64:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:630: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by plot.getPieChart() could be null and is dereferenced at line 630
+
+source/org/jfree/chart/ChartFactory.java:636: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by plot.getPieChart() could be null and is dereferenced at line 636
+
+source/org/jfree/chart/ChartFactory.java:636: warning: ANALYSIS_STOPS (backend/rearrange.ml:1291:57-64:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:666: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 666
+
+source/org/jfree/chart/ChartFactory.java:666: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartFactory.java:695: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 695
+
+source/org/jfree/chart/ChartFactory.java:695: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/ChartPanel.java:1725: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/ChartPanel.java:1725: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class java.util.EventListener *[_] cannot be cast to class org.jfree.chart.ChartMouseListener    at line 1725
+
+source/org/jfree/chart/ChartPanel.java:1767: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/ChartPanel.java:1767: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class java.util.EventListener *[_] cannot be cast to class org.jfree.chart.ChartMouseListener    at line 1767
+
+source/org/jfree/chart/ChartPanel.java:1979: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getSubplotIndex(...) at line 1979
+
+source/org/jfree/chart/ChartPanel.java:1979: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/annotations/XYBoxAnnotation.java:265: warning: UNINITIALIZED_VALUE (backend/symExec.ml:117:65-72:)
+  value result was not initialized after declaration and is used at line 265
+
+source/org/jfree/chart/annotations/XYDrawableAnnotation.java:201: warning: UNINITIALIZED_VALUE (backend/symExec.ml:117:65-72:)
+  value result was not initialized after declaration and is used at line 201
+
+source/org/jfree/chart/annotations/XYLineAnnotation.java:264: warning: UNINITIALIZED_VALUE (backend/symExec.ml:117:65-72:)
+  value result was not initialized after declaration and is used at line 264
+
+source/org/jfree/chart/annotations/XYPolygonAnnotation.java:146: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/annotations/XYPolygonAnnotation.java:146: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double [_] cannot be cast to double [_]   at line 146
+
+source/org/jfree/chart/annotations/XYPolygonAnnotation.java:162: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/annotations/XYPolygonAnnotation.java:162: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double [_] cannot be cast to double [_]   at line 162
+
+source/org/jfree/chart/axis/CyclicNumberAxis.java:767: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (jmax-jmin) could be zero at line 767
+
+source/org/jfree/chart/axis/CyclicNumberAxis.java:770: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (jmax-jmin) could be zero at line 770
+
+source/org/jfree/chart/axis/CyclicNumberAxis.java:776: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (jmax-jmin) could be zero at line 776
+
+source/org/jfree/chart/axis/CyclicNumberAxis.java:779: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (jmax-jmin) could be zero at line 779
+
+source/org/jfree/chart/axis/DateAxis.java:590: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/axis/DateAxis.java:590: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.time.DateRange  cannot be cast to class org.jfree.data.Range   in expression __new(class org.jfree.data.time.DateRange )  in call to setRange(...) at line 590
+
+source/org/jfree/chart/axis/DateAxis.java:640: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/axis/DateAxis.java:640: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.time.DateRange  cannot be cast to class org.jfree.data.Range   in expression __new(class org.jfree.data.time.DateRange )  in call to setRange(...) at line 640
+
+source/org/jfree/chart/axis/DateAxis.java:786: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 786
+
+source/org/jfree/chart/axis/DateAxis.java:790: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 790
+
+source/org/jfree/chart/axis/DateAxis.java:1303: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/axis/DateAxis.java:1303: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class org.jfree.chart.axis.NumberTickUnit  cannot be cast to class org.jfree.chart.axis.DateTickUnit   in expression tickUnits.getCeilingTickUnit(guess)  at line 1303
+
+source/org/jfree/chart/axis/DateAxis.java:1333: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/axis/DateAxis.java:1333: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class org.jfree.chart.axis.NumberTickUnit  cannot be cast to class org.jfree.chart.axis.DateTickUnit   in expression tickUnits.getCeilingTickUnit(estimate1)  at line 1333
+
+source/org/jfree/chart/axis/LogAxis.java:334: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 334
+
+source/org/jfree/chart/axis/LogAxis.java:338: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 338
+
+source/org/jfree/chart/axis/NumberAxis.java:579: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 579
+
+source/org/jfree/chart/axis/NumberAxis.java:583: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 583
+
+source/org/jfree/chart/axis/PeriodAxis.java:1004: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 1004
+
+source/org/jfree/chart/axis/PeriodAxis.java:1008: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (max-min) could be zero at line 1008
+
+source/org/jfree/chart/axis/SegmentedTimeline.java:827: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/axis/SegmentedTimeline.java:827: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to addException(...) at line 827
+
+source/org/jfree/chart/axis/SegmentedTimeline.java:846: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to addException(...) at line 846
+
+source/org/jfree/chart/axis/SegmentedTimeline.java:846: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/axis/SymbolAxis.java:303: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to draw(...) at line 303
+
+source/org/jfree/chart/axis/SymbolAxis.java:303: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/axis/ValueAxis.java:1292: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to expand(...) at line 1292
+
+source/org/jfree/chart/axis/ValueAxis.java:1292: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/axis/ValueAxis.java:1305: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/axis/ValueAxis.java:1305: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to setRangeWithMargins(...) at line 1305
+
+source/org/jfree/chart/block/BorderArrangement.java:171: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object contentSize last assigned on line 131 could be null and is dereferenced at line 171
+
+source/org/jfree/chart/block/BorderArrangement.java:503: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to arrange(...) at line 503
+
+source/org/jfree/chart/block/CenterArrangement.java:220: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to arrangeFR(...) at line 220
+
+source/org/jfree/chart/block/CenterArrangement.java:220: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/block/ColumnArrangement.java:263: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to arrangeRF(...) at line 263
+
+source/org/jfree/chart/block/ColumnArrangement.java:263: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/block/FlowArrangement.java:292: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to arrangeFR(...) at line 292
+
+source/org/jfree/chart/block/FlowArrangement.java:292: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/encoders/ImageEncoderFactory.java:69: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to forName(...) at line 69
+
+source/org/jfree/chart/encoders/ImageEncoderFactory.java:71: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to forName(...) at line 71
+
+source/org/jfree/chart/plot/CategoryPlot.java:454: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 454
+
+source/org/jfree/chart/plot/CategoryPlot.java:464: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 464
+
+source/org/jfree/chart/plot/CategoryPlot.java:470: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 470
+
+source/org/jfree/chart/plot/CategoryPlot.java:471: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to mapDatasetToDomainAxis(...) at line 471
+
+source/org/jfree/chart/plot/CategoryPlot.java:478: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 478
+
+source/org/jfree/chart/plot/CategoryPlot.java:479: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to mapDatasetToRangeAxis(...) at line 479
+
+source/org/jfree/chart/plot/CategoryPlot.java:659: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 659
+
+source/org/jfree/chart/plot/CategoryPlot.java:660: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer axis was dereferenced at line 657 and is tested for null at line 660
+
+source/org/jfree/chart/plot/CategoryPlot.java:933: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 933
+
+source/org/jfree/chart/plot/CategoryPlot.java:934: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer axis was dereferenced at line 931 and is tested for null at line 934
+
+source/org/jfree/chart/plot/CategoryPlot.java:1196: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 1196
+
+source/org/jfree/chart/plot/CategoryPlot.java:1381: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 1381
+
+source/org/jfree/chart/plot/CategoryPlot.java:1801: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by getRangeAxis() could be null and is dereferenced at line 1801
+
+source/org/jfree/chart/plot/CategoryPlot.java:1821: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by getRangeAxis() could be null and is dereferenced at line 1821
+
+source/org/jfree/chart/plot/CategoryPlot.java:1827: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by getRangeAxis() could be null and is dereferenced at line 1827
+
+source/org/jfree/chart/plot/CategoryPlot.java:3077: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by getRangeAxis() could be null and is dereferenced at line 3077
+
+source/org/jfree/chart/plot/CategoryPlot.java:3727: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/plot/CategoryPlot.java:3727: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.chart.axis.AxisSpace  cannot be cast to class java.lang.Object    in call to clone(...) at line 3727
+
+source/org/jfree/chart/plot/CategoryPlot.java:3731: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/plot/CategoryPlot.java:3731: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.chart.axis.AxisSpace  cannot be cast to class java.lang.Object    in call to clone(...) at line 3731
+
+source/org/jfree/chart/plot/CombinedDomainCategoryPlot.java:251: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getSubplotIndex(...) at line 251
+
+source/org/jfree/chart/plot/CombinedDomainCategoryPlot.java:251: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/CombinedDomainXYPlot.java:555: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getSubplotIndex(...) at line 555
+
+source/org/jfree/chart/plot/CombinedDomainXYPlot.java:555: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/CombinedRangeXYPlot.java:508: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getSubplotIndex(...) at line 508
+
+source/org/jfree/chart/plot/CombinedRangeXYPlot.java:508: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/CompassPlot.java:447: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesPaint(...) at line 447
+
+source/org/jfree/chart/plot/CompassPlot.java:448: error: ARRAY_OUT_OF_BOUNDS_L1 (backend/rearrange.ml:64:64-71:)
+  array CompassPlot.seriesNeedle could be accessed with an index out of bounds at line 448
+
+source/org/jfree/chart/plot/CompassPlot.java:469: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesOutlineStroke(...) at line 469
+
+source/org/jfree/chart/plot/CompassPlot.java:546: error: ARRAY_OUT_OF_BOUNDS_L1 (backend/rearrange.ml:64:64-71:)
+  array p last assigned on line 538 could be accessed with an index out of bounds at line 546
+
+source/org/jfree/chart/plot/CompassPlot.java:827: warning: ANALYSIS_STOPS (backend/rearrange.ml:290:38-45:)
+  exception: Bad_footprint
+
+source/org/jfree/chart/plot/CompassPlot.java:827: error: Bad_footprint (backend/rearrange.ml:290:38-45:)
+  
+
+source/org/jfree/chart/plot/JThermometer.java:93: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object JThermometer.plot.insets initialized automatically could be null and is dereferenced by call to setInsets(...) at line 93
+
+source/org/jfree/chart/plot/JThermometer.java:93: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/plot/MeterPlot.java:1173: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to drawAlignedString(...) at line 1173
+
+source/org/jfree/chart/plot/MultiplePiePlot.java:146: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object MultiplePiePlot.pieChart.subtitles initialized automatically could be null and is dereferenced by call to removeLegend() at line 146
+
+source/org/jfree/chart/plot/MultiplePiePlot.java:146: warning: ANALYSIS_STOPS (backend/tabulation.ml:1179:65-72:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/plot/PiePlot.java:2565: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getValue(...) at line 2565
+
+source/org/jfree/chart/plot/PiePlot.java:2565: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/PolarPlot.java:314: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer PolarPlot.axis was dereferenced at line 305 and is tested for null at line 314
+
+source/org/jfree/chart/plot/PolarPlot.java:826: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to drawRadialGridLines(...) at line 826
+
+source/org/jfree/chart/plot/PolarPlot.java:826: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/PolarPlot.java:1006: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/plot/PolarPlot.java:1006: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.chart.axis.ValueAxis  cannot be cast to class java.lang.Object    in call to clone(...) at line 1006
+
+source/org/jfree/chart/plot/RingPlot.java:367: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getSectionKey(...) at line 367
+
+source/org/jfree/chart/plot/SpiderWebPlot.java:698: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setPaint(...) at line 698
+
+source/org/jfree/chart/plot/ThermometerPlot.java:855: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to setSubrange(...) at line 855
+
+source/org/jfree/chart/plot/ThermometerPlot.java:855: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/ThermometerPlot.java:1564: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.chart.axis.ValueAxis  cannot be cast to class java.lang.Object    in call to clone(...) at line 1564
+
+source/org/jfree/chart/plot/ThermometerPlot.java:1564: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class org.jfree.chart.labels.AbstractCategoryItemLabelGenerator  cannot be cast to class org.jfree.chart.axis.ValueAxis   in expression clone(ThermometerPlot.rangeAxis)  at line 1564
+
+source/org/jfree/chart/plot/WaferMapPlot.java:319: warning: ANALYSIS_STOPS (backend/rearrange.ml:1291:57-64:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/plot/WaferMapPlot.java:319: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B5] object WaferMapPlot.dataset last accessed on line 274 could be null and is dereferenced at line 319
+
+source/org/jfree/chart/plot/XYPlot.java:535: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 535
+
+source/org/jfree/chart/plot/XYPlot.java:540: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 540
+
+source/org/jfree/chart/plot/XYPlot.java:546: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 546
+
+source/org/jfree/chart/plot/XYPlot.java:552: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 552
+
+source/org/jfree/chart/plot/XYPlot.java:554: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 554
+
+source/org/jfree/chart/plot/XYPlot.java:560: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 560
+
+source/org/jfree/chart/plot/XYPlot.java:743: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 743
+
+source/org/jfree/chart/plot/XYPlot.java:744: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer axis was dereferenced at line 741 and is tested for null at line 744
+
+source/org/jfree/chart/plot/XYPlot.java:979: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer axis was dereferenced at line 969 and is tested for null at line 979
+
+source/org/jfree/chart/plot/XYPlot.java:1093: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 1093
+
+source/org/jfree/chart/plot/XYPlot.java:1094: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer axis was dereferenced at line 1091 and is tested for null at line 1094
+
+source/org/jfree/chart/plot/XYPlot.java:1298: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 1298
+
+source/org/jfree/chart/plot/XYPlot.java:1439: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 1439
+
+source/org/jfree/chart/plot/XYPlot.java:2438: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getDomainAxisEdge(...) at line 2438
+
+source/org/jfree/chart/plot/XYPlot.java:2438: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/XYPlot.java:2485: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getRangeAxisEdge(...) at line 2485
+
+source/org/jfree/chart/plot/XYPlot.java:2485: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/XYPlot.java:2920: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by getRenderer() could be null and is dereferenced at line 2920
+
+source/org/jfree/chart/plot/XYPlot.java:2958: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by getRenderer() could be null and is dereferenced at line 2958
+
+source/org/jfree/chart/plot/XYPlot.java:3077: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getDomainAxisForDataset(...) at line 3077
+
+source/org/jfree/chart/plot/XYPlot.java:3294: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by getRenderer() could be null and is dereferenced at line 3294
+
+source/org/jfree/chart/plot/XYPlot.java:3342: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getDomainAxisForDataset(...) at line 3342
+
+source/org/jfree/chart/plot/XYPlot.java:3342: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/XYPlot.java:3375: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getRangeAxisForDataset(...) at line 3375
+
+source/org/jfree/chart/plot/XYPlot.java:3375: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/plot/dial/DialPlot.java:149: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setDataset(...) at line 149
+
+source/org/jfree/chart/plot/dial/DialPlot.java:497: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 497
+
+source/org/jfree/chart/plot/dial/DialPlot.java:648: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to set(...) at line 648
+
+source/org/jfree/chart/plot/dial/DialTextAnnotation.java:307: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to drawAlignedString(...) at line 307
+
+source/org/jfree/chart/plot/dial/StandardDialScale.java:709: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to drawAlignedString(...) at line 709
+
+source/org/jfree/chart/renderer/AbstractRenderer.java:634: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesPaint(...) at line 634
+
+source/org/jfree/chart/renderer/AbstractRenderer.java:789: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesFillPaint(...) at line 789
+
+source/org/jfree/chart/renderer/AbstractRenderer.java:949: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesOutlinePaint(...) at line 949
+
+source/org/jfree/chart/renderer/AbstractRenderer.java:1107: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesStroke(...) at line 1107
+
+source/org/jfree/chart/renderer/AbstractRenderer.java:1265: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesOutlineStroke(...) at line 1265
+
+source/org/jfree/chart/renderer/AbstractRenderer.java:1426: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1027:60-67:)
+  possible array out of bounds in call to setSeriesShape(...) at line 1426
+
+source/org/jfree/chart/renderer/DefaultPolarItemRenderer.java:234: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to drawAlignedString(...) at line 234
+
+source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java:627: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to addAnnotation(...) at line 627
+
+source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java:627: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/renderer/category/BarRenderer.java:640: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer result was dereferenced at line 639 and is tested for null at line 640
+
+source/org/jfree/chart/renderer/category/BarRenderer3D.java:569: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object path last assigned on line 530 could be null and is dereferenced at line 569
+
+source/org/jfree/chart/renderer/category/BarRenderer3D.java:569: warning: ANALYSIS_STOPS (backend/rearrange.ml:1291:57-64:)
+  exception: NULL_DEREFERENCE
+
+source/org/jfree/chart/renderer/category/GroupedStackedBarRenderer.java:209: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by plot.getDataset() could be null and is dereferenced at line 209
+
+source/org/jfree/chart/renderer/category/LayeredBarRenderer.java:411: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to getBarWidth() at line 411
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:289: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object domainAxis last assigned on line 271 could be null and is dereferenced at line 289
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:459: warning: ANALYSIS_STOPS (backend/rearrange.ml:290:38-45:)
+  exception: Bad_footprint
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:459: error: Bad_footprint (backend/rearrange.ml:290:38-45:)
+  
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:517: warning: ANALYSIS_STOPS (backend/rearrange.ml:290:38-45:)
+  exception: Bad_footprint
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:517: error: Bad_footprint (backend/rearrange.ml:290:38-45:)
+  
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:655: warning: ANALYSIS_STOPS (backend/rearrange.ml:290:38-45:)
+  exception: Bad_footprint
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:655: error: Bad_footprint (backend/rearrange.ml:290:38-45:)
+  
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:714: warning: ANALYSIS_STOPS (backend/rearrange.ml:290:38-45:)
+  exception: Bad_footprint
+
+source/org/jfree/chart/renderer/category/StackedBarRenderer3D.java:714: error: Bad_footprint (backend/rearrange.ml:290:38-45:)
+  
+
+source/org/jfree/chart/renderer/category/WaterfallBarRenderer.java:371: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to getFirstBarPaint() at line 371
+
+source/org/jfree/chart/renderer/xy/AbstractXYItemRenderer.java:634: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to addAnnotation(...) at line 634
+
+source/org/jfree/chart/renderer/xy/AbstractXYItemRenderer.java:634: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/chart/renderer/xy/CandlestickRenderer.java:661: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/renderer/xy/CandlestickRenderer.java:661: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.time.ohlc.OHLCSeriesCollection  cannot be cast to class org.jfree.data.general.CombinedDataset    in call to getHighValue(...) at line 661
+
+source/org/jfree/chart/renderer/xy/StackedXYAreaRenderer2.java:230: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/chart/renderer/xy/StackedXYAreaRenderer2.java:230: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.xy.TableXYDataset  cannot be cast to class org.jfree.data.xy.AbstractXYDataset    in call to getXValue(...) at line 230
+
+source/org/jfree/chart/text/TextUtilities.java:208: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object lastLine last assigned on line 207 could be null and is dereferenced at line 208
+
+source/org/jfree/chart/text/TextUtilities.java:209: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object lastFragment last assigned on line 208 could be null and is dereferenced at line 209
+
+source/org/jfree/chart/title/LegendGraphic.java:551: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object contentSize last assigned on line 513 could be null and is dereferenced at line 551
+
+source/org/jfree/chart/urls/CustomPieURLGenerator.java:186: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by getURL(key,pieItem) could be null and is dereferenced at line 186
+
+source/org/jfree/chart/urls/CustomPieURLGenerator.java:216: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to put(...) at line 216
+
+source/org/jfree/chart/util/ShapeUtilities.java:105: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class org.jfree.chart.labels.AbstractCategoryItemLabelGenerator  cannot be cast to class java.awt.Shape   in expression clone(shape)  at line 105
+
+source/org/jfree/data/DataUtilities.java:164: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression total could be zero at line 164
+
+source/org/jfree/data/Range.java:353: warning: UNINITIALIZED_VALUE (backend/symExec.ml:117:65-72:)
+  value result was not initialized after declaration and is used at line 353
+
+source/org/jfree/data/general/DatasetUtilities.java:161: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to getValue(...) at line 161
+
+source/org/jfree/data/general/DatasetUtilities.java:161: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+source/org/jfree/data/general/DatasetUtilities.java:161: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B5] object dataset.source could be null and is dereferenced by call to getValue(...) at line 161
+
+source/org/jfree/data/general/DatasetUtilities.java:1021: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/general/DatasetUtilities.java:1021: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.category.CategoryDataset  cannot be cast to class org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset    in call to getRowCount() at line 1021
+
+source/org/jfree/data/general/DatasetUtilities.java:1139: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.category.CategoryDataset  cannot be cast to class org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset    in call to getRowCount() at line 1139
+
+source/org/jfree/data/general/DatasetUtilities.java:1139: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/general/SubSeriesDataset.java:396: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/general/SubSeriesDataset.java:396: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.general.SeriesDataset  cannot be cast to class org.jfree.data.xy.CategoryTableXYDataset    in call to getY(...) at line 396
+
+source/org/jfree/data/general/SubSeriesDataset.java:415: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/general/SubSeriesDataset.java:415: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.general.SeriesDataset  cannot be cast to class org.jfree.data.xy.CategoryTableXYDataset    in call to getY(...) at line 415
+
+source/org/jfree/data/general/SubSeriesDataset.java:438: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/general/SubSeriesDataset.java:438: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  int [_] cannot be cast to int [_]   at line 438
+
+source/org/jfree/data/jdbc/JDBCCategoryDataset.java:124: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to forName(...) at line 124
+
+source/org/jfree/data/jdbc/JDBCPieDataset.java:102: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to forName(...) at line 102
+
+source/org/jfree/data/jdbc/JDBCXYDataset.java:151: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to forName(...) at line 151
+
+source/org/jfree/data/statistics/HistogramDataset.java:207: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to put(...) at line 207
+
+source/org/jfree/data/statistics/HistogramDataset.java:208: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to put(...) at line 208
+
+source/org/jfree/data/statistics/HistogramDataset.java:209: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to put(...) at line 209
+
+source/org/jfree/data/statistics/HistogramDataset.java:210: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to put(...) at line 210
+
+source/org/jfree/data/statistics/Statistics.java:110: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression counter could be zero at line 110
+
+source/org/jfree/data/statistics/Statistics.java:170: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression count could be zero at line 170
+
+source/org/jfree/data/statistics/Statistics.java:323: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression (returned by __get_array_length()-1) could be zero at line 323
+
+source/org/jfree/data/statistics/Statistics.java:396: error: DIVIDE_BY_ZERO (backend/symExec.ml:421:49-56:)
+  Expression counter could be zero at line 396
+
+source/org/jfree/data/time/Hour.java:408: error: Assert_failure (backend/symExec.ml:327:6-6:)
+  
+
+source/org/jfree/data/time/Hour.java:408: warning: ANALYSIS_STOPS (backend/symExec.ml:327:6-6:)
+  exception: Assert_failure
+
+source/org/jfree/data/time/Minute.java:425: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/time/Minute.java:425: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class org.jfree.data.time.Hour  cannot be cast to class java.lang.Object   in expression m.getHour()  in call to compareTo(...) at line 425
+
+source/org/jfree/data/xml/CategoryDatasetHandler.java:108: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by getSubHandlers() could be null and is dereferenced at line 108
+
+source/org/jfree/data/xml/CategorySeriesHandler.java:148: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to popSubHandler() at line 148
+
+source/org/jfree/data/xml/DatasetReader.java:73: error: RESOURCE_LEAK (backend/abs.ml:1139:19-26:)
+   resource of type java.io.FileInputStream acquired to in by call to FileInputStream(...) at line 72 is not released after line 73
+
+source/org/jfree/data/xml/DatasetReader.java:118: error: RESOURCE_LEAK (backend/abs.ml:1139:19-26:)
+   resource of type java.io.FileInputStream acquired to in by call to FileInputStream(...) at line 117 is not released after line 118
+
+source/org/jfree/data/xml/ItemHandler.java:158: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to popSubHandler() at line 158
+
+source/org/jfree/data/xml/ItemHandler.java:163: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to popSubHandler() at line 163
+
+source/org/jfree/data/xml/KeyHandler.java:116: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to popSubHandler() at line 116
+
+source/org/jfree/data/xml/PieDatasetHandler.java:107: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B1] object returned by getSubHandlers() could be null and is dereferenced at line 107
+
+source/org/jfree/data/xml/ValueHandler.java:124: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to popSubHandler() at line 124
+
+source/org/jfree/data/xy/CategoryTableXYDataset.java:113: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class java.lang.Number  cannot be cast to class java.lang.Comparable    at line 113
+
+source/org/jfree/data/xy/CategoryTableXYDataset.java:113: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/CategoryTableXYDataset.java:137: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/CategoryTableXYDataset.java:137: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class java.lang.Number  cannot be cast to class java.lang.Comparable    at line 137
+
+source/org/jfree/data/xy/CategoryTableXYDataset.java:195: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/CategoryTableXYDataset.java:195: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class java.lang.Comparable  cannot be cast to class java.lang.Number   in expression CategoryTableXYDataset.values.getRowKey(item)  at line 195
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:128: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:128: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 128
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:150: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:150: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 150
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:172: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 172
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:172: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:194: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:194: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 194
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:216: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:216: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 216
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:238: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:238: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 238
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:260: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:260: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 260
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:459: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 459
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:459: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:521: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultIntervalXYDataset.java:521: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 521
+
+source/org/jfree/data/xy/DefaultTableXYDataset.java:430: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to remove(...) at line 430
+
+source/org/jfree/data/xy/DefaultXYDataset.java:151: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYDataset.java:151: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 151
+
+source/org/jfree/data/xy/DefaultXYDataset.java:173: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYDataset.java:173: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 173
+
+source/org/jfree/data/xy/DefaultXYDataset.java:216: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYDataset.java:216: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 216
+
+source/org/jfree/data/xy/DefaultXYDataset.java:322: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 322
+
+source/org/jfree/data/xy/DefaultXYDataset.java:322: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYDataset.java:364: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 364
+
+source/org/jfree/data/xy/DefaultXYDataset.java:364: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:149: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 149
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:149: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:171: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:171: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 171
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:214: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 214
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:214: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:257: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:257: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 257
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:365: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:365: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 365
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:412: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/DefaultXYZDataset.java:412: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  double (*[_])[_] cannot be cast to double (*[_])[_]   at line 412
+
+source/org/jfree/data/xy/XIntervalDataItem.java:70: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+source/org/jfree/data/xy/XIntervalDataItem.java:70: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class java.lang.Comparable  cannot be cast to class java.lang.Number    at line 70
+
+Summary of the reports
+
+                                ANALYSIS_STOPS: 85
+                          PRECONDITION_NOT_MET: 56
+                          CLASS_CAST_EXCEPTION: 46
+                              NULL_DEREFERENCE: 31
+                          RETURN_VALUE_IGNORED: 23
+                                DIVIDE_BY_ZERO: 17
+                   NULL_TEST_AFTER_DEREFERENCE: 7
+                                 Bad_footprint: 5
+                           UNINITIALIZED_VALUE: 4
+                                 RESOURCE_LEAK: 2
+                        ARRAY_OUT_OF_BOUNDS_L1: 2
+  Assert_failure (backend/symExec.ml:327:6-6:): 1

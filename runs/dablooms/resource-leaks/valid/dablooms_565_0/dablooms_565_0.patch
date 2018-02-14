@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+@@ -563,6 +563,7 @@
+     }
+     
+     bloom = scaling_bloom_init(capacity, error_rate, filename, fd);
++        close(fd);
+     
+     size -= sizeof(scaling_bloom_header_t);
+     while (size) {

@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/annotations/CategoryPointerAnnotation.java	2017-08-26 03:07:29.581911530 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/annotations/CategoryPointerAnnotation.java	2017-08-26 03:07:29.581911530 -0400
+@@ -359,6 +359,7 @@
+         RectangleEdge rangeEdge = Plot.resolveRangeAxisLocation(
+                 plot.getRangeAxisLocation(), orientation);
+         CategoryDataset dataset = plot.getDataset();
++    if (dataset == null) {        throw new IllegalArgumentException("Null 'stream' argument.");    }
+         int catIndex = dataset.getColumnIndex(getCategory());
+         int catCount = dataset.getColumnCount();
+         double j2DX = domainAxis.getCategoryMiddle(catIndex, catCount, 

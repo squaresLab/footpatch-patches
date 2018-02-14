@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+@@ -571,6 +571,7 @@
+         size -= cur_bloom->num_bytes;
+         if (size < 0) {
+             free_scaling_bloom(bloom);
++        close(fd);
+             fprintf(stderr, "Error, Actual filesize and expected filesize are not equal\n");
+             return NULL;
+         }

@@ -1,0 +1,4978 @@
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl12.cluster
+Doing cluster xcl6.cluster
+Doing cluster xcl18.cluster
+Doing cluster xcl16.cluster
+Doing cluster xcl19.cluster
+Doing cluster xcl13.cluster
+Doing cluster xcl8.cluster
+Doing cluster xcl5.cluster
+Doing cluster xcl7.cluster
+Doing cluster xcl2.cluster
+Doing cluster xcl3.cluster
+Doing cluster xcl1.cluster
+Doing cluster xcl9.cluster
+Doing cluster xcl14.cluster
+Doing cluster xcl10.cluster
+Doing cluster xcl11.cluster
+Doing cluster xcl15.cluster
+Doing cluster xcl4.cluster
+Doing cluster xcl20.cluster
+Doing cluster xcl17.cluster
+SEARCH STORE SIZE 4
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 13
+SIZE OF ERRORS: 1
+Doing cluster xcl21.cluster
+Doing cluster xcl22.cluster
+SEARCH STORE SIZE 15
+SIZE OF ERRORS: 5
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/mainloop.c]:[124] :[ memory is not reachable after line 124, column 4]
+[+] Complete err string: " memory is not reachable after line 124, column 4"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 52
+SIZE OF ERRORS: 4
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[2006] :[ memory is not reachable after line 2006, column 3]
+[+] Complete err string: " memory is not reachable after line 2006, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/confile.c]:[2506] :[ memory dynamically allocated to dent by call to malloc() at line 2501, column 39 is not reachable after line 2506, column 2]
+[+] Complete err string: " memory dynamically allocated to dent by call to malloc() at line 2501, column 39 is not reachable after line 2506, column 2"
+[+] ERROR LINE IS: 2501
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "dent"
+[+] pvar TYPE not freed: "struct lxc_list *"
+	[=] This spec matches against Type "struct lxc_list *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 52
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: struct lxc_list *
+[+] No specific candidate for type struct lxc_list *. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+Doing cluster xcl23.cluster
+SEARCH STORE SIZE 61
+SIZE OF ERRORS: 1
+Doing cluster xcl24.cluster
+Doing cluster xcl25.cluster
+SEARCH STORE SIZE 67
+SIZE OF ERRORS: 5
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/tools/lxc_create.c]:[49] :[ memory is not reachable after line 49, column 3]
+[+] Complete err string: " memory is not reachable after line 49, column 3"
+[-] Could not get pvar name and type
+Doing cluster xcl26.cluster
+SEARCH STORE SIZE 85
+SIZE OF ERRORS: 6
+SEARCH STORE SIZE 46
+SIZE OF ERRORS: 7
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/tools/lxc_usernsexec.c]:[260] :[ p is not reachable after line 260, column 6]
+[+] Complete err string: " p is not reachable after line 260, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/tools/lxc_usernsexec.c]:[259] :[ return is not reachable after line 259, column 3]
+[+] Complete err string: " return is not reachable after line 259, column 3"
+[-] Could not get pvar name and type
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/lxc/tools/lxc_usernsexec.c]:[92] :[ resource acquired by call to open() at line 83, column 7 is not released after line 92, column 57]
+[+] Complete err string: " resource acquired by call to open() at line 83, column 7 is not released after line 92, column 57"
+[+] ERROR LINE IS: 83
+[+] NOTE: pvar: return (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] heurstic is return, but pvar is fd. Returning fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 46
+[+] irvar n$2 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$2 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar @f$0 lookup gives pvar which.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar @f$0 lookup gives pvar which.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 3
+	[+] Candidate 0: n$6=_fun_dup2(n$4:,n$5:) [line 98]
+	[+] Candidate 1: n$8=_fun_close(n$7:) [line 96]
+	[+] Candidate 2: n$3=_fun_close(n$2:) [line 99]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/tools/lxc_usernsexec.c
+			[*] Origin line num range: 97 - 98
+			[*] Origin function: opentty
+			[*] extracted: 		dup2(fd, which);
+	[&] Renaming fragment fixing var to pvar: which -> fd
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tdup2(fd, which);" "which" "fd" > /tmp/patch27f6f1.footpatch
+Doing cluster xcl27.cluster
+SEARCH STORE SIZE 83
+SIZE OF ERRORS: 4
+Doing cluster xcl28.cluster
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 89
+SIZE OF ERRORS: 8
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/confile.c]:[2506] :[ memory dynamically allocated to dent by call to malloc() at line 2501, column 39 is not reachable after line 2506, column 2]
+[+] Complete err string: " memory dynamically allocated to dent by call to malloc() at line 2501, column 39 is not reachable after line 2506, column 2"
+[+] ERROR LINE IS: 2501
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "dent"
+[+] pvar TYPE not freed: "struct lxc_list *"
+	[=] This spec matches against Type "struct lxc_list *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 89
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: struct lxc_list *
+[+] No specific candidate for type struct lxc_list *. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+SEARCH STORE SIZE 45
+SIZE OF ERRORS: 1
+Doing cluster xcl30.cluster
+Doing cluster xcl29.cluster
+Doing cluster xcl31.cluster
+SEARCH STORE SIZE 101
+SIZE OF ERRORS: 7
+Doing cluster xcl32.cluster
+SEARCH STORE SIZE 73
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 24
+SIZE OF ERRORS: 5
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[64] :[ memory is not reachable after line 64, column 2]
+[+] Complete err string: " memory is not reachable after line 64, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[146] :[ memory is not reachable after line 146, column 3]
+[+] Complete err string: " memory is not reachable after line 146, column 3"
+[-] Could not get pvar name and type
+Doing cluster xcl33.cluster
+Doing cluster xcl34.cluster
+SEARCH STORE SIZE 92
+SIZE OF ERRORS: 5
+SEARCH STORE SIZE 111
+SIZE OF ERRORS: 9
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/cgroups/cgfsng.c]:[1320] :[ lxc_cgfsng_debug is not reachable after line 1320, column 3]
+[+] Complete err string: " lxc_cgfsng_debug is not reachable after line 1320, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/cgroups/cgfsng.c]:[1319] :[ memory is not reachable after line 1319, column 6]
+[+] Complete err string: " memory is not reachable after line 1319, column 6"
+[-] Could not get pvar name and type
+Doing cluster xcl35.cluster
+SEARCH STORE SIZE 55
+SIZE OF ERRORS: 3
+Doing cluster xcl36.cluster
+Doing cluster xcl37.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 94
+SIZE OF ERRORS: 4
+SEARCH STORE SIZE 106
+SIZE OF ERRORS: 6
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/attach.c]:[1376] :[ passwd is not reachable after line 1376, column 3]
+[+] Complete err string: " passwd is not reachable after line 1376, column 3"
+[-] Could not get pvar name and type
+Doing cluster xcl39.cluster
+Doing cluster xcl38.cluster
+Doing cluster xcl40.cluster
+SEARCH STORE SIZE 113
+SIZE OF ERRORS: 6
+Doing cluster xcl41.cluster
+SEARCH STORE SIZE 48
+SIZE OF ERRORS: 3
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[2006] :[ memory is not reachable after line 2006, column 3]
+[+] Complete err string: " memory is not reachable after line 2006, column 3"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 126
+SIZE OF ERRORS: 16
+Doing cluster xcl42.cluster
+Doing cluster xcl43.cluster
+SEARCH STORE SIZE 75
+SIZE OF ERRORS: 6
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/bdev/lxcdir.c]:[69] :[pointer specs could be null and is dereferenced at line 69, column 15]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname dir_create
+[=] I found these typs for pvar could
+[-] No type for pvar found
+SEARCH STORE SIZE 69
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 46
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 19
+SIZE OF ERRORS: 3
+SEARCH STORE SIZE 67
+SIZE OF ERRORS: 1
+Doing cluster xcl47.cluster
+Doing cluster xcl45.cluster
+Doing cluster xcl46.cluster
+Doing cluster xcl48.cluster
+Doing cluster xcl44.cluster
+SEARCH STORE SIZE 138
+SIZE OF ERRORS: 12
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[289] :[ memory is not reachable after line 289, column 2]
+[+] Complete err string: " memory is not reachable after line 289, column 2"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[289] :[pointer rundir last assigned on line 288 could be null and is dereferenced by call to sprintf() at line 289, column 2]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_rundir
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[282] :[ memory is not reachable after line 282, column 12]
+[+] Complete err string: " memory is not reachable after line 282, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[277] :[ memory is not reachable after line 277, column 12]
+[+] Complete err string: " memory is not reachable after line 277, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[275] :[ memory is not reachable after line 275, column 11]
+[+] Complete err string: " memory is not reachable after line 275, column 11"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 45
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 114
+SIZE OF ERRORS: 5
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/tools/lxc_unshare.c]:[101] :[ pwent is not reachable after line 101, column 3]
+[+] Complete err string: " pwent is not reachable after line 101, column 3"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 125
+SIZE OF ERRORS: 7
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/mainloop.c]:[124] :[ memory is not reachable after line 124, column 4]
+[+] Complete err string: " memory is not reachable after line 124, column 4"
+[-] Could not get pvar name and type
+Doing cluster xcl50.cluster
+Doing cluster xcl49.cluster
+Doing cluster xcl51.cluster
+Doing cluster xcl52.cluster
+SEARCH STORE SIZE 55
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 96
+SIZE OF ERRORS: 4
+Doing cluster xcl53.cluster
+Doing cluster xcl54.cluster
+SEARCH STORE SIZE 180
+SIZE OF ERRORS: 17
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/bdev/bdev.c]:[763] :[ memory dynamically allocated to return by call to malloc() at line 752, column 9 is not reachable after line 763, column 2]
+[+] Complete err string: " memory dynamically allocated to return by call to malloc() at line 752, column 9 is not reachable after line 763, column 2"
+[+] ERROR LINE IS: 752
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "mkfs"
+[+] pvar TYPE not freed: "char *"
+	[=] This spec matches against Type "char *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 180
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$11 to pvar mntdata.
+Comparing [tstruct] irvar "@f$11" and irvar' "@f$5"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+Comparing [tstruct] irvar "@f$1" and irvar' "_t$4"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+Comparing [tstruct] irvar "@f$1" and irvar' "_t$4"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar mntdata.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar mntdata.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$10 to pvar mntdata.
+Comparing [tstruct] irvar "@f$10" and irvar' "@f$5"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Filtered candidates: 6
+	[+] Candidate 0: _fun_free(n$21:) [line 957]
+	[+] Candidate 1: _fun_LXC_INFO(&locinfo:,"mounted '%s' on '%s', with fstype '%s'":,n$1:,n$3:,n$4:) [line 969]
+	[+] Candidate 2: _fun_free(n$5:) [line 967]
+	[+] Candidate 3: _fun_free(n$3:) [line 62]
+	[+] Candidate 4: _fun_free(n$14:) [line 963]
+	[+] Candidate 5: n$2=_fun_fclose(n$1:) [line 63]
+[+] Prioritizing compatibility for type: char *
+[+] Found candidate containing type char *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/bdev/bdev.c
+			[*] Origin line num range: 968 - 969
+			[*] Origin function: find_fstype_cb
+			[*] extracted: 	INFO("mounted '%s' on '%s', with fstype '%s'", cbarg->rootfs,
+	[&] Renaming fragment fixing var to pvar: mntdata -> mkfs
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\tINFO(\"mounted '%s' on '%s', with fstype '%s'\", cbarg->rootfs," "mntdata" "mkfs" > /tmp/patchb33330.footpatch
+SEARCH STORE SIZE 53
+SIZE OF ERRORS: 4
+Doing cluster xcl55.cluster
+SEARCH STORE SIZE 46
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 186
+SIZE OF ERRORS: 22
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[635] :[ memory is not reachable after line 635, column 7]
+[+] Complete err string: " memory is not reachable after line 635, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[632] :[ memory is not reachable after line 632, column 4]
+[+] Complete err string: " memory is not reachable after line 632, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[289] :[ memory is not reachable after line 289, column 2]
+[+] Complete err string: " memory is not reachable after line 289, column 2"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[289] :[pointer rundir last assigned on line 288 could be null and is dereferenced by call to sprintf() at line 289, column 2]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_rundir
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[282] :[ memory is not reachable after line 282, column 12]
+[+] Complete err string: " memory is not reachable after line 282, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[277] :[ memory is not reachable after line 277, column 12]
+[+] Complete err string: " memory is not reachable after line 277, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[275] :[ memory is not reachable after line 275, column 11]
+[+] Complete err string: " memory is not reachable after line 275, column 11"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 25
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 79
+SIZE OF ERRORS: 5
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/bdev/lxcrsync.c]:[64] :[ memory dynamically allocated to s by call to malloc() at line 57, column 6 is not reachable after line 64, column 2]
+[+] Complete err string: " memory dynamically allocated to s by call to malloc() at line 57, column 6 is not reachable after line 64, column 2"
+[+] ERROR LINE IS: 57
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "s"
+[+] pvar TYPE not freed: "char *"
+	[=] This spec matches against Type "char *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 79
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: char *
+[+] No specific candidate for type char *. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+Doing cluster xcl56.cluster
+Doing cluster xcl58.cluster
+Doing cluster xcl57.cluster
+Doing cluster xcl59.cluster
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/bdev/bdev.c]:[757] :[ memory dynamically allocated to mkfs by call to malloc() at line 752, column 9 is not reachable after line 757, column 17]
+[+] Complete err string: " memory dynamically allocated to mkfs by call to malloc() at line 752, column 9 is not reachable after line 757, column 17"
+[+] ERROR LINE IS: 752
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "mkfs"
+[+] pvar TYPE not freed: "char *"
+	[=] This spec matches against Type "char *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 180
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$11 to pvar mntdata.
+Comparing [tstruct] irvar "@f$11" and irvar' "@f$5"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+Comparing [tstruct] irvar "@f$1" and irvar' "_t$4"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+Comparing [tstruct] irvar "@f$1" and irvar' "_t$4"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar bdev.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar mntdata.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar r.
+[+] type "structbdev" does not match needed typ of spec "char"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar mntdata.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$10 to pvar mntdata.
+Comparing [tstruct] irvar "@f$10" and irvar' "@f$5"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Filtered candidates: 6
+	[+] Candidate 0: _fun_free(n$21:) [line 957]
+	[+] Candidate 1: _fun_LXC_INFO(&locinfo:,"mounted '%s' on '%s', with fstype '%s'":,n$1:,n$3:,n$4:) [line 969]
+	[+] Candidate 2: _fun_free(n$5:) [line 967]
+	[+] Candidate 3: _fun_free(n$3:) [line 62]
+	[+] Candidate 4: _fun_free(n$14:) [line 963]
+	[+] Candidate 5: n$2=_fun_fclose(n$1:) [line 63]
+[+] Prioritizing compatibility for type: char *
+[+] Found candidate containing type char *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/bdev/bdev.c
+			[*] Origin line num range: 968 - 969
+			[*] Origin function: find_fstype_cb
+			[*] extracted: 	INFO("mounted '%s' on '%s', with fstype '%s'", cbarg->rootfs,
+	[&] Renaming fragment fixing var to pvar: mntdata -> mkfs
+SEARCH STORE SIZE 93
+SIZE OF ERRORS: 14
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/bdev/lxczfs.c]:[136] :[ p is not reachable after line 136, column 3]
+[+] Complete err string: " p is not reachable after line 136, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/bdev/lxczfs.c]:[128] :[ memory is not reachable after line 128, column 6]
+[+] Complete err string: " memory is not reachable after line 128, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/bdev/lxczfs.c]:[249] :[ memory is not reachable after line 249, column 7]
+[+] Complete err string: " memory is not reachable after line 249, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/bdev/lxczfs.c]:[80] :[ memory is not reachable after line 80, column 14]
+[+] Complete err string: " memory is not reachable after line 80, column 14"
+[-] Could not get pvar name and type
+Doing cluster xcl60.cluster
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\tINFO(\"mounted '%s' on '%s', with fstype '%s'\", cbarg->rootfs," "mntdata" "mkfs" > /tmp/patchbf132f.footpatch
+SEARCH STORE SIZE 196
+SIZE OF ERRORS: 19
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/lxc_user_nic.c]:[343] :[ memory is not reachable after line 343, column 26]
+[+] Complete err string: " memory is not reachable after line 343, column 26"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/lxc_user_nic.c]:[171] :[ memory dynamically allocated to groupnames by call to malloc() at line 154, column 15 is not reachable after line 171, column 4]
+[+] Complete err string: " memory dynamically allocated to groupnames by call to malloc() at line 154, column 15 is not reachable after line 171, column 4"
+[+] ERROR LINE IS: 154
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "groupnames"
+[+] pvar TYPE not freed: "char **"
+	[=] This spec matches against Type "char **". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 196
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$82 to pvar group_ids.
+[?] Comparing HPRED TYPE of IRVAR unsignedint and PVAR type char*.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$13 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$13 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$13 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$13 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$14 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$14 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar nlmsg.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$73 to pvar group_ids.
+[?] Comparing HPRED TYPE of IRVAR unsignedint and PVAR type char*.
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar answer.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar answer.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar answer.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar answer.
+[+] type "structnlmsg" does not match needed typ of spec "char*"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$52 to pvar group_ids.
+Comparing [tstruct] irvar "n$52" and irvar' "@f$0"
+[?] Comparing HPRED TYPE of IRVAR unsignedint and PVAR type char*.
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: char **
+[+] No specific candidate for type char **. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/network.c]:[577] :[ rta is not reachable after line 577, column 11]
+[+] Complete err string: " rta is not reachable after line 577, column 11"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/lxc_user_nic.c]:[663] :[pointer names could be null and is dereferenced at line 663, column 17]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname get_nic_if_avail
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/lxc_user_nic.c]:[104] :[ pwd is not reachable after line 104, column 2]
+[+] Complete err string: " pwd is not reachable after line 104, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[64] :[ memory is not reachable after line 64, column 2]
+[+] Complete err string: " memory is not reachable after line 64, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[146] :[ memory is not reachable after line 146, column 3]
+[+] Complete err string: " memory is not reachable after line 146, column 3"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 156
+SIZE OF ERRORS: 6
+SEARCH STORE SIZE 45
+SIZE OF ERRORS: 1
+Doing cluster xcl61.cluster
+Doing cluster xcl63.cluster
+Doing cluster xcl62.cluster
+SEARCH STORE SIZE 68
+SIZE OF ERRORS: 3
+SEARCH STORE SIZE 64
+SIZE OF ERRORS: 5
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/af_unix.c]:[238] :[pointer cmsg last assigned on line 237 could be null and is dereferenced at line 238, column 2]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname lxc_abstract_unix_send_credential
+[=] I found these typs for pvar last
+[-] No type for pvar found
+Doing cluster xcl64.cluster
+Doing cluster xcl65.cluster
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 68
+SIZE OF ERRORS: 5
+Doing cluster xcl66.cluster
+Doing cluster xcl67.cluster
+SEARCH STORE SIZE 112
+SIZE OF ERRORS: 10
+Doing cluster xcl68.cluster
+SEARCH STORE SIZE 120
+SIZE OF ERRORS: 5
+SEARCH STORE SIZE 45
+SIZE OF ERRORS: 1
+Doing cluster xcl69.cluster
+SEARCH STORE SIZE 48
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 29
+SEARCH STORE SIZE 46
+SIZE OF ERRORS: 11
+SIZE OF ERRORS: 1
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/genl.c]:[97] :[ memory is not reachable after line 97, column 9]
+[+] Complete err string: " memory is not reachable after line 97, column 9"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/genl.c]:[82] :[ genlmsghdr is not reachable after line 82, column 6]
+[+] Complete err string: " genlmsghdr is not reachable after line 82, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[64] :[ memory is not reachable after line 64, column 2]
+[+] Complete err string: " memory is not reachable after line 64, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/genl.c]:[59] :[ genlmsghdr is not reachable after line 59, column 2]
+[+] Complete err string: " genlmsghdr is not reachable after line 59, column 2"
+[-] Could not get pvar name and type
+Doing cluster xcl70.cluster
+Doing cluster xcl72.cluster
+Doing cluster xcl74.cluster
+Doing cluster xcl73.cluster
+SEARCH STORE SIZE 215
+SIZE OF ERRORS: 14
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/mainloop.c]:[124] :[ memory is not reachable after line 124, column 4]
+[+] Complete err string: " memory is not reachable after line 124, column 4"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 287
+SIZE OF ERRORS: 16
+SEARCH STORE SIZE 182
+SIZE OF ERRORS: 15
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/lxc/monitor.c]:[234] :[ resource acquired by call to socket() at line 218, column 7 is not released after line 234, column 8]
+[+] Complete err string: " resource acquired by call to socket() at line 218, column 7 is not released after line 234, column 8"
+[+] ERROR LINE IS: 218
+[+] NOTE: pvar: return (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] heurstic is return, but pvar is fd. Returning fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 182
+[+] irvar n$6 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$6 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$2 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$2 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$2 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$2 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$13 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$13 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar @f$0 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+SEARCH STORE SIZE 45
+SIZE OF ERRORS: 2
+[+] Filtered candidates: 5
+	[+] Candidate 0: n$1=_fun_close(n$0:) [line 127]
+	[+] Candidate 1: n$1=_fun_close(n$0:) [line 153]
+	[+] Candidate 2: n$14=_fun_close(n$13:) [line 116]
+	[+] Candidate 3: n$3=_fun_close(n$2:) [line 1848]
+	[+] Candidate 4: n$7=_fun_close(n$6:) [line 122]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/monitor.c
+			[*] Origin line num range: 126 - 127
+			[*] Origin function: lxc_monitor_fifo_send
+			[*] extracted: 	close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 19 locations (optional): [238, 229, 228, 227, 237, 235, 234, 233, 226, 220, 52, 225, 224, 219, 218, 215, 213, 212, 206]
+	[+] Patching at primary location: 234
+	[+] Create dir /home/vagrant/projects/lxc/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/lxc/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/lxc/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "\tclose(fd);"
+		[+] Attempting to extract line 234 from file /home/vagrant/projects/lxc/src/lxc/monitor.c
+		[+] Succesfully extracted "\t\tfd = lxc_abstract_unix_connect(addr.sun_path);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+SEARCH STORE SIZE 81
+SIZE OF ERRORS: 6
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/tools/lxc_autostart.c]:[336] :[ memory is not reachable after line 336, column 3]
+[+] Complete err string: " memory is not reachable after line 336, column 3"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 56
+SIZE OF ERRORS: 1
+Reading from file /tmp/monitor.c_tmp_patched_diff
+
+Wrote to file /tmp/monitor.c_tmp_patched_diff
+Uncaught crash when dumping patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[289] :[ memory is not reachable after line 289, column 2]
+[+] Complete err string: " memory is not reachable after line 289, column 2"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[289] :[pointer rundir last assigned on line 288 could be null and is dereferenced by call to sprintf() at line 289, column 2]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_rundir
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[282] :[ memory is not reachable after line 282, column 12]
+[+] Complete err string: " memory is not reachable after line 282, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[277] :[ memory is not reachable after line 277, column 12]
+[+] Complete err string: " memory is not reachable after line 277, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[275] :[ memory is not reachable after line 275, column 11]
+[+] Complete err string: " memory is not reachable after line 275, column 11"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 161
+SEARCH STORE SIZE 74
+SIZE OF ERRORS: 6
+[+] Found error: MEMORY_LEAK
+SIZE OF ERRORS: 4
+[+] Patchable error: [src/lxc/tools/lxc_copy.c]:[576] :[ memory is not reachable after line 576, column 3]
+[+] Complete err string: " memory is not reachable after line 576, column 3"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 176
+SIZE OF ERRORS: 8
+SEARCH STORE SIZE 156
+SIZE OF ERRORS: 19
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[289] :[ memory is not reachable after line 289, column 2]
+[+] Complete err string: " memory is not reachable after line 289, column 2"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[289] :[pointer rundir last assigned on line 288 could be null and is dereferenced by call to sprintf() at line 289, column 2]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_rundir
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[282] :[ memory is not reachable after line 282, column 12]
+[+] Complete err string: " memory is not reachable after line 282, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[277] :[ memory is not reachable after line 277, column 12]
+[+] Complete err string: " memory is not reachable after line 277, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[275] :[ memory is not reachable after line 275, column 11]
+[+] Complete err string: " memory is not reachable after line 275, column 11"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/mainloop.c]:[124] :[ memory is not reachable after line 124, column 4]
+[+] Complete err string: " memory is not reachable after line 124, column 4"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 348
+SIZE OF ERRORS: 27
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/network.c]:[1130] :[ return is not reachable after line 1130, column 5]
+[+] Complete err string: " return is not reachable after line 1130, column 5"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/network.c]:[1122] :[ rta is not reachable after line 1122, column 8]
+[+] Complete err string: " rta is not reachable after line 1122, column 8"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1214] :[ memory is not reachable after line 1214, column 9]
+[+] Complete err string: " memory is not reachable after line 1214, column 9"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1210] :[ memory is not reachable after line 1210, column 22]
+[+] Complete err string: " memory is not reachable after line 1210, column 22"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[64] :[ memory is not reachable after line 64, column 2]
+[+] Complete err string: " memory is not reachable after line 64, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/network.c]:[577] :[ rta is not reachable after line 577, column 11]
+[+] Complete err string: " rta is not reachable after line 577, column 11"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[146] :[ memory is not reachable after line 146, column 3]
+[+] Complete err string: " memory is not reachable after line 146, column 3"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 303
+SIZE OF ERRORS: 42
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1264] :[ memory is not reachable after line 1264, column 6]
+[+] Complete err string: " memory is not reachable after line 1264, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1264] :[ memory is not reachable after line 1264, column 7]
+[+] Complete err string: " memory is not reachable after line 1264, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[289] :[ memory is not reachable after line 289, column 2]
+[+] Complete err string: " memory is not reachable after line 289, column 2"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[289] :[pointer rundir last assigned on line 288 could be null and is dereferenced by call to sprintf() at line 289, column 2]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_rundir
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[282] :[ memory is not reachable after line 282, column 12]
+[+] Complete err string: " memory is not reachable after line 282, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[277] :[ memory is not reachable after line 277, column 12]
+[+] Complete err string: " memory is not reachable after line 277, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[275] :[ memory is not reachable after line 275, column 11]
+[+] Complete err string: " memory is not reachable after line 275, column 11"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[1003] :[pointer array could be null and is dereferenced at line 1003, column 10]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname lxc_append_null_to_array
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[744] :[pointer path could be null and is dereferenced at line 744, column 7]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname lxc_deslashify
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[2006] :[ memory is not reachable after line 2006, column 3]
+[+] Complete err string: " memory is not reachable after line 2006, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[2032] :[ memory is not reachable after line 2032, column 3]
+[+] Complete err string: " memory is not reachable after line 2032, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[635] :[ memory is not reachable after line 635, column 7]
+[+] Complete err string: " memory is not reachable after line 635, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[632] :[ memory is not reachable after line 632, column 4]
+[+] Complete err string: " memory is not reachable after line 632, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1214] :[ memory is not reachable after line 1214, column 9]
+[+] Complete err string: " memory is not reachable after line 1214, column 9"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1210] :[ memory is not reachable after line 1210, column 22]
+[+] Complete err string: " memory is not reachable after line 1210, column 22"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 299
+SIZE OF ERRORS: 22
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/mainloop.c]:[124] :[ memory is not reachable after line 124, column 4]
+[+] Complete err string: " memory is not reachable after line 124, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/commands.c]:[1003] :[ memory dynamically allocated to tmplist by call to malloc() at line 996, column 35 is not reachable after line 1003, column 2]
+[+] Complete err string: " memory dynamically allocated to tmplist by call to malloc() at line 996, column 35 is not reachable after line 1003, column 2"
+[+] ERROR LINE IS: 996
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "tmplist"
+[+] pvar TYPE not freed: "struct lxc_list *"
+	[=] This spec matches against Type "struct lxc_list *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 299
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar iterator.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar iterator.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar iterator.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar iterator.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar iterator.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar iterator.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$10 to pvar newclient.
+[+] type "structstate_client" does not match needed typ of spec "structlxc_list"
+[+] Filtered candidates: 1
+	[+] Candidate 0: _fun_free(n$9:) [line 124]
+[+] Prioritizing compatibility for type: struct lxc_list *
+[+] No specific candidate for type struct lxc_list *. Returning 1 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/mainloop.c
+			[*] Origin line num range: 123 - 124
+			[*] Origin function: lxc_mainloop_del_handler
+			[*] extracted: 			free(iterator);
+	[&] Renaming fragment fixing var to pvar: iterator -> tmplist
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\t\tfree(iterator);" "iterator" "tmplist" > /tmp/patch3d8875.footpatch
+SEARCH STORE SIZE 118
+SIZE OF ERRORS: 10
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[289] :[ memory is not reachable after line 289, column 2]
+[+] Complete err string: " memory is not reachable after line 289, column 2"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/utils.c]:[289] :[pointer rundir last assigned on line 288 could be null and is dereferenced by call to sprintf() at line 289, column 2]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_rundir
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[282] :[ memory is not reachable after line 282, column 12]
+[+] Complete err string: " memory is not reachable after line 282, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[277] :[ memory is not reachable after line 277, column 12]
+[+] Complete err string: " memory is not reachable after line 277, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[275] :[ memory is not reachable after line 275, column 11]
+[+] Complete err string: " memory is not reachable after line 275, column 11"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 488
+SIZE OF ERRORS: 47
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[635] :[ memory is not reachable after line 635, column 7]
+[+] Complete err string: " memory is not reachable after line 635, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[632] :[ memory is not reachable after line 632, column 4]
+[+] Complete err string: " memory is not reachable after line 632, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/cgroups/cgfsng.c]:[1320] :[ lxc_cgfsng_debug is not reachable after line 1320, column 3]
+[+] Complete err string: " lxc_cgfsng_debug is not reachable after line 1320, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/cgroups/cgfsng.c]:[1319] :[ memory is not reachable after line 1319, column 6]
+[+] Complete err string: " memory is not reachable after line 1319, column 6"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 232
+SIZE OF ERRORS: 14
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/attach.c]:[1376] :[ passwd is not reachable after line 1376, column 3]
+[+] Complete err string: " passwd is not reachable after line 1376, column 3"
+[-] Could not get pvar name and type
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/lxc/attach.c]:[208] :[ resource of type _IO_FILE acquired to proc_file by call to fopen() at line 201, column 14 is not released after line 208, column 7]
+[+] Complete err string: " resource of type _IO_FILE acquired to proc_file by call to fopen() at line 201, column 14 is not released after line 208, column 7"
+[+] ERROR LINE IS: 201
+[+] NOTE: pvar: proc_file (heuristic from error message) and pvar proc_file (extracted from error message line number).
+[+] pvar is proc_file and heurstic is proc_file. Using pvar proc_file
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "proc_file"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 232
+[+] irvar n$12 lookup gives pvar proc_file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$12 lookup gives pvar proc_file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$12 lookup gives pvar proc_file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$12 lookup gives pvar proc_file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$12 lookup gives pvar proc_file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$12 lookup gives pvar proc_file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 1
+	[+] Candidate 0: n$13=_fun_fclose(n$12:) [line 223]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+SEARCH STORE SIZE 430
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/attach.c
+			[*] Origin line num range: 222 - 223
+			[*] Origin function: lxc_proc_get_context_info
+			[*] extracted: 	fclose(proc_file);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 13 locations (optional): [209, 208, 207, 86, 203, 202, 201, 198, 197, 194, 193, 192, 186]
+	[+] Patching at primary location: 208
+	[+] Create dir /home/vagrant/projects/lxc/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/lxc/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/lxc/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "\tfclose(proc_file);"
+		[+] Attempting to extract line 208 from file /home/vagrant/projects/lxc/src/lxc/attach.c
+		[+] Succesfully extracted "\tif (!info) {"
+			[+] Line does not contain {
+		[+] Fragment was NOT if-bracketed
+SIZE OF ERRORS: 33
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/cgroups/cgfs.c]:[659] :[ h is not reachable after line 659, column 12]
+[+] Complete err string: " h is not reachable after line 659, column 12"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/cgroups/cgfs.c]:[2315] :[ memory is not reachable after line 2315, column 6]
+[+] Complete err string: " memory is not reachable after line 2315, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/cgroups/cgfs.c]:[2315] :[ memory is not reachable after line 2315, column 7]
+[+] Complete err string: " memory is not reachable after line 2315, column 7"
+[-] Could not get pvar name and type
+Reading from file /tmp/attach.c_tmp_patched_diff
+
+Wrote to file /tmp/attach.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/lxc/src/lxc/attach.c /tmp/attach.c_tmp_patched_diff > /tmp/udiff_fe953c.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_fe953c.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/lxc/src/lxc/attach.c
+			[*] Destination function: lxc_proc_get_context_info
+			[*] Destination line insert: 208
+	[+] Wrote patch attach_208_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 545
+SIZE OF ERRORS: 48
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/confile.c]:[2506] :[ memory dynamically allocated to dent by call to malloc() at line 2501, column 39 is not reachable after line 2506, column 2]
+[+] Complete err string: " memory dynamically allocated to dent by call to malloc() at line 2501, column 39 is not reachable after line 2506, column 2"
+[+] ERROR LINE IS: 2501
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "dent"
+[+] pvar TYPE not freed: "struct lxc_list *"
+	[=] This spec matches against Type "struct lxc_list *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 545
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar mntlist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar mntlist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar mntlist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$58 to pvar inet6dev.
+[+] type "structlxc_inet6dev" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$58 to pvar inet6dev.
+[+] type "structlxc_inet6dev" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$97 to pvar inetdev.
+[+] type "structlxc_inetdev" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$97 to pvar inetdev.
+[+] type "structlxc_inetdev" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar idmap.
+[+] type "structid_map" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar idmap.
+[+] type "structid_map" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar idmap.
+[+] type "structid_map" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar line.
+Comparing [tstruct] irvar "@f$0" and irvar' "_t$7"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+Comparing [tstruct] irvar "@f$1" and irvar' "_t$4"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar line.
+Comparing [tstruct] irvar "@f$1" and irvar' "_t$4"
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar idmaplist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar idmaplist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar idmaplist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar idmaplist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar idmaplist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar idmaplist.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar utsname.
+[+] type "structutsname" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar utsname.
+[+] type "structutsname" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar utsname.
+[+] type "structutsname" does not match needed typ of spec "structlxc_list"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar it.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$8 to pvar hook.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar hook.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type structlxc_list.
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$5 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar cur.
+[+] typ matches needed typ of spec struct lxc_list *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Filtered candidates: 13
+	[+] Candidate 0: _fun_free(n$13:) [line 4372]
+	[+] Candidate 1: _fun_free(n$13:) [line 4411]
+	[+] Candidate 2: _fun_free(n$13:) [line 4348]
+	[+] Candidate 3: _fun_free(n$1:) [line 2010]
+	[+] Candidate 4: _fun_free(n$13:) [line 4412]
+	[+] Candidate 5: _fun_free(n$13:) [line 4320]
+	[+] Candidate 6: _fun_free(n$13:) [line 4436]
+	[+] Candidate 7: _fun_free(n$13:) [line 4508]
+	[+] Candidate 8: _fun_free(n$14:) [line 404]
+	[+] Candidate 9: _fun_free(n$13:) [line 4423]
+	[+] Candidate 10: _fun_free(n$7:) [line 2111]
+	[+] Candidate 11: _fun_free(n$13:) [line 4331]
+	[+] Candidate 12: _fun_free(n$14:) [line 2523]
+[+] Prioritizing compatibility for type: struct lxc_list *
+[+] No specific candidate for type struct lxc_list *. Returning 13 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 13
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/confile.c
+			[*] Origin line num range: 4371 - 4372
+			[*] Origin function: clr_config_net_ipv4
+			[*] extracted: 		free(cur);
+	[&] Renaming fragment fixing var to pvar: cur -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(cur);" "cur" "dent" > /tmp/patchfc4f03.footpatch
+SEARCH STORE SIZE 846
+SIZE OF ERRORS: 64
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/conf.c]:[4871] :[pointer result could be null and is dereferenced at line 4871, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname getgname
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[2006] :[ memory is not reachable after line 2006, column 3]
+[+] Complete err string: " memory is not reachable after line 2006, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1264] :[ memory is not reachable after line 1264, column 6]
+[+] Complete err string: " memory is not reachable after line 1264, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1264] :[ memory is not reachable after line 1264, column 7]
+[+] Complete err string: " memory is not reachable after line 1264, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/conf.c]:[4328] :[ memory is not reachable after line 4328, column 2]
+[+] Complete err string: " memory is not reachable after line 4328, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[635] :[ memory is not reachable after line 635, column 7]
+[+] Complete err string: " memory is not reachable after line 635, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[632] :[ memory is not reachable after line 632, column 4]
+[+] Complete err string: " memory is not reachable after line 632, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1214] :[ memory is not reachable after line 1214, column 9]
+[+] Complete err string: " memory is not reachable after line 1214, column 9"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[1210] :[ memory is not reachable after line 1210, column 22]
+[+] Complete err string: " memory is not reachable after line 1210, column 22"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[64] :[ memory is not reachable after line 64, column 2]
+[+] Complete err string: " memory is not reachable after line 64, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/nl.c]:[146] :[ memory is not reachable after line 146, column 3]
+[+] Complete err string: " memory is not reachable after line 146, column 3"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/conf.c]:[1836] :[ memory is not reachable after line 1836, column 12]
+[+] Complete err string: " memory is not reachable after line 1836, column 12"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/lxc/conf.c]:[4859] :[pointer result could be null and is dereferenced at line 4859, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname getuname
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/conf.c]:[4859] :[ result is not reachable after line 4859, column 9]
+[+] Complete err string: " result is not reachable after line 4859, column 9"
+[-] Could not get pvar name and type
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/conf.c
+			[*] Origin line num range: 4410 - 4411
+			[*] Origin function: lxc_clear_groups
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patchd0c33c.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/commands.c]:[1002] :[ memory dynamically allocated to newclient by call to malloc() at line 988, column 39 is not reachable after line 1002, column 38]
+[+] Complete err string: " memory dynamically allocated to newclient by call to malloc() at line 988, column 39 is not reachable after line 1002, column 38"
+[+] ERROR LINE IS: 988
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "newclient"
+[+] pvar TYPE not freed: "struct state_client *"
+	[=] This spec matches against Type "struct state_client *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 299
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar iterator.
+[+] type "structlxc_list" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar iterator.
+[+] type "structlxc_list" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar iterator.
+[+] type "structlxc_list" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar iterator.
+[+] type "structlxc_list" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar iterator.
+[+] type "structlxc_list" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar iterator.
+[+] type "structlxc_list" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ts.
+[+] type "structlxc_tty_state" does not match needed typ of spec "structstate_client"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$10 to pvar newclient.
+[+] typ matches needed typ of spec struct state_client *
+[+] Filtered candidates: 1
+	[+] Candidate 0: _fun_free(n$10:) [line 998]
+[+] Prioritizing compatibility for type: struct state_client *
+[+] No specific candidate for type struct state_client *. Returning 1 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/commands.c
+			[*] Origin line num range: 997 - 998
+			[*] Origin function: lxc_cmd_state_server_callback
+			[*] extracted: 		free(newclient);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 16 locations (optional): [1005, 979, 77, 984, 1003, 1002, 997, 996, 994, 993, 989, 988, 983, 978, 974, 971]
+	[+] Patching at primary location: 1002
+	[+] Create dir /home/vagrant/projects/lxc/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/lxc/infer-out/footpatch/memory_leak_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/lxc/infer-out/footpatch/memory_leak_with_type/patches.
+		[+] Have fragment "\t\tfree(newclient);"
+		[+] Attempting to extract line 1002 from file /home/vagrant/projects/lxc/src/lxc/commands.c
+		[+] Succesfully extracted "\tlxc_list_add_elem(tmplist, newclient);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/commands.c_tmp_patched_diff
+
+Wrote to file /tmp/commands.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/lxc/src/lxc/commands.c /tmp/commands.c_tmp_patched_diff > /tmp/udiff_989389.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_989389.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/lxc/src/lxc/commands.c
+			[*] Destination function: lxc_cmd_state_server_callback
+			[*] Destination line insert: 1002
+	[+] Wrote patch commands_1002_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/conf.c
+			[*] Origin line num range: 4347 - 4348
+			[*] Origin function: lxc_clear_config_keepcaps
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patch56f7af.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/confile.c
+			[*] Origin line num range: 2009 - 2010
+			[*] Origin function: set_config_idmaps
+			[*] extracted: 	free(idmaplist);
+	[&] Renaming fragment fixing var to pvar: idmaplist -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\tfree(idmaplist);" "idmaplist" "dent" > /tmp/patch3b02fa.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/confile.c
+			[*] Origin line num range: 4411 - 4412
+			[*] Origin function: clr_config_net_ipv6
+			[*] extracted: 		free(cur);
+	[&] Renaming fragment fixing var to pvar: cur -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(cur);" "cur" "dent" > /tmp/patchf5fc0f.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/conf.c
+			[*] Origin line num range: 4319 - 4320
+			[*] Origin function: lxc_clear_config_caps
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patch398c6e.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/conf.c
+			[*] Origin line num range: 4435 - 4436
+			[*] Origin function: lxc_clear_mount_entries
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patch5c35b1.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/conf.c
+			[*] Origin line num range: 4507 - 4508
+			[*] Origin function: lxc_clear_includes
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patch5a43ea.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/confile_utils.c
+			[*] Origin line num range: 403 - 404
+			[*] Origin function: lxc_free_networks
+			[*] extracted: 		free(cur);
+	[&] Renaming fragment fixing var to pvar: cur -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(cur);" "cur" "dent" > /tmp/patchea4c31.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/conf.c
+			[*] Origin line num range: 4422 - 4423
+			[*] Origin function: lxc_clear_environment
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patch56c009.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/confile.c
+			[*] Origin line num range: 2110 - 2111
+			[*] Origin function: set_config_mount
+			[*] extracted: 		free(mntlist);
+	[&] Renaming fragment fixing var to pvar: mntlist -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(mntlist);" "mntlist" "dent" > /tmp/patch4da193.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/conf.c
+			[*] Origin line num range: 4330 - 4331
+			[*] Origin function: lxc_free_idmap
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patchbc1bc0.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/lxc/src/lxc/confile.c
+			[*] Origin line num range: 2522 - 2523
+			[*] Origin function: lxc_config_define_load
+			[*] extracted: 		free(it);
+	[&] Renaming fragment fixing var to pvar: it -> dent
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(it);" "it" "dent" > /tmp/patch90782a.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/conf.c]:[4328] :[ memory is not reachable after line 4328, column 2]
+[+] Complete err string: " memory is not reachable after line 4328, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/lxc/utils.c]:[2006] :[ memory is not reachable after line 2006, column 3]
+[+] Complete err string: " memory is not reachable after line 2006, column 3"
+[-] Could not get pvar name and type

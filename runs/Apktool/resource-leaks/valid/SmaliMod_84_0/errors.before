@@ -1,0 +1,102 @@
+Found 32 issues
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java:382: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 382 is not released after line 382
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java:382: error: RESOURCE_LEAK
+   resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 382 is not released after line 382
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java:384: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 382 is not released after line 384
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java:572: error: RESOURCE_LEAK
+   resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 572
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java:574: error: RESOURCE_LEAK
+   resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 574
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java:576: error: RESOURCE_LEAK
+   resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 576
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java:648: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 647 is not released after line 648
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java:29: error: NULL_DEREFERENCE
+  object returned by get() could be null and is dereferenced at line 29
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/mod/SmaliMod.java:84: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 59 is not released after line 84
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java:454: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 454 is not released after line 454
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java:613: error: NULL_DEREFERENCE
+  object returned by dir.listFiles() could be null and is dereferenced at line 613
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java:616: error: NULL_DEREFERENCE
+  object returned by dir.listFiles() could be null and is dereferenced at line 616
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java:684: error: RESOURCE_LEAK
+   resource of type java.util.zip.ZipFile acquired to zip by call to ZipFile(...) at line 638 is not released after line 684
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java:150: error: NULL_DEREFERENCE
+  object returned by name.equals(getName()) could be null and is dereferenced at line 150
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java:296: error: NULL_DEREFERENCE
+  object value last assigned on line 294 could be null and is dereferenced at line 296
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java:299: error: NULL_DEREFERENCE
+  object returned by AXmlResourceParser.m_strings.getString(name) could be null and is dereferenced at line 299
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java:330: error: NULL_DEREFERENCE
+  object value last assigned on line 326 could be null and is dereferenced at line 330
+
+brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java:75: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 70 is not released after line 75
+
+brut.apktool/apktool-lib/src/test/java/brut/androlib/BuildAndDecodeTest.java:474: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 472 is not released after line 474
+
+brut.apktool/apktool-lib/src/test/java/brut/androlib/BuildAndDecodeTest.java:474: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 471 is not released after line 474
+
+brut.apktool/apktool-lib/src/test/java/brut/androlib/BuildAndDecodeTest.java:475: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 471 is not released after line 475
+
+brut.apktool/apktool-lib/src/test/java/brut/androlib/LargeIntsInManifestTest.java:82: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 79 is not released after line 82
+
+brut.apktool/apktool-lib/src/test/java/brut/androlib/LargeIntsInManifestTest.java:82: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 80 is not released after line 82
+
+brut.apktool/apktool-lib/src/test/java/brut/androlib/LargeIntsInManifestTest.java:83: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 79 is not released after line 83
+
+brut.apktool/apktool-lib/src/test/java/brut/androlib/TestUtils.java:43: error: RESOURCE_LEAK
+   resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 43 is not released after line 43
+
+brut.j.dir/src/main/java/brut/directory/DirUtil.java:84: error: RESOURCE_LEAK
+   resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 84 is not released after line 84
+
+brut.j.dir/src/main/java/brut/directory/FileDirectory.java:92: error: NULL_DEREFERENCE
+  object files last assigned on line 91 could be null and is dereferenced at line 92
+
+brut.j.util/src/main/java/brut/util/BrutIO.java:56: error: NULL_DEREFERENCE
+  object subfiles last assigned on line 55 could be null and is dereferenced at line 56
+
+brut.j.util/src/main/java/brut/util/OS.java:38: error: NULL_DEREFERENCE
+  object files last assigned on line 37 could be null and is dereferenced at line 38
+
+brut.j.util/src/main/java/brut/util/OS.java:61: error: NULL_DEREFERENCE
+  object files last assigned on line 60 could be null and is dereferenced at line 61
+
+brut.j.util/src/main/java/brut/util/OSDetection.java:20: error: NULL_DEREFERENCE
+  object returned by getProperty("os.name") could be null and is dereferenced at line 20
+
+brut.j.util/src/main/java/brut/util/OSDetection.java:21: error: NULL_DEREFERENCE
+  object returned by getProperty("sun.arch.data.model") could be null and is dereferenced at line 21
+
+Summary of the reports
+
+     RESOURCE_LEAK: 19
+  NULL_DEREFERENCE: 13

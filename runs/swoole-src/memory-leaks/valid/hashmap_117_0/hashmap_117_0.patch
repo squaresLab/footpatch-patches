@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/core/hashmap.c	2018-02-12 07:58:52.386674405 +0000
+--- /home/vagrant/projects/swoole-src/src/core/hashmap.c	2018-02-12 07:58:52.386674405 +0000
+@@ -115,6 +115,7 @@
+     if (!(root->hh.tbl))
+     {
+         swWarn("malloc for table failed.");
++    swHashMap_node_free(hmap, root);
+         return NULL;
+     }
+ 

@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/annotations/CategoryLineAnnotation.java	2017-08-26 03:07:03.457939030 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/annotations/CategoryLineAnnotation.java	2017-08-26 03:07:03.457939030 -0400
+@@ -287,6 +287,7 @@
+             int rendererIndex, PlotRenderingInfo info) {
+ 
+         CategoryDataset dataset = plot.getDataset();
++    if (dataset == null) {        throw new IllegalArgumentException("Null 'stream' argument.");    }
+         int catIndex1 = dataset.getColumnIndex(this.category1);
+         int catIndex2 = dataset.getColumnIndex(this.category2);
+         int catCount = dataset.getColumnCount();

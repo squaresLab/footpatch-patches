@@ -1,0 +1,49 @@
+Found 14 issues
+
+src/derapify.c:914: error: RESOURCE_LEAK
+   resource of type _IO_FILE acquired by call to fopen() at line 901, column 20 is not released after line 914, column 9
+
+src/derapify.c:914: error: RESOURCE_LEAK
+   resource of type _IO_FILE acquired by call to tmpfile() at line 881, column 20 is not released after line 914, column 9
+
+src/p3d.c:399: error: NULL_DEREFERENCE
+  pointer model_info->lod_resolutions last assigned on line 396 could be null and is dereferenced at line 399, column 9
+
+src/p3d.c:696: error: NULL_DEREFERENCE
+  pointer odol_lod->subskeleton_to_skeleton last assigned on line 692 could be null and is dereferenced at line 696, column 9
+
+src/p3d.c:697: error: NULL_DEREFERENCE
+  pointer odol_lod->skeleton_to_subskeleton last assigned on line 693 could be null and is dereferenced at line 697, column 9
+
+src/paa2img.c:279: error: RESOURCE_LEAK
+   resource of type _IO_FILE acquired by call to fopen() at line 267, column 9 is not released after line 279, column 13
+
+src/rapify.c:663: error: RESOURCE_LEAK
+   resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44
+
+src/unpack.c:82: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 70, column 32 is not reachable after line 82, column 40
+
+src/unpack.c:177: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 165, column 32 is not reachable after line 177, column 40
+
+src/unpack.c:352: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 344, column 32 is not reachable after line 352, column 40
+
+src/utils.c:191: error: NULL_DEREFERENCE
+  pointer temp last assigned on line 188 could be null and is dereferenced at line 191, column 9
+
+src/utils.c:328: error: NULL_DEREFERENCE
+  pointer tmp last assigned on line 327 could be null and is dereferenced by call to strncpy() at line 328, column 5
+
+src/utils.c:462: error: NULL_DEREFERENCE
+  pointer tmp last assigned on line 461 could be null and is dereferenced at line 462, column 5
+
+src/utils.c:495: error: NULL_DEREFERENCE
+  pointer tmp last assigned on line 494 could be null and is dereferenced at line 495, column 5
+
+Summary of the reports
+
+  NULL_DEREFERENCE: 7
+     RESOURCE_LEAK: 4
+       MEMORY_LEAK: 3

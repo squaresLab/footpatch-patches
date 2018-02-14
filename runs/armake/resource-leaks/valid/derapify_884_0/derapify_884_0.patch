@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/armake/src/derapify.c	2018-01-03 20:46:50.228350787 +0000
+--- /home/vagrant/projects/armake/src/derapify.c	2018-01-03 20:46:50.228350787 +0000
+@@ -882,6 +882,7 @@
+ #endif
+         if (!f_source) {
+             errorf("Failed to open temp file.\n");
++        fclose(f_temp);
+ #ifdef _WIN32
+             DeleteFile(temp_name);
+ #endif

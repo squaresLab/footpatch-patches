@@ -1,0 +1,14 @@
+--- /home/vagrant/projects/sysstat/rd_stats.c	2018-01-03 20:46:27.487726053 +0000
+--- /home/vagrant/projects/sysstat/rd_stats.c	2018-01-03 20:46:27.487726053 +0000
+@@ -1760,7 +1760,11 @@
+ 		return;
+ 
+ 	if (fgets(line, 128, fp) == NULL)
++	if (fgets(line, 128, fp) == NULL) {
++	fclose(fp);
+ 		return;
++}
++
+ 
+ 	sscanf(line, "%lu.%lu", &up_sec, &up_cent);
+ 	*uptime = (unsigned long long) up_sec * HZ +

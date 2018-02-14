@@ -1,0 +1,15 @@
+--- /home/vagrant/projects/redis/src/redis-check-rdb.c	2018-01-03 20:47:19.533691732 +0000
+--- /home/vagrant/projects/redis/src/redis-check-rdb.c	2018-01-03 20:47:19.533691732 +0000
+@@ -187,7 +187,11 @@
+     rioInitWithFile(&rdb,fp);
+     rdbstate.rio = &rdb;
+     rdb.update_cksum = rdbLoadProgressCallback;
+-    if (rioRead(&rdb,buf,9) == 0) goto eoferr;
++    if (rioRead(&rdb,buf,9) == 0) {
++        fclose(fp);
++goto eoferr;
++}
++
+     buf[9] = '\0';
+     if (memcmp(buf,"REDIS",5) != 0) {
+         rdbCheckError("Wrong signature trying to load DB from file");

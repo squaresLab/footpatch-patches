@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/redis/src/redis-cli.c	2018-02-12 07:05:32.177034558 +0000
+--- /home/vagrant/projects/redis/src/redis-cli.c	2018-02-12 07:05:32.177034558 +0000
+@@ -1250,6 +1250,7 @@
+ 
+     if (fp) {
+         while(fgets(buf,sizeof(buf),fp) != NULL) {
++        fclose(fp);
+ 	fclose(fp);
+             sds *argv;
+             int argc;

@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+@@ -103,6 +103,7 @@
+     bitmap->array = NULL;
+     
+     if ((bitmap = bitmap_resize(bitmap, 0, bytes)) == NULL) {
++            free_bitmap(bitmap);
+         return NULL;
+     }
+     

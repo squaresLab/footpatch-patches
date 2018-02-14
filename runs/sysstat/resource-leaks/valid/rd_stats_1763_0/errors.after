@@ -1,0 +1,18 @@
+Found 4 issues                                                                      
+                                                                                    
+common.c:81: error: NULL_DEREFERENCE                                                
+  pointer ltm last assigned on line 79 could be null and is dereferenced at line 81, column 13
+                                                                                    
+common.c:104: error: NULL_DEREFERENCE                                               
+  pointer ltm last assigned on line 102 could be null and is dereferenced at line 104, column 13
+                                                                                    
+rd_stats.c:2086: error: NULL_DEREFERENCE                                            
+  pointer line last assigned on line 2077 could be null and is dereferenced by call to fgets() at line 2086, column 10
+                                                                                    
+rd_stats.c:2088: error: MEMORY_LEAK                                                 
+   memory dynamically allocated to line by call to realloc() at line 2084, column 2 is not reachable after line 2088, column 7
+                                                                                    
+Summary of the reports                                                              
+                                                                                    
+  NULL_DEREFERENCE: 3                                                               
+       MEMORY_LEAK: 1  

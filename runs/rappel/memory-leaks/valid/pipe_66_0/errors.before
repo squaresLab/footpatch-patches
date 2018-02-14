@@ -1,0 +1,8 @@
+Found 1 issue
+
+pipe.c:66: error: MEMORY_LEAK
+   memory dynamically allocated by call to xmalloc() at line 52, column 23 is not reachable after line 66, column 12
+
+Summary of the reports
+
+  MEMORY_LEAK: 1

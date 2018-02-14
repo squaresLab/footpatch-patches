@@ -1,0 +1,9 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/renderer/category/BarRenderer.java	2017-08-26 03:06:11.297993720 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/renderer/category/BarRenderer.java	2017-08-26 03:06:11.297993720 -0400
+@@ -492,6 +492,7 @@
+ 
+         // get the clipping values...
+         ValueAxis rangeAxis = plot.getRangeAxisForDataset(rendererIndex);
++    if (rangeAxis == null) {        throw new IllegalArgumentException("Null 'plot' argument.");    }
+         this.lowerClip = rangeAxis.getRange().getLowerBound();
+         this.upperClip = rangeAxis.getRange().getUpperBound();

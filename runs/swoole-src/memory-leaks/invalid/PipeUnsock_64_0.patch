@@ -1,0 +1,15 @@
+--- /home/vagrant/projects/swoole-src/src/pipe/PipeUnsock.c	2018-01-03 20:45:23.743611998 +0000
+--- /home/vagrant/projects/swoole-src/src/pipe/PipeUnsock.c	2018-01-03 20:45:23.743611998 +0000
+@@ -61,7 +61,11 @@
+     ret = socketpair(AF_UNIX, protocol, 0, object->socks);
+     if (ret < 0)
+     {
+-        swWarn("socketpair() failed. Error: %s [%d]", strerror(errno), errno);
++        swWarn("socketpair() {
++    sw_free(object);
++failed. Error: %s [%d]", strerror(errno), errno);
++}
++
+         return SW_ERR;
+     }
+     else

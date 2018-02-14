@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/CombinedDomainCategoryPlot.java	2017-08-26 03:06:50.365952784 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/CombinedDomainCategoryPlot.java	2017-08-26 03:06:50.365952784 -0400
+@@ -524,6 +524,7 @@
+             while (iterator.hasNext()) {
+                 CategoryPlot plot = (CategoryPlot) iterator.next();
+                 List more = plot.getCategories();
++    if (more == null) {        throw new IllegalArgumentException("Null 'object' argument.");    }
+                 Iterator moreIterator = more.iterator();
+                 while (moreIterator.hasNext()) {
+                     Comparable category = (Comparable) moreIterator.next();

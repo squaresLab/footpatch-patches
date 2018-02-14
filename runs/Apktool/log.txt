@@ -1,0 +1,3090 @@
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl7.cluster
+Doing cluster xcl2.cluster
+Doing cluster xcl4.cluster
+Doing cluster xcl1.cluster
+Doing cluster xcl8.cluster
+Doing cluster xcl5.cluster
+Doing cluster xcl3.cluster
+Doing cluster xcl19.cluster
+Doing cluster xcl13.cluster
+Doing cluster xcl18.cluster
+Doing cluster xcl17.cluster
+Doing cluster xcl12.cluster
+Doing cluster xcl9.cluster
+Doing cluster xcl20.cluster
+Doing cluster xcl15.cluster
+Doing cluster xcl14.cluster
+Doing cluster xcl6.cluster
+Doing cluster xcl16.cluster
+SEARCH STORE SIZE 1
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 2
+SEARCH STORE SIZE 1
+SIZE OF ERRORS: 0
+SIZE OF ERRORS: 0
+Doing cluster xcl10.cluster
+Doing cluster xcl11.cluster
+SEARCH STORE SIZE 8
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 12
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 8
+SIZE OF ERRORS: 0
+Doing cluster xcl21.cluster
+Doing cluster xcl22.cluster
+Doing cluster xcl23.cluster
+Doing cluster xcl24.cluster
+Doing cluster xcl25.cluster
+Doing cluster xcl26.cluster
+SEARCH STORE SIZE 12
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 2
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 6
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 17
+Doing cluster xcl27.cluster
+SIZE OF ERRORS: 1
+Doing cluster xcl28.cluster
+Doing cluster xcl29.cluster
+SEARCH STORE SIZE 24
+SIZE OF ERRORS: 1
+Doing cluster xcl31.cluster
+Doing cluster xcl30.cluster
+SEARCH STORE SIZE 34
+SIZE OF ERRORS: 1
+Doing cluster xcl32.cluster
+SEARCH STORE SIZE 8
+SIZE OF ERRORS: 1
+Doing cluster xcl33.cluster
+SEARCH STORE SIZE 34
+SIZE OF ERRORS: 1
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+Doing cluster xcl34.cluster
+SEARCH STORE SIZE 30
+SIZE OF ERRORS: 0
+Doing cluster xcl35.cluster
+SEARCH STORE SIZE 52
+SIZE OF ERRORS: 0
+Doing cluster xcl36.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 75
+SEARCH STORE SIZE 47
+SIZE OF ERRORS: 3
+Doing cluster xcl37.cluster
+SIZE OF ERRORS: 0
+Doing cluster xcl38.cluster
+Doing cluster xcl39.cluster
+SEARCH STORE SIZE 26
+SIZE OF ERRORS: 0
+Doing cluster xcl40.cluster
+SEARCH STORE SIZE 165
+SIZE OF ERRORS: 3
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java]:[75] :[ resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 70 is not released after line 75]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 70 is not released after line 75"
+[+] ERROR LINE IS: 70
+[+] NOTE: pvar: return (heuristic from error message) and pvar inStream (extracted from error message line number).
+[+] heurstic is return, but pvar is inStream. Returning inStream
+THE TYPE IS "class java.io.FileInputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "inStream"
+[+] adding spec for type:  "class java.io.FileInputStream *"
+[+] Spec asked to look for type "java.io.FileInputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 165
+[+] irvar n$97 lookup gives pvar is.
+Comparing [tstruct] irvar "n$97" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$97" and irvar' "n$97"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$97 lookup gives pvar is.
+Comparing [tstruct] irvar "n$97" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$97" and irvar' "n$97"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$76 lookup gives pvar is.
+Comparing [tstruct] irvar "n$76" and irvar' "n$76"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$76 lookup gives pvar is.
+Comparing [tstruct] irvar "n$76" and irvar' "n$76"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$76 lookup gives pvar is.
+Comparing [tstruct] irvar "n$76" and irvar' "n$76"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$76 lookup gives pvar is.
+Comparing [tstruct] irvar "n$76" and irvar' "n$76"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$47 lookup gives pvar inStream.
+Comparing [tstruct] irvar "n$47" and irvar' "n$47"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$47 lookup gives pvar inStream.
+Comparing [tstruct] irvar "n$47" and irvar' "n$47"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$47 lookup gives pvar inStream.
+Comparing [tstruct] irvar "n$47" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$47" and irvar' "@f$2"
+Comparing [tstruct] irvar "n$47" and irvar' "n$47"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] irvar n$47 lookup gives pvar inStream.
+Comparing [tstruct] irvar "n$47" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$47" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$47" and irvar' "@f$2"
+Comparing [tstruct] irvar "n$47" and irvar' "@f$4"
+Comparing [tstruct] irvar "n$47" and irvar' "@f$5"
+Comparing [tstruct] irvar "n$47" and irvar' "n$47"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileInputStream.
+[+] Filtered candidates: 3
+	[+] Candidate 0: _fun_void FileInputStream.close()(n$47:) virtual [line 83]
+	[+] Candidate 1: _fun_void FileInputStream.close()(n$76:) virtual [line 85]
+	[+] Candidate 2: _fun_void FileInputStream.close()(n$97:) virtual [line 100]
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileInputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileInputStream *. Returning 3 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 3
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/rvt/Pinta/integrations/infer/Apktool/brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java
+			[*] Origin line num range: 82 - 83
+			[*] Origin function: void SmaliBuilder.buildFile(String,DexBuilder)
+			[*] extracted:         inStream.close();
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 6 locations (optional): [75, 74, 72, 70, 69, 67]
+	[+] Patching at primary location: 75
+	[+] Create dir /home/rvt/Pinta/integrations/infer/Apktool/infer-out/footpatch
+	[+] Create dir /home/rvt/Pinta/integrations/infer/Apktool/infer-out/footpatch/close_file_resource_with_type_java_ish/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/rvt/Pinta/integrations/infer/Apktool/infer-out/footpatch/close_file_resource_with_type_java_ish/patches.
+		[+] Before cheking filter garbage
+		[+] Have fragment "        inStream.close();"
+		[+] Attempting to extract line 75 from file /home/rvt/Pinta/integrations/infer/Apktool/brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java
+		[+] Succesfully extracted "                    throw new AndrolibException(\"Could not smali file: \" + fileName);"
+			[+] Checking whether we should bracketize. Looking for "{". Original line is                     throw new AndrolibException("Could not smali file: " + fileName);
+			 [+] No match for line containing {
+Checking NEXT line "                }"
+NEXT line does NOT have bracket
+		[---] WNevermind: original line does not cointain {but also doesn't match if (...) ...; not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/SmaliBuilder.java_tmp_patched_diff
+
+Wrote to file /tmp/SmaliBuilder.java_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/rvt/Pinta/integrations/infer/Apktool/brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java /tmp/SmaliBuilder.java_tmp_patched_diff > /tmp/udiff_fb3ba2.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_fb3ba2.footpatch" 
+		[*] Destination filename: /home/rvt/Pinta/integrations/infer/Apktool/brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java
+			[*] Destination function: void SmaliBuilder.buildFile(String,DexBuilder)
+			[*] Destination line insert: 75
+	[+] Wrote patch SmaliBuilder_75_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+Doing cluster xcl41.cluster
+SEARCH STORE SIZE 77
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 150
+Doing cluster xcl42.cluster
+SEARCH STORE SIZE 105
+SIZE OF ERRORS: 1
+SIZE OF ERRORS: 0
+Doing cluster xcl43.cluster
+Doing cluster xcl44.cluster
+SEARCH STORE SIZE 12
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 110
+Doing cluster xcl45.cluster
+SIZE OF ERRORS: 2
+Doing cluster xcl46.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl47.cluster
+SEARCH STORE SIZE 290
+SIZE OF ERRORS: 3
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+Doing cluster xcl48.cluster
+SEARCH STORE SIZE 1
+SIZE OF ERRORS: 0
+Doing cluster xcl49.cluster
+SEARCH STORE SIZE 64
+SIZE OF ERRORS: 1
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.dir/src/main/java/brut/directory/FileDirectory.java]:[92] :[object files last assigned on line 91 could be null and is dereferenced at line 92]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void FileDirectory.loadAll()
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 193
+SEARCH STORE SIZE 88
+SEARCH STORE SIZE 316
+SEARCH STORE SIZE 16
+Doing cluster xcl50.cluster
+SIZE OF ERRORS: 15
+SIZE OF ERRORS: 4
+SEARCH STORE SIZE 88
+SEARCH STORE SIZE 286
+SIZE OF ERRORS: 1
+Doing cluster xcl51.cluster
+Doing cluster xcl52.cluster
+SIZE OF ERRORS: 4
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.j.dir/src/main/java/brut/directory/DirUtil.java]:[84] :[ resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 84 is not released after line 84]
+[+] Complete err string: " resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 84 is not released after line 84"
+[+] ERROR LINE IS: 84
+[+] NOTE: pvar: return (heuristic from error message) and pvar $irvar1 (extracted from error message line number).
+[+] heurstic is return, but pvar is $irvar1. Returning $irvar1
+THE TYPE IS "class java.io.FileOutputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "$irvar1"
+[+] adding spec for type:  "class java.io.FileOutputStream *"
+[+] Spec asked to look for type "java.io.FileOutputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 193
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileOutputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileOutputStream *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+Doing cluster xcl53.cluster
+SIZE OF ERRORS: 7
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/test/java/brut/androlib/LargeIntsInManifestTest.java]:[82] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 80 is not released after line 82]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 80 is not released after line 82"
+[+] ERROR LINE IS: 80
+[+] NOTE: pvar: return (heuristic from error message) and pvar test (extracted from error message line number).
+[+] heurstic is return, but pvar is test. Returning test
+THE TYPE IS "class java.io.FileReader *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "test"
+[+] adding spec for type:  "class java.io.FileReader *"
+[+] Spec asked to look for type "java.io.FileReader"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 316
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileReader *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileReader *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/test/java/brut/androlib/LargeIntsInManifestTest.java]:[82] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 79 is not released after line 82]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 79 is not released after line 82"
+Doing cluster xcl54.cluster
+[+] ERROR LINE IS: 79
+[+] NOTE: pvar: return (heuristic from error message) and pvar control (extracted from error message line number).
+[+] heurstic is return, but pvar is control. Returning control
+THE TYPE IS "class java.io.FileReader *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "control"
+[+] adding spec for type:  "class java.io.FileReader *"
+[+] Spec asked to look for type "java.io.FileReader"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 316
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileReader *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileReader *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/test/java/brut/androlib/LargeIntsInManifestTest.java]:[83] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 79 is not released after line 83]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 79 is not released after line 83"
+[+] ERROR LINE IS: 79
+[+] NOTE: pvar: return (heuristic from error message) and pvar control (extracted from error message line number).
+[+] heurstic is return, but pvar is control. Returning control
+THE TYPE IS "class java.io.FileReader *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "control"
+[+] adding spec for type:  "class java.io.FileReader *"
+[+] Spec asked to look for type "java.io.FileReader"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 316
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileReader *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileReader *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+SIZE OF ERRORS: 3
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+Doing cluster xcl55.cluster
+SEARCH STORE SIZE 30
+SIZE OF ERRORS: 0
+Doing cluster xcl56.cluster
+Doing cluster xcl57.cluster
+SEARCH STORE SIZE 3
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 32
+SIZE OF ERRORS: 0
+Doing cluster xcl58.cluster
+Doing cluster xcl59.cluster
+SEARCH STORE SIZE 22
+SEARCH STORE SIZE 12
+SIZE OF ERRORS: 2
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OSDetection.java]:[21] :[object returned by getProperty("sun.arch.data.model") could be null and is dereferenced at line 21]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void OSDetection.<clinit>()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OSDetection.java]:[20] :[object returned by getProperty("os.name") could be null and is dereferenced at line 20]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void OSDetection.<clinit>()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 69
+SEARCH STORE SIZE 148
+Doing cluster xcl60.cluster
+SIZE OF ERRORS: 2
+Doing cluster xcl61.cluster
+SEARCH STORE SIZE 86
+SIZE OF ERRORS: 3
+Doing cluster xcl62.cluster
+Doing cluster xcl63.cluster
+SIZE OF ERRORS: 8
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java]:[299] :[object returned by AXmlResourceParser.m_strings.getString(name) could be null and is dereferenced at line 299]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String AXmlResourceParser.getAttributeNamespace(int)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java]:[296] :[object value last assigned on line 294 could be null and is dereferenced at line 296]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname String AXmlResourceParser.getAttributeNamespace(int)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java]:[330] :[object value last assigned on line 326 could be null and is dereferenced at line 330]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname String AXmlResourceParser.getAttributeName(int)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+Doing cluster xcl64.cluster
+SEARCH STORE SIZE 317
+SIZE OF ERRORS: 6
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+Doing cluster xcl65.cluster
+SEARCH STORE SIZE 93
+SEARCH STORE SIZE 169
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 110
+Doing cluster xcl66.cluster
+SIZE OF ERRORS: 2
+SIZE OF ERRORS: 1
+Doing cluster xcl67.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl68.cluster
+SEARCH STORE SIZE 72
+Doing cluster xcl69.cluster
+SIZE OF ERRORS: 0
+Doing cluster xcl70.cluster
+SEARCH STORE SIZE 81
+SIZE OF ERRORS: 0
+Doing cluster xcl71.cluster
+SEARCH STORE SIZE 1
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 133
+SEARCH STORE SIZE 395
+Doing cluster xcl72.cluster
+SIZE OF ERRORS: 1
+Doing cluster xcl73.cluster
+SIZE OF ERRORS: 5
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SEARCH STORE SIZE 187
+Doing cluster xcl74.cluster
+SIZE OF ERRORS: 0
+Doing cluster xcl75.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 118
+Doing cluster xcl76.cluster
+SIZE OF ERRORS: 6
+SEARCH STORE SIZE 346
+Doing cluster xcl77.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl78.cluster
+SEARCH STORE SIZE 12
+SIZE OF ERRORS: 0
+Doing cluster xcl79.cluster
+SIZE OF ERRORS: 3
+Doing cluster xcl80.cluster
+SEARCH STORE SIZE 8
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 5
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 42
+Doing cluster xcl81.cluster
+Doing cluster xcl82.cluster
+SIZE OF ERRORS: 1
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+Doing cluster xcl83.cluster
+SEARCH STORE SIZE 48
+SIZE OF ERRORS: 6
+Doing cluster xcl84.cluster
+SEARCH STORE SIZE 46
+SIZE OF ERRORS: 2
+Doing cluster xcl85.cluster
+SEARCH STORE SIZE 32
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 27
+SIZE OF ERRORS: 1
+Doing cluster xcl86.cluster
+Doing cluster xcl87.cluster
+SEARCH STORE SIZE 244
+SEARCH STORE SIZE 4
+SIZE OF ERRORS: 0
+Doing cluster xcl88.cluster
+SEARCH STORE SIZE 286
+SEARCH STORE SIZE 491
+SEARCH STORE SIZE 63
+SIZE OF ERRORS: 4
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[61] :[object files last assigned on line 60 could be null and is dereferenced at line 61]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.cpdir(File,File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SIZE OF ERRORS: 21
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java]:[330] :[object value last assigned on line 326 could be null and is dereferenced at line 330]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname String AXmlResourceParser.getAttributeName(int)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java]:[299] :[object returned by AXmlResourceParser.m_strings.getString(name) could be null and is dereferenced at line 299]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String AXmlResourceParser.getAttributeNamespace(int)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java]:[296] :[object value last assigned on line 294 could be null and is dereferenced at line 296]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname String AXmlResourceParser.getAttributeNamespace(int)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/decoder/AXmlResourceParser.java]:[150] :[object returned by name.equals(getName()) could be null and is dereferenced at line 150]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void AXmlResourceParser.require(int,String,String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+Doing cluster xcl89.cluster
+SIZE OF ERRORS: 3
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+Doing cluster xcl90.cluster
+Doing cluster xcl91.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 286
+Doing cluster xcl92.cluster
+SEARCH STORE SIZE 32
+SIZE OF ERRORS: 5
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 42
+Doing cluster xcl93.cluster
+Doing cluster xcl94.cluster
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl95.cluster
+Doing cluster xcl96.cluster
+SEARCH STORE SIZE 34
+SIZE OF ERRORS: 5
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 12
+SIZE OF ERRORS: 0
+Doing cluster xcl98.cluster
+Doing cluster xcl97.cluster
+SEARCH STORE SIZE 1
+SIZE OF ERRORS: 0
+Doing cluster xcl99.cluster
+Doing cluster xcl100.cluster
+SEARCH STORE SIZE 12
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 4
+SIZE OF ERRORS: 0
+Doing cluster xcl101.cluster
+Doing cluster xcl102.cluster
+SEARCH STORE SIZE 22
+SEARCH STORE SIZE 12
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+SIZE OF ERRORS: 0
+SIZE OF ERRORS: 0
+Doing cluster xcl104.cluster
+Doing cluster xcl103.cluster
+Doing cluster xcl105.cluster
+SEARCH STORE SIZE 22
+SEARCH STORE SIZE 5
+SIZE OF ERRORS: 0
+SIZE OF ERRORS: 1
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/BrutIO.java]:[56] :[object subfiles last assigned on line 55 could be null and is dereferenced at line 56]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname long BrutIO.recursiveModifiedTime(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 7
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 35
+SIZE OF ERRORS: 1
+Doing cluster xcl106.cluster
+Doing cluster xcl107.cluster
+Doing cluster xcl108.cluster
+SEARCH STORE SIZE 4
+SIZE OF ERRORS: 0
+Doing cluster xcl109.cluster
+SEARCH STORE SIZE 536
+SEARCH STORE SIZE 288
+SIZE OF ERRORS: 15
+SIZE OF ERRORS: 4
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 155
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 53
+SIZE OF ERRORS: 3
+SEARCH STORE SIZE 276
+SIZE OF ERRORS: 2
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/test/java/brut/androlib/TestUtils.java]:[43] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 43 is not released after line 43]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 43 is not released after line 43"
+[+] ERROR LINE IS: 43
+[+] NOTE: pvar: return (heuristic from error message) and pvar $irvar0 (extracted from error message line number).
+[+] heurstic is return, but pvar is $irvar0. Returning $irvar0
+THE TYPE IS "class java.io.FileReader *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "$irvar0"
+[+] adding spec for type:  "class java.io.FileReader *"
+[+] Spec asked to look for type "java.io.FileReader"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 276
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileReader *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileReader *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+SEARCH STORE SIZE 462
+SEARCH STORE SIZE 286
+SIZE OF ERRORS: 3
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SIZE OF ERRORS: 5
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SEARCH STORE SIZE 145
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 453
+SEARCH STORE SIZE 177
+SIZE OF ERRORS: 4
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 209
+SIZE OF ERRORS: 5
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.j.dir/src/main/java/brut/directory/DirUtil.java]:[84] :[ resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 84 is not released after line 84]
+[+] Complete err string: " resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 84 is not released after line 84"
+[+] ERROR LINE IS: 84
+[+] NOTE: pvar: return (heuristic from error message) and pvar $irvar1 (extracted from error message line number).
+[+] heurstic is return, but pvar is $irvar1. Returning $irvar1
+THE TYPE IS "class java.io.FileOutputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "$irvar1"
+[+] adding spec for type:  "class java.io.FileOutputStream *"
+[+] Spec asked to look for type "java.io.FileOutputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 209
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileOutputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileOutputStream *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+SEARCH STORE SIZE 290
+SIZE OF ERRORS: 3
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 657
+SEARCH STORE SIZE 232
+SIZE OF ERRORS: 12
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+SIZE OF ERRORS: 3
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/test/java/brut/androlib/BuildAndDecodeTest.java]:[474] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 472 is not released after line 474]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 472 is not released after line 474"
+[+] ERROR LINE IS: 472
+[+] NOTE: pvar: return (heuristic from error message) and pvar test (extracted from error message line number).
+[+] heurstic is return, but pvar is test. Returning test
+THE TYPE IS "class java.io.FileReader *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "test"
+[+] adding spec for type:  "class java.io.FileReader *"
+[+] Spec asked to look for type "java.io.FileReader"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 657
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileReader *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileReader *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/test/java/brut/androlib/BuildAndDecodeTest.java]:[474] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 471 is not released after line 474]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 471 is not released after line 474"
+[+] ERROR LINE IS: 471
+[+] NOTE: pvar: return (heuristic from error message) and pvar control (extracted from error message line number).
+[+] heurstic is return, but pvar is control. Returning control
+THE TYPE IS "class java.io.FileReader *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "control"
+[+] adding spec for type:  "class java.io.FileReader *"
+[+] Spec asked to look for type "java.io.FileReader"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 657
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileReader *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileReader *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/test/java/brut/androlib/BuildAndDecodeTest.java]:[475] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 471 is not released after line 475]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 471 is not released after line 475"
+[+] ERROR LINE IS: 471
+[+] NOTE: pvar: return (heuristic from error message) and pvar control (extracted from error message line number).
+[+] heurstic is return, but pvar is control. Returning control
+THE TYPE IS "class java.io.FileReader *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "control"
+[+] adding spec for type:  "class java.io.FileReader *"
+[+] Spec asked to look for type "java.io.FileReader"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 657
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileReader.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileReader *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileReader *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+SEARCH STORE SIZE 336
+SIZE OF ERRORS: 5
+SEARCH STORE SIZE 957
+SIZE OF ERRORS: 22
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SEARCH STORE SIZE 1408
+SIZE OF ERRORS: 27
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[454] :[ resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 454 is not released after line 454]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileReader(...) at line 454 is not released after line 454"
+[+] ERROR LINE IS: 454
+[+] NOTE: pvar: return (heuristic from error message) and pvar it (extracted from error message line number).
+[+] heurstic is return, but pvar is it. Returning it
+THE TYPE IS "class org.apache.commons.io.LineIterator *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "it"
+[+] adding spec for type:  "class org.apache.commons.io.LineIterator *"
+[+] Spec asked to look for type "org.apache.commons.io.LineIterator"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1408
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type org.apache.commons.io.LineIterator.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class org.apache.commons.io.LineIterator *
+[!] CONFIDENCE = LOW! No candidate for type class org.apache.commons.io.LineIterator *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[613] :[object returned by dir.listFiles() could be null and is dereferenced at line 613]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void AndrolibResources.emptyFrameworkDirectory()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[616] :[object returned by dir.listFiles() could be null and is dereferenced at line 616]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void AndrolibResources.emptyFrameworkDirectory()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[684] :[ resource of type java.util.zip.ZipFile acquired to zip by call to ZipFile(...) at line 638 is not released after line 684]
+[+] Complete err string: " resource of type java.util.zip.ZipFile acquired to zip by call to ZipFile(...) at line 638 is not released after line 684"
+[+] ERROR LINE IS: 638
+[+] NOTE: pvar: zip (heuristic from error message) and pvar zip (extracted from error message line number).
+[+] pvar is zip and heurstic is zip. Using pvar zip
+THE TYPE IS "class java.util.zip.ZipFile *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "zip"
+[+] adding spec for type:  "class java.util.zip.ZipFile *"
+[+] Spec asked to look for type "java.util.zip.ZipFile"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1408
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.util.zip.ZipFile *
+[!] CONFIDENCE = LOW! No candidate for type class java.util.zip.ZipFile *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+SEARCH STORE SIZE 1809
+SEARCH STORE SIZE 1348
+SIZE OF ERRORS: 25
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[613] :[object returned by dir.listFiles() could be null and is dereferenced at line 613]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void AndrolibResources.emptyFrameworkDirectory()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[616] :[object returned by dir.listFiles() could be null and is dereferenced at line 616]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void AndrolibResources.emptyFrameworkDirectory()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[684] :[ resource of type java.util.zip.ZipFile acquired to zip by call to ZipFile(...) at line 638 is not released after line 684]
+[+] Complete err string: " resource of type java.util.zip.ZipFile acquired to zip by call to ZipFile(...) at line 638 is not released after line 684"
+[+] ERROR LINE IS: 638
+[+] NOTE: pvar: zip (heuristic from error message) and pvar zip (extracted from error message line number).
+[+] pvar is zip and heurstic is zip. Using pvar zip
+THE TYPE IS "class java.util.zip.ZipFile *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "zip"
+[+] adding spec for type:  "class java.util.zip.ZipFile *"
+[+] Spec asked to look for type "java.util.zip.ZipFile"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1348
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.util.zip.ZipFile *
+[!] CONFIDENCE = LOW! No candidate for type class java.util.zip.ZipFile *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SIZE OF ERRORS: 43
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java]:[576] :[ resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 576]
+[+] Complete err string: " resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 576"
+[+] ERROR LINE IS: 567
+[+] NOTE: pvar: return (heuristic from error message) and pvar in (extracted from error message line number).
+[+] heurstic is return, but pvar is in. Returning in
+THE TYPE IS "class brut.directory.Directory *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "in"
+[+] adding spec for type:  "class brut.directory.Directory *"
+[+] Spec asked to look for type "brut.directory.Directory"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class brut.directory.Directory *
+[!] CONFIDENCE = LOW! No candidate for type class brut.directory.Directory *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java]:[574] :[ resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 574]
+[+] Complete err string: " resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 574"
+[+] ERROR LINE IS: 567
+[+] NOTE: pvar: return (heuristic from error message) and pvar in (extracted from error message line number).
+[+] heurstic is return, but pvar is in. Returning in
+THE TYPE IS "class brut.directory.Directory *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "in"
+[+] adding spec for type:  "class brut.directory.Directory *"
+[+] Spec asked to look for type "brut.directory.Directory"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class brut.directory.Directory *
+[!] CONFIDENCE = LOW! No candidate for type class brut.directory.Directory *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java]:[572] :[ resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 572]
+[+] Complete err string: " resource of type java.util.zip.ZipFile acquired by call to getDirectory() at line 567 is not released after line 572"
+[+] ERROR LINE IS: 567
+[+] NOTE: pvar: return (heuristic from error message) and pvar in (extracted from error message line number).
+[+] heurstic is return, but pvar is in. Returning in
+THE TYPE IS "class brut.directory.Directory *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "in"
+[+] adding spec for type:  "class brut.directory.Directory *"
+[+] Spec asked to look for type "brut.directory.Directory"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type brut.directory.Directory.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class brut.directory.Directory *
+[!] CONFIDENCE = LOW! No candidate for type class brut.directory.Directory *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[61] :[object files last assigned on line 60 could be null and is dereferenced at line 61]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.cpdir(File,File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java]:[382] :[ resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 382 is not released after line 382]
+[+] Complete err string: " resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 382 is not released after line 382"
+[+] ERROR LINE IS: 382
+[+] NOTE: pvar: return (heuristic from error message) and pvar $irvar1 (extracted from error message line number).
+[+] heurstic is return, but pvar is $irvar1. Returning $irvar1
+THE TYPE IS "class java.io.FileOutputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "$irvar1"
+[+] adding spec for type:  "class java.io.FileOutputStream *"
+[+] Spec asked to look for type "java.io.FileOutputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileOutputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileOutputStream *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java]:[382] :[ resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 382 is not released after line 382]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 382 is not released after line 382"
+[+] ERROR LINE IS: 382
+[+] NOTE: pvar: return (heuristic from error message) and pvar $irvar1 (extracted from error message line number).
+[+] heurstic is return, but pvar is $irvar1. Returning $irvar1
+THE TYPE IS "class java.io.FileOutputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "$irvar1"
+[+] adding spec for type:  "class java.io.FileOutputStream *"
+[+] Spec asked to look for type "java.io.FileOutputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileOutputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileOutputStream *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java]:[384] :[ resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 382 is not released after line 384]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 382 is not released after line 384"
+[+] ERROR LINE IS: 382
+[+] NOTE: pvar: return (heuristic from error message) and pvar $irvar1 (extracted from error message line number).
+[+] heurstic is return, but pvar is $irvar1. Returning $irvar1
+THE TYPE IS "class java.io.FileOutputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "$irvar1"
+[+] adding spec for type:  "class java.io.FileOutputStream *"
+[+] Spec asked to look for type "java.io.FileOutputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileOutputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileOutputStream *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/Androlib.java]:[648] :[ resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 647 is not released after line 648]
+[+] Complete err string: " resource of type java.io.FileInputStream acquired by call to FileInputStream(...) at line 647 is not released after line 648"
+[+] ERROR LINE IS: 647
+[+] NOTE: pvar: return (heuristic from error message) and pvar unknownFile (extracted from error message line number).
+[+] heurstic is return, but pvar is unknownFile. Returning unknownFile
+THE TYPE IS "class java.io.BufferedInputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "unknownFile"
+[+] adding spec for type:  "class java.io.BufferedInputStream *"
+[+] Spec asked to look for type "java.io.BufferedInputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.BufferedInputStream.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.BufferedInputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.BufferedInputStream *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[613] :[object returned by dir.listFiles() could be null and is dereferenced at line 613]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void AndrolibResources.emptyFrameworkDirectory()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[616] :[object returned by dir.listFiles() could be null and is dereferenced at line 616]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname void AndrolibResources.emptyFrameworkDirectory()
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/ApktoolProperties.java]:[29] :[object returned by get() could be null and is dereferenced at line 29]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname String ApktoolProperties.get(String)
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/res/AndrolibResources.java]:[684] :[ resource of type java.util.zip.ZipFile acquired to zip by call to ZipFile(...) at line 638 is not released after line 684]
+[+] Complete err string: " resource of type java.util.zip.ZipFile acquired to zip by call to ZipFile(...) at line 638 is not released after line 684"
+[+] ERROR LINE IS: 638
+[+] NOTE: pvar: zip (heuristic from error message) and pvar zip (extracted from error message line number).
+[+] pvar is zip and heurstic is zip. Using pvar zip
+THE TYPE IS "class java.util.zip.ZipFile *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "zip"
+[+] adding spec for type:  "class java.util.zip.ZipFile *"
+[+] Spec asked to look for type "java.util.zip.ZipFile"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.util.zip.ZipFile.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.util.zip.ZipFile *
+[!] CONFIDENCE = LOW! No candidate for type class java.util.zip.ZipFile *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/BrutIO.java]:[56] :[object subfiles last assigned on line 55 could be null and is dereferenced at line 56]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname long BrutIO.recursiveModifiedTime(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.apktool/apktool-lib/src/main/java/brut/androlib/meta/MetaInfo.java]:[44] :[object representer.representers could be null and is dereferenced by call to StringExRepresent() at line 44]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar could in pname Yaml MetaInfo.getYaml()
+[=] I found these typs for pvar could
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [brut.j.util/src/main/java/brut/util/OS.java]:[38] :[object files last assigned on line 37 could be null and is dereferenced at line 38]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname void OS.rmdir(File)
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [brut.j.dir/src/main/java/brut/directory/DirUtil.java]:[84] :[ resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 84 is not released after line 84]
+[+] Complete err string: " resource of type java.io.FileOutputStream acquired by call to FileOutputStream(...) at line 84 is not released after line 84"
+[+] ERROR LINE IS: 84
+[+] NOTE: pvar: return (heuristic from error message) and pvar $irvar1 (extracted from error message line number).
+[+] heurstic is return, but pvar is $irvar1. Returning $irvar1
+THE TYPE IS "class java.io.FileOutputStream *"
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "$irvar1"
+[+] adding spec for type:  "class java.io.FileOutputStream *"
+[+] Spec asked to look for type "java.io.FileOutputStream"
+	[=] Attempting patching with spec "close_file_resource_with_type_java_ish"
+	[!] Footpatch_spec : Store size at check 1809
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$13 lookup gives pvar fis.
+Comparing [tstruct] irvar "n$13" and irvar' "n$13"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$6"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$7 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$4"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$5"
+Comparing [tstruct] irvar "@f$7" and irvar' "@f$7"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$3 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$3" and irvar' "@f$3"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$4 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$2"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$3"
+Comparing [tstruct] irvar "@f$4" and irvar' "@f$4"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar templateStream.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$0 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$0" and irvar' "@f$0"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar n$60 lookup gives pvar in.
+Comparing [tstruct] irvar "n$60" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$60" and irvar' "n$60"
+[?] Comparing IRVAR TYPE java.io.FileInputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$1 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$1" and irvar' "@f$1"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] irvar @f$2 lookup gives pvar in.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$0"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$1"
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$2"
+[?] Comparing IRVAR TYPE java.io.InputStream and BAD PVAR type java.io.FileOutputStream.
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type (janky C version): class java.io.FileOutputStream *
+[!] CONFIDENCE = LOW! No candidate for type class java.io.FileOutputStream *. Returning 0 potential candidates (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0

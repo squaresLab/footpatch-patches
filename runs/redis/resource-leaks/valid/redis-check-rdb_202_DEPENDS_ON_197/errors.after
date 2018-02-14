@@ -1,0 +1,31 @@
+Found 8 issues
+
+src/anet.c:384: error: RESOURCE_LEAK
+   resource acquired to return by call to anetCreateSocket() at line 377, column 14 is not released after line 384, column 13
+
+src/cluster.c:405: error: RESOURCE_LEAK
+   resource acquired to return by call to open() at line 379, column 14 is not released after line 405, column 5
+
+src/db.c:1149: error: MEMORY_LEAK
+   return is not reachable after line 1149, column 9
+
+src/debug.c:894: error: RESOURCE_LEAK
+   resource acquired to return by call to openDirectLogFiledes() at line 890, column 14 is not released after line 894, column 14
+
+src/quicklist.c:1149: error: NULL_DEREFERENCE
+  pointer nextFn last assigned on line 1133 could be null and is dereferenced at line 1149, column 20
+
+src/redis-cli.c:1252: error: RESOURCE_LEAK
+   resource of type _IO_FILE acquired to fp by call to fopen() at line 1248, column 16 is not released after line 1252, column 15
+
+src/server.c:3281: error: RESOURCE_LEAK
+   resource acquired to fd by call to open() at line 3277, column 15 is not released after line 3281, column 13
+
+src/slowlog.c:125: error: NULL_DEREFERENCE
+  pointer server.slowlog->tail last assigned on line 125 could be null and is dereferenced by call to listDelNode() at line 125, column 9
+
+Summary of the reports
+
+     RESOURCE_LEAK: 5
+  NULL_DEREFERENCE: 2
+       MEMORY_LEAK: 1

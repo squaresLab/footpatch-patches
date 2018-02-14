@@ -1,0 +1,112 @@
+Found 35 issues
+
+src/core/array.c:130: error: MEMORY_LEAK
+   memory dynamically allocated by call to swArray_extend() at line 130, column 13 is not reachable after line 130, column 13
+
+src/core/base.c:563: error: RESOURCE_LEAK
+   resource acquired to return by call to open() at line 554, column 37 is not released after line 563, column 16
+
+src/core/base.c:581: error: MEMORY_LEAK
+   memory dynamically allocated to content by call to swString_new() at line 560, column 46 is not reachable after line 581, column 17
+
+src/core/hashmap.c:117: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 101, column 28 is not reachable after line 117, column 9
+
+src/core/hashmap.c:153: error: MEMORY_LEAK
+   memory dynamically allocated to node by call to malloc() at line 142, column 46 is not reachable after line 153, column 5
+
+src/core/log.c:74: error: NULL_DEREFERENCE
+  pointer p last assigned on line 73 could be null and is dereferenced at line 74, column 75
+
+src/core/socket.c:35: error: RESOURCE_LEAK
+   resource acquired by call to open() at line 25, column 42 is not released after line 35, column 9
+
+src/memory/ShareMemory.c:157: error: MEMORY_LEAK
+   memory dynamically allocated by call to shmget() at line 155, column 18 is not reachable after line 157, column 9
+
+src/memory/Table.c:86: error: NULL_DEREFERENCE
+  pointer col last assigned on line 85 could be null and is dereferenced at line 86, column 5
+
+src/memory/Table.c:89: error: MEMORY_LEAK
+   memory dynamically allocated to return by call to malloc() at line 85, column 26 is not reachable after line 89, column 9
+
+src/memory/Table.c:125: error: MEMORY_LEAK
+   memory dynamically allocated by call to swString_dup() at line 86, column 17 is not reachable after line 125, column 9
+
+src/memory/Table.c:131: error: MEMORY_LEAK
+   memory dynamically allocated to col by call to malloc() at line 85, column 26 is not reachable after line 131, column 5
+
+src/network/Port.c:319: error: NULL_DEREFERENCE
+  pointer request last assigned on line 310 could be null and is dereferenced at line 319, column 19
+
+src/network/Server.c:879: error: NULL_DEREFERENCE
+  pointer conn last assigned on line 878 could be null and is dereferenced at line 879, column 19
+
+src/network/Timer.c:125: error: MEMORY_LEAK
+   memory dynamically allocated to return by call to malloc() at line 115, column 27 is not reachable after line 125, column 9
+
+src/network/Worker.c:209: error: NULL_DEREFERENCE
+  pointer package last assigned on line 179 could be null and is dereferenced at line 209, column 13
+
+src/os/base.c:179: error: MEMORY_LEAK
+   memory dynamically allocated to swAioBase_thread_pool.params by call to swThreadPool_create() at line 166, column 9 is not reachable after line 179, column 9
+
+src/os/base.c:320: error: MEMORY_LEAK
+   memory dynamically allocated to return by call to malloc() at line 304, column 43 is not reachable after line 320, column 9
+
+src/os/base.c:347: error: MEMORY_LEAK
+   memory dynamically allocated to return by call to malloc() at line 331, column 43 is not reachable after line 347, column 9
+
+src/os/base.c:375: error: MEMORY_LEAK
+   memory dynamically allocated to return by call to malloc() at line 358, column 43 is not reachable after line 375, column 9
+
+src/os/linux_aio.c:191: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 165, column 26 is not reachable after line 191, column 1
+
+src/pipe/PipeBase.c:41: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 32, column 26 is not reachable after line 41, column 9
+
+src/pipe/PipeUnsock.c:64: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 54, column 28 is not reachable after line 64, column 9
+
+src/reactor/ReactorPoll.c:53: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 42, column 29 is not reachable after line 53, column 9
+
+src/reactor/ReactorPoll.c:59: error: MEMORY_LEAK
+   memory dynamically allocated by call to calloc() at line 50, column 19 is not reachable after line 59, column 9
+
+src/reactor/ReactorSelect.c:76: error: NULL_DEREFERENCE
+  pointer ev last assigned on line 79 could be null and is dereferenced at line 76, column 5
+
+src/reactor/ReactorSelect.c:97: error: NULL_DEREFERENCE
+  pointer ev last assigned on line 96 could be null and is dereferenced at line 97, column 5
+
+swoole_buffer.c:131: error: MEMORY_LEAK
+   memory dynamically allocated to buffer by call to swString_new() at line 124, column 24 is not reachable after line 131, column 5
+
+swoole_buffer.c:338: error: MEMORY_LEAK
+   memory dynamically allocated by call to swString_extend() at line 338, column 9 is not reachable after line 338, column 9
+
+swoole_http_server.c:710: error: RESOURCE_LEAK
+   resource of type _IO_FILE acquired by call to fdopen() at line 707, column 16 is not released after line 710, column 9
+
+swoole_mmap.c:184: error: RESOURCE_LEAK
+   resource acquired by call to open() at line 173, column 36 is not released after line 184, column 13
+
+swoole_mmap.c:189: error: RESOURCE_LEAK
+   resource acquired by call to open() at line 173, column 36 is not released after line 189, column 13
+
+swoole_mmap.c:205: error: RESOURCE_LEAK
+   resource acquired by call to open() at line 173, column 36 is not released after line 205, column 9
+
+swoole_server.c:1272: error: NULL_DEREFERENCE
+  pointer serv last assigned on line 1271 could be null and is dereferenced by call to swServer_init() at line 1272, column 5
+
+thirdparty/multipart_parser.c:76: error: NULL_DEREFERENCE
+  pointer p last assigned on line 69 could be null and is dereferenced at line 76, column 3
+
+Summary of the reports
+
+       MEMORY_LEAK: 20
+  NULL_DEREFERENCE: 9
+     RESOURCE_LEAK: 6

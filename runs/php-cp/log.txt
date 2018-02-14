@@ -1,0 +1,791 @@
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl10.cluster
+Doing cluster xcl11.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl2.cluster
+Doing cluster xcl12.cluster
+Doing cluster xcl7.cluster
+Doing cluster xcl5.cluster
+Doing cluster xcl4.cluster
+Doing cluster xcl6.cluster
+Doing cluster xcl3.cluster
+Doing cluster xcl14.cluster
+Doing cluster xcl8.cluster
+Doing cluster xcl13.cluster
+Doing cluster xcl1.cluster
+Doing cluster xcl9.cluster
+SEARCH STORE SIZE 15
+SIZE OF ERRORS: 2
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpNetWork.c]:[47] :[pointer p last assigned on line 47 could be null and is dereferenced at line 47, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpEpoll_del
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 48
+SIZE OF ERRORS: 5
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[48] :[pointer p last assigned on line 48 could be null and is dereferenced at line 48, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[109] :[pointer p last assigned on line 109 could be null and is dereferenced at line 109, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [cpMemory.c]:[102] :[ resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5]
+[+] Complete err string: " resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5"
+[+] ERROR LINE IS: 95
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 48
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "val$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 1
+	[+] Candidate 0: n$1=_fun_close(n$0:) [line 88]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Origin line num range: 87 - 88
+			[*] Origin function: cp_create_mmap_file
+			[*] extracted:     close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 7 locations (optional): [109, 104, 102, 98, 96, 95, 92]
+	[+] Patching at primary location: 102
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    close(fd);"
+		[+] Attempting to extract line 102 from file /home/vagrant/projects/php-cp/cpMemory.c
+		[+] Succesfully extracted "    void *mem = mmap(NULL, object->size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/cpMemory.c_tmp_patched_diff
+
+Wrote to file /tmp/cpMemory.c_tmp_patched_diff
+SEARCH STORE SIZE 46
+SIZE OF ERRORS: 4
+SEARCH STORE SIZE 35
+SIZE OF ERRORS: 2
+		[p] Patch command 1: "diff -u /home/vagrant/projects/php-cp/cpMemory.c /tmp/cpMemory.c_tmp_patched_diff > /tmp/udiff_30c705.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_30c705.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Destination function: cp_mmap_calloc_with_file
+			[*] Destination line insert: 102
+	[+] Wrote patch cpMemory_102_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[98] :[pointer p last assigned on line 98 could be null and is dereferenced at line 98, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 55
+SIZE OF ERRORS: 4
+SEARCH STORE SIZE 93
+SIZE OF ERRORS: 11
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[109] :[pointer p last assigned on line 109 could be null and is dereferenced at line 109, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [cpMemory.c]:[102] :[ resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5]
+[+] Complete err string: " resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5"
+[+] ERROR LINE IS: 95
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 93
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "val$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 1
+	[+] Candidate 0: n$1=_fun_close(n$0:) [line 88]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Origin line num range: 87 - 88
+			[*] Origin function: cp_create_mmap_file
+			[*] extracted:     close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 7 locations (optional): [109, 104, 102, 98, 96, 95, 92]
+	[+] Patching at primary location: 102
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    close(fd);"
+		[+] Attempting to extract line 102 from file /home/vagrant/projects/php-cp/cpMemory.c
+		[+] Succesfully extracted "    void *mem = mmap(NULL, object->size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/cpMemory.c_tmp_patched_diff
+
+Wrote to file /tmp/cpMemory.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/php-cp/cpMemory.c /tmp/cpMemory.c_tmp_patched_diff > /tmp/udiff_f804f1.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_f804f1.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Destination function: cp_mmap_calloc_with_file
+			[*] Destination line insert: 102
+	[+] Wrote patch cpMemory_102_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[98] :[pointer p last assigned on line 98 could be null and is dereferenced at line 98, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpPingWorker.c]:[155] :[pointer p last assigned on line 155 could be null and is dereferenced at line 155, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpFork_ping_worker
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[347] :[pointer ser_data.c last assigned on line 344 could be null and is dereferenced by call to memcpy() at line 347, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_ser_and_setpro
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 100
+SIZE OF ERRORS: 15
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[264] :[pointer p last assigned on line 264 could be null and is dereferenced at line 264, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[257] :[pointer p last assigned on line 257 could be null and is dereferenced at line 257, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[398] :[pointer p last assigned on line 398 could be null and is dereferenced at line 398, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpQueueSignalSet
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[205] :[pointer p last assigned on line 205 could be null and is dereferenced at line 205, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpSetIsBlock
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[360] :[pointer ser_data.c last assigned on line 357 could be null and is dereferenced by call to memcpy() at line 360, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_ser_and_setdis
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[347] :[pointer ser_data.c last assigned on line 344 could be null and is dereferenced by call to memcpy() at line 347, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_ser_and_setpro
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[47] :[pointer p last assigned on line 47 could be null and is dereferenced at line 47, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname pid_init
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[280] :[pointer p last assigned on line 280 could be null and is dereferenced at line 280, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname swSingalNone
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 56
+SIZE OF ERRORS: 8
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpClientNet.c]:[28] :[pointer p last assigned on line 28 could be null and is dereferenced at line 28, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpClient_close
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpClientNet.c]:[121] :[pointer p last assigned on line 121 could be null and is dereferenced at line 121, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname swClient_inet_addr
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpClientNet.c]:[116] :[pointer p last assigned on line 116 could be null and is dereferenced at line 116, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname swClient_inet_addr
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 76
+SIZE OF ERRORS: 23
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [msgpack/msgpack_unpack.c]:[639] :[ ce is not reachable after line 639, column 21]
+[+] Complete err string: " ce is not reachable after line 639, column 21"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [msgpack/msgpack_unpack.c]:[634] :[ memory is not reachable after line 634, column 25]
+[+] Complete err string: " memory is not reachable after line 634, column 25"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 221
+SIZE OF ERRORS: 23
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[185] :[pointer p last assigned on line 185 could be null and is dereferenced at line 185, column 21]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpManagerAdd
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[101] :[pointer p last assigned on line 101 could be null and is dereferenced at line 101, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpFork_one_worker
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[147] :[pointer p last assigned on line 147 could be null and is dereferenced at line 147, column 25]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpManagerRecycle
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[31] :[pointer p last assigned on line 31 could be null and is dereferenced at line 31, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpWorker_do_stop
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[80] :[pointer p last assigned on line 80 could be null and is dereferenced at line 80, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpWorker_loop
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[76] :[pointer p last assigned on line 76 could be null and is dereferenced at line 76, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpWorker_loop
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[264] :[pointer p last assigned on line 264 could be null and is dereferenced at line 264, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[257] :[pointer p last assigned on line 257 could be null and is dereferenced at line 257, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[109] :[pointer p last assigned on line 109 could be null and is dereferenced at line 109, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [cpMemory.c]:[102] :[ resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5]
+[+] Complete err string: " resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5"
+[+] ERROR LINE IS: 95
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 221
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "val$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 1
+	[+] Candidate 0: n$1=_fun_close(n$0:) [line 88]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Origin line num range: 87 - 88
+			[*] Origin function: cp_create_mmap_file
+			[*] extracted:     close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 7 locations (optional): [109, 104, 102, 98, 96, 95, 92]
+	[+] Patching at primary location: 102
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    close(fd);"
+		[+] Attempting to extract line 102 from file /home/vagrant/projects/php-cp/cpMemory.c
+		[+] Succesfully extracted "    void *mem = mmap(NULL, object->size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/cpMemory.c_tmp_patched_diff
+
+Wrote to file /tmp/cpMemory.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/php-cp/cpMemory.c /tmp/cpMemory.c_tmp_patched_diff > /tmp/udiff_8eb3a4.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_8eb3a4.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Destination function: cp_mmap_calloc_with_file
+			[*] Destination line insert: 102
+	[+] Wrote patch cpMemory_102_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[98] :[pointer p last assigned on line 98 could be null and is dereferenced at line 98, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[372] :[pointer p last assigned on line 372 could be null and is dereferenced at line 372, column 21]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpWorker_manager_loop
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpPingWorker.c]:[155] :[pointer p last assigned on line 155 could be null and is dereferenced at line 155, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpFork_ping_worker
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[347] :[pointer ser_data.c last assigned on line 344 could be null and is dereferenced by call to memcpy() at line 347, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_ser_and_setpro
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[368] :[pointer p last assigned on line 368 could be null and is dereferenced at line 368, column 17]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpWorker_manager_loop
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 186
+SIZE OF ERRORS: 17
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpClientNet.c]:[28] :[pointer p last assigned on line 28 could be null and is dereferenced at line 28, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpClient_close
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[48] :[pointer p last assigned on line 48 could be null and is dereferenced at line 48, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 326
+SIZE OF ERRORS: 39
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[736] :[pointer p last assigned on line 736 could be null and is dereferenced at line 736, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpMutexLock
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[756] :[pointer p last assigned on line 756 could be null and is dereferenced at line 756, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpMutexTryLock
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[746] :[pointer p last assigned on line 746 could be null and is dereferenced at line 746, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpMutexUnLock
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[578] :[pointer p last assigned on line 578 could be null and is dereferenced at line 578, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpReactor_client_receive
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[490] :[pointer pre last assigned on line 469 could be null and is dereferenced at line 490, column 25]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpReactor_client_release
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[495] :[pointer pre last assigned on line 469 could be null and is dereferenced at line 495, column 25]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpReactor_client_release
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[468] :[pointer p last assigned on line 468 could be null and is dereferenced at line 468, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpReactor_client_release
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[631] :[pointer p last assigned on line 631 could be null and is dereferenced at line 631, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpReactor_start
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [cpServer.c]:[629] :[ memory dynamically allocated to index by call to malloc() at line 627, column 29 is not reachable after line 629, column 13]
+[+] Complete err string: " memory dynamically allocated to index by call to malloc() at line 627, column 29 is not reachable after line 629, column 13"
+[+] ERROR LINE IS: 627
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "index"
+[+] pvar TYPE not freed: "int *"
+	[=] This spec matches against Type "int *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 326
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar id.
+Comparing [tstruct] irvar "n$0" and irvar' "val$3"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar id.
+Comparing [tstruct] irvar "@f$2" and irvar' "@f$4"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 1
+	[+] Candidate 0: _fun_free(n$0:) [line 604]
+[+] Prioritizing compatibility for type: int *
+[+] No specific candidate for type int *. Returning 1 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/php-cp/cpServer.c
+			[*] Origin line num range: 603 - 604
+			[*] Origin function: cpReactor_thread_loop
+			[*] extracted:     free(id);
+	[&] Renaming fragment fixing var to pvar: id -> index
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "    free(id);" "id" "index" > /tmp/patch0ce8f1.footpatch
+	[+] Filtered patch 17 locations (optional): [633, 631, 629, 628, 627, 625, 623, 622, 61, 60, 59, 57, 619, 618, 613, 612, 609]
+	[+] Patching at primary location: 629
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch/memory_leak_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/php-cp/infer-out/footpatch/memory_leak_with_type/patches.
+		[+] Have fragment "    free(index);"
+		[+] Attempting to extract line 629 from file /home/vagrant/projects/php-cp/cpServer.c
+		[+] Succesfully extracted "        if (pthread_create(&pidt, NULL, (void * (*)(void *)) cpReactor_thread_loop, (void *) index) < 0)"
+			 [+] No match for line containing {
+		[+] Fragment was if-bracketed:
+        if (pthread_create(&pidt, NULL, (void * (*)(void *)) cpReactor_thread_loop, (void *) index) {
+    free(index);
+< 0)
+}
+
+Reading from file /tmp/cpServer.c_tmp_patched_diff
+
+Wrote to file /tmp/cpServer.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/php-cp/cpServer.c /tmp/cpServer.c_tmp_patched_diff > /tmp/udiff_7d550d.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_7d550d.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/php-cp/cpServer.c
+			[*] Destination function: cpReactor_start
+			[*] Destination line insert: 629
+	[+] Wrote patch cpServer_629_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[628] :[pointer index last assigned on line 627 could be null and is dereferenced at line 628, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpReactor_start
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[47] :[pointer p last assigned on line 47 could be null and is dereferenced at line 47, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname pid_init
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[280] :[pointer p last assigned on line 280 could be null and is dereferenced at line 280, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname swSingalNone
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[48] :[pointer p last assigned on line 48 could be null and is dereferenced at line 48, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[121] :[pointer p last assigned on line 121 could be null and is dereferenced at line 121, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpServer_init_lock
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[371] :[pointer p last assigned on line 371 could be null and is dereferenced at line 371, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpServer_master_onAccept
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[364] :[pointer p last assigned on line 364 could be null and is dereferenced at line 364, column 21]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpServer_master_onAccept
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[300] :[pointer p last assigned on line 300 could be null and is dereferenced at line 300, column 25]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpServer_start
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[101] :[pointer p last assigned on line 101 could be null and is dereferenced at line 101, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpFork_one_worker
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[80] :[pointer p last assigned on line 80 could be null and is dereferenced at line 80, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpWorker_loop
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpWorker.c]:[76] :[pointer p last assigned on line 76 could be null and is dereferenced at line 76, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpWorker_loop
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[264] :[pointer p last assigned on line 264 could be null and is dereferenced at line 264, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[257] :[pointer p last assigned on line 257 could be null and is dereferenced at line 257, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[109] :[pointer p last assigned on line 109 could be null and is dereferenced at line 109, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [cpMemory.c]:[102] :[ resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5]
+[+] Complete err string: " resource acquired to fd by call to open() at line 95, column 14 is not released after line 102, column 5"
+[+] ERROR LINE IS: 95
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 326
+[+] irvar @f$0 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$82 lookup gives pvar conn_fd.
+Comparing [tstruct] irvar "n$82" and irvar' "@f$2"
+Comparing [tstruct] irvar "n$82" and irvar' "@f$32"
+Comparing [tstruct] irvar "n$82" and irvar' "@f$39"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$82 lookup gives pvar conn_fd.
+Comparing [tstruct] irvar "n$82" and irvar' "@f$0"
+Comparing [tstruct] irvar "n$82" and irvar' "@f$30"
+Comparing [tstruct] irvar "n$82" and irvar' "@f$60"
+Comparing [tstruct] irvar "n$82" and irvar' "@f$67"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "val$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$0 lookup gives pvar fd.
+Comparing [tstruct] irvar "n$0" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 3
+	[+] Candidate 0: n$1=_fun_close(n$0:) [line 88]
+	[+] Candidate 1: n$83=_fun_close(n$82:) [line 372]
+	[+] Candidate 2: n$1=_fun_close(n$0:) [line 51]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Origin line num range: 87 - 88
+			[*] Origin function: cp_create_mmap_file
+			[*] extracted:     close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 7 locations (optional): [109, 104, 102, 98, 96, 95, 92]
+	[+] Patching at primary location: 102
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/php-cp/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    close(fd);"
+		[+] Attempting to extract line 102 from file /home/vagrant/projects/php-cp/cpMemory.c
+		[+] Succesfully extracted "    void *mem = mmap(NULL, object->size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/cpMemory.c_tmp_patched_diff
+
+Wrote to file /tmp/cpMemory.c_tmp_patched_diff
+SEARCH STORE SIZE 333
+SIZE OF ERRORS: 47
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [connect_pool_client.c]:[264] :[ resource acquired to fd by call to open() at line 259, column 18 is not released after line 264, column 14]
+[+] Complete err string: " resource acquired to fd by call to open() at line 259, column 18 is not released after line 264, column 14"
+[+] ERROR LINE IS: 259
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 333
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: int 
+[+] No specific candidate for type int . Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: NULL_DEREFERENCE
+		[p] Patch command 1: "diff -u /home/vagrant/projects/php-cp/cpMemory.c /tmp/cpMemory.c_tmp_patched_diff > /tmp/udiff_2a9756.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_2a9756.footpatch" 
+[+] Patchable error: [connect_pool_client.c]:[257] :[pointer semid2attbuf last assigned on line 250 could be null and is dereferenced at line 257, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_attach_buf
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [connect_pool_client.c]:[199] :[pointer workerid2writefd last assigned on line 192 could be null and is dereferenced at line 199, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_writefd
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [connect_pool_client.c]:[48] :[ resource acquired to fd by call to open() at line 43, column 18 is not released after line 48, column 14]
+[+] Complete err string: " resource acquired to fd by call to open() at line 43, column 18 is not released after line 48, column 14"
+[+] ERROR LINE IS: 43
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 333
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: int 
+[+] No specific candidate for type int . Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [connect_pool_client.c]:[649] :[pointer real_data_source_arr last assigned on line 616 could be null and is dereferenced at line 649, column 23]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname create_pass_data
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [connect_pool_client.c]:[521] :[ cli is not reachable after line 521, column 5]
+[+] Complete err string: " cli is not reachable after line 521, column 5"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[205] :[pointer p last assigned on line 205 could be null and is dereferenced at line 205, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpSetIsBlock
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[264] :[pointer p last assigned on line 264 could be null and is dereferenced at line 264, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpFunction.c]:[257] :[pointer p last assigned on line 257 could be null and is dereferenced at line 257, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpCreateFifo
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [connect_pool_client.c]:[228] :[pointer workerid2readfd last assigned on line 221 could be null and is dereferenced at line 228, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_readfd
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [connect_pool_client.c]:[519] :[pointer cli last assigned on line 505 could be null and is dereferenced at line 519, column 5]
+		[*] Destination filename: /home/vagrant/projects/php-cp/cpMemory.c
+			[*] Destination function: cp_mmap_calloc_with_file
+			[*] Destination line insert: 102
+	[+] Wrote patch cpMemory_102_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpMemory.c]:[98] :[pointer p last assigned on line 98 could be null and is dereferenced at line 98, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cp_mmap_calloc_with_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[708] :[pointer p last assigned on line 708 could be null and is dereferenced at line 708, column 25]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpSignalHandle
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [cpServer.c]:[697] :[pointer p last assigned on line 697 could be null and is dereferenced at line 697, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname cpSignalHandle
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname async_done
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [connect_pool_client.c]:[75] :[ resource acquired to cli->sock by call to cpClient_create() at line 64, column 9 is not released after line 75, column 9]
+[+] Complete err string: " resource acquired to cli->sock by call to cpClient_create() at line 64, column 9 is not released after line 75, column 9"
+[+] ERROR LINE IS: 64
+	[-] Could not find pvar name or type of error
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [connect_pool_client.c]:[72] :[ memory is not reachable after line 72, column 5]
+[+] Complete err string: " memory is not reachable after line 72, column 5"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [connect_pool_client.c]:[68] :[ memory is not reachable after line 68, column 25]
+[+] Complete err string: " memory is not reachable after line 68, column 25"
+[-] Could not get pvar name and type

@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/dablooms/src/dablooms.c	2017-08-25 10:32:56.482873493 -0400
+--- /home/rvt/Pinta/integrations/infer/dablooms/src/dablooms.c	2017-08-25 10:32:56.482873493 -0400
+@@ -380,6 +380,7 @@
+         return NULL;
+     }
+     if ((bloom->bitmap = new_bitmap(fd, size)) == NULL) {
++        close(fd);
+         fprintf(stderr, "Error, Could not create bitmap with file\n");
+         free_counting_bloom(bloom);
+         return NULL;

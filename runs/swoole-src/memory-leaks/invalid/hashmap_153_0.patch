@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/core/hashmap.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/core/hashmap.c	2018-01-03 20:45:23.739613999 +0000
+@@ -150,6 +150,7 @@
+     node->key_str = strndup(key, key_len);
+     node->key_int = key_len;
+     node->data = data;
++    swHashMap_node_free(hmap, node);
+     return swHashMap_node_add(root, node);
+ }
+ 

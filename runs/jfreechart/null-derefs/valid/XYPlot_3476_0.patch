@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+@@ -3473,6 +3473,7 @@
+         if (getOrientation() == PlotOrientation.HORIZONTAL) {
+             axis = getDomainAxis();
+         }
++    if (axis == null) {        throw new IllegalArgumentException("Null 'stream' argument.");    }
+         if (axis.getRange().contains(value)) {
+             double yy = axis.valueToJava2D(value, dataArea, RectangleEdge.LEFT);
+             Line2D line = new Line2D.Double(dataArea.getMinX(), yy, 

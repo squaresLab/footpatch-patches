@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+@@ -2937,6 +2937,7 @@
+         if (bandPaint != null) {
+             boolean fillBand = false;
+             ValueAxis axis = getRangeAxis();
++    if (axis == null) {        throw new IllegalArgumentException("Null 'stream' argument.");    }
+             double previous = axis.getLowerBound();
+             Iterator iterator = ticks.iterator();
+             while (iterator.hasNext()) {

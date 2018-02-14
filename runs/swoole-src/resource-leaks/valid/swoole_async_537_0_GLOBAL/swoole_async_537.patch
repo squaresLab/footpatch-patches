@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/swoole_async.c    2018-01-03 20:45:23.747609998 +0000
+--- /home/vagrant/projects/swoole-src/swoole_async.c    2018-01-03 20:45:23.747609998 +0000
+@@ -535,6 +535,7 @@
+     if (fstat(fd, &file_stat) < 0)
+     {
+         swoole_php_fatal_error(E_WARNING, "fstat failed. Error: %s[%d]", strerror(errno), errno);
++    close(fd);
+         RETURN_FALSE;
+     }
+     if (file_stat.st_size <= 0)

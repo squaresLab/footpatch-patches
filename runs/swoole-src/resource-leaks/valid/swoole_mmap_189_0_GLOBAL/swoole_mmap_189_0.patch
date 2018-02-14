@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/swoole_mmap.c     2018-01-03 20:45:23.747609998 +0000
+--- /home/vagrant/projects/swoole-src/swoole_mmap.c     2018-01-03 20:45:23.747609998 +0000
+@@ -187,6 +187,7 @@
+         if (_stat.st_size == 0)
+         {
+             swoole_php_sys_error(E_WARNING, "file[%s] is empty.", filename);
++    close(fd);
+             RETURN_FALSE;
+         }
+         if (offset > 0)

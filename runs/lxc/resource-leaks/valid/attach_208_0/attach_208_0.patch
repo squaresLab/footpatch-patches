@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/lxc/src/lxc/attach.c	2018-01-03 20:48:26.212337808 +0000
+--- /home/vagrant/projects/lxc/src/lxc/attach.c	2018-01-03 20:48:26.212337808 +0000
+@@ -206,6 +206,7 @@
+ 
+ 	info = calloc(1, sizeof(*info));
+ 	if (!info) {
++	fclose(proc_file);
+ 		SYSERROR("Could not allocate memory.");
+ 		return NULL;
+ 	}

@@ -1,0 +1,767 @@
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl5.cluster
+Doing cluster xcl11.cluster
+Doing cluster xcl1.cluster
+Doing cluster xcl18.cluster
+Doing cluster xcl3.cluster
+Doing cluster xcl4.cluster
+Doing cluster xcl10.cluster
+Doing cluster xcl17.cluster
+Doing cluster xcl13.cluster
+Doing cluster xcl12.cluster
+Doing cluster xcl14.cluster
+Doing cluster xcl19.cluster
+Doing cluster xcl6.cluster
+Doing cluster xcl2.cluster
+Doing cluster xcl20.cluster
+Doing cluster xcl7.cluster
+Doing cluster xcl16.cluster
+Doing cluster xcl8.cluster
+Doing cluster xcl15.cluster
+Doing cluster xcl9.cluster
+SEARCH STORE SIZE 3
+SIZE OF ERRORS: 1
+Doing cluster xcl21.cluster
+SEARCH STORE SIZE 2
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 4
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 2
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 29
+SIZE OF ERRORS: 5
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/paa2img.c]:[279] :[ resource of type _IO_FILE acquired by call to fopen() at line 267, column 9 is not released after line 279, column 13]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 267, column 9 is not released after line 279, column 13"
+[+] ERROR LINE IS: 267
+[+] NOTE: pvar: return (heuristic from error message) and pvar f (extracted from error message line number).
+[+] heurstic is return, but pvar is f. Returning f
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 29
+[+] irvar n$52 lookup gives pvar f.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$52 lookup gives pvar f.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$52 lookup gives pvar f.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$52 lookup gives pvar f.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 1
+	[+] Candidate 0: n$53=_fun_fclose(n$52:) [line 303]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/paa2img.c
+			[*] Origin line num range: 302 - 303
+			[*] Origin function: paa2img
+			[*] extracted:     fclose(f);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 33 locations (optional): [162, 161, 158, 153, 152, 151, 145, 279, 309, 287, 306, 305, 303, 302, 301, 299, 298, 297, 296, 295, 291, 286, 285, 284, 283, 278, 277, 276, 275, 273, 268, 267, 244]
+	[+] Patching at primary location: 279
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    fclose(f);"
+		[+] Attempting to extract line 279 from file /home/vagrant/projects/armake/src/paa2img.c
+		[+] Succesfully extracted "            errorf(\"Failed to find MIPMAP pointer.\\n\");"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/paa2img.c_tmp_patched_diff
+
+Wrote to file /tmp/paa2img.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/paa2img.c /tmp/paa2img.c_tmp_patched_diff > /tmp/udiff_a353fb.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_a353fb.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/armake/src/paa2img.c
+			[*] Destination function: paa2img
+			[*] Destination line insert: 279
+	[+] Wrote patch paa2img_279_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 35
+SIZE OF ERRORS: 3
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/unpack.c]:[352] :[ memory dynamically allocated by call to malloc() at line 344, column 32 is not reachable after line 352, column 40]
+[+] Complete err string: " memory dynamically allocated by call to malloc() at line 344, column 32 is not reachable after line 352, column 40"
+[+] ERROR LINE IS: 344
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "headers"
+[+] pvar TYPE not freed: "struct header *"
+	[=] This spec matches against Type "struct header *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 35
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: struct header *
+[+] No specific candidate for type struct header *. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/unpack.c]:[82] :[ memory dynamically allocated by call to malloc() at line 70, column 32 is not reachable after line 82, column 40]
+[+] Complete err string: " memory dynamically allocated by call to malloc() at line 70, column 32 is not reachable after line 82, column 40"
+[+] ERROR LINE IS: 70
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "headers"
+[+] pvar TYPE not freed: "struct header *"
+	[=] This spec matches against Type "struct header *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 35
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: struct header *
+[+] No specific candidate for type struct header *. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/unpack.c]:[177] :[ memory dynamically allocated by call to malloc() at line 165, column 32 is not reachable after line 177, column 40]
+[+] Complete err string: " memory dynamically allocated by call to malloc() at line 165, column 32 is not reachable after line 177, column 40"
+[+] ERROR LINE IS: 165
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "headers"
+[+] pvar TYPE not freed: "struct header *"
+	[=] This spec matches against Type "struct header *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 35
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: struct header *
+[+] No specific candidate for type struct header *. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+SEARCH STORE SIZE 38
+SIZE OF ERRORS: 3
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/filesystem.c]:[458] :[ memory is not reachable after line 458, column 5]
+[+] Complete err string: " memory is not reachable after line 458, column 5"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 40
+SIZE OF ERRORS: 3
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/sign.c]:[340] :[ memory is not reachable after line 340, column 5]
+[+] Complete err string: " memory is not reachable after line 340, column 5"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/sign.c]:[340] :[pointer returned by strrchr() could be null and is dereferenced at line 340, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname cmd_sign
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/sign.c]:[331] :[pointer returned by strrchr() could be null and is dereferenced by call to strcmp() at line 331, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname cmd_sign
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SEARCH STORE SIZE 46
+SIZE OF ERRORS: 4
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/utils.c]:[191] :[pointer temp last assigned on line 188 could be null and is dereferenced at line 191, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname reverse_endianness
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 35
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 18
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 26
+SIZE OF ERRORS: 4
+SEARCH STORE SIZE 27
+SIZE OF ERRORS: 5
+SEARCH STORE SIZE 73
+SIZE OF ERRORS: 6
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/utils.c]:[462] :[pointer tmp last assigned on line 461 could be null and is dereferenced at line 462, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname escape_string
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/utils.c]:[328] :[pointer tmp last assigned on line 327 could be null and is dereferenced by call to strncpy() at line 328, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname replace_string
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/utils.c]:[191] :[pointer temp last assigned on line 188 could be null and is dereferenced at line 191, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname reverse_endianness
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/utils.c]:[495] :[pointer tmp last assigned on line 494 could be null and is dereferenced at line 495, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname unescape_string
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 75
+SIZE OF ERRORS: 2
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/rapify.c]:[663] :[ resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44"
+[+] ERROR LINE IS: 653
+[+] NOTE: pvar: return (heuristic from error message) and pvar f_temp (extracted from error message line number).
+[+] heurstic is return, but pvar is f_temp. Returning f_temp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f_temp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 75
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$146 lookup gives pvar f_temp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$147=_fun_fclose(n$146:) [line 683]
+	[+] Candidate 1: n$118=_fun_fclose(n$117:) [line 678]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/rapify.c
+			[*] Origin line num range: 682 - 683
+			[*] Origin function: rapify_file
+			[*] extracted:         fclose(f_temp);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 16 locations (optional): [675, 671, 670, 668, 667, 663, 662, 661, 660, 659, 654, 653, 650, 649, 645, 629]
+	[+] Patching at primary location: 663
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        fclose(f_temp);"
+		[+] Attempting to extract line 663 from file /home/vagrant/projects/armake/src/rapify.c
+		[+] Succesfully extracted "            errorf(\"Failed to open %s.\\n\", target);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/rapify.c_tmp_patched_diff
+
+Wrote to file /tmp/rapify.c_tmp_patched_diff
+SEARCH STORE SIZE 101
+SIZE OF ERRORS: 8
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/model_config.c]:[347] :[ memory is not reachable after line 347, column 5]
+[+] Complete err string: " memory is not reachable after line 347, column 5"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/model_config.c]:[347] :[pointer returned by strrchr() could be null and is dereferenced at line 347, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname read_model_config
+[=] I found these typs for pvar by
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/rapify.c]:[663] :[ resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44"
+[+] ERROR LINE IS: 653
+[+] NOTE: pvar: return (heuristic from error message) and pvar f_temp (extracted from error message line number).
+[+] heurstic is return, but pvar is f_temp. Returning f_temp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f_temp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 101
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$146 lookup gives pvar f_temp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$147=_fun_fclose(n$146:) [line 683]
+	[+] Candidate 1: n$118=_fun_fclose(n$117:) [line 678]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/rapify.c
+			[*] Origin line num range: 682 - 683
+			[*] Origin function: rapify_file
+			[*] extracted:         fclose(f_temp);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 16 locations (optional): [675, 671, 670, 668, 667, 663, 662, 661, 660, 659, 654, 653, 650, 649, 645, 629]
+	[+] Patching at primary location: 663
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        fclose(f_temp);"
+		[+] Attempting to extract line 663 from file /home/vagrant/projects/armake/src/rapify.c
+		[+] Succesfully extracted "            errorf(\"Failed to open %s.\\n\", target);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/rapify.c_tmp_patched_diff
+
+Wrote to file /tmp/rapify.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/rapify.c /tmp/rapify.c_tmp_patched_diff > /tmp/udiff_50a5bb.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_50a5bb.footpatch" 
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/rapify.c /tmp/rapify.c_tmp_patched_diff > /tmp/udiff_ed4be5.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_ed4be5.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/armake/src/rapify.c
+			[*] Destination function: rapify_file
+			[*] Destination line insert: 663
+	[+] Wrote patch rapify_663_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+		[*] Destination filename: /home/vagrant/projects/armake/src/rapify.c
+			[*] Destination function: rapify_file
+			[*] Destination line insert: 663
+	[+] Wrote patch rapify_663_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 62
+SIZE OF ERRORS: 9
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/rapify.c]:[663] :[ resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44"
+[+] ERROR LINE IS: 653
+[+] NOTE: pvar: return (heuristic from error message) and pvar f_temp (extracted from error message line number).
+[+] heurstic is return, but pvar is f_temp. Returning f_temp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f_temp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 62
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$219 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$219" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$219 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$219" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$219 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$219" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$211 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$211" and irvar' "val$2"
+Comparing [tstruct] irvar "n$211" and irvar' "_t$134"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$211 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$211" and irvar' "_t$134"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$211 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$211" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$211" and irvar' "_t$134"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$146 lookup gives pvar f_temp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$209 lookup gives pvar f_source.
+Comparing [tstruct] irvar "n$209" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$209 lookup gives pvar f_source.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$209 lookup gives pvar f_source.
+Comparing [tstruct] irvar "n$209" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 5
+	[+] Candidate 0: n$210=_fun_fclose(n$209:) [line 1781]
+	[+] Candidate 1: n$147=_fun_fclose(n$146:) [line 683]
+	[+] Candidate 2: n$212=_fun_fclose(n$211:) [line 1780]
+	[+] Candidate 3: n$220=_fun_fclose(n$219:) [line 1769]
+	[+] Candidate 4: n$118=_fun_fclose(n$117:) [line 678]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/p3d.c
+			[*] Origin line num range: 1780 - 1781
+			[*] Origin function: mlod2odol
+			[*] extracted:         fclose(f_source);
+	[&] Renaming fragment fixing var to pvar: f_source -> f_temp
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "        fclose(f_source);" "f_source" "f_temp" > /tmp/patch00ddd1.footpatch
+SEARCH STORE SIZE 36
+SIZE OF ERRORS: 4
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/img2paa.c]:[70] :[ memory is not reachable after line 70, column 13]
+[+] Complete err string: " memory is not reachable after line 70, column 13"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/img2paa.c]:[99] :[ memory is not reachable after line 99, column 13]
+[+] Complete err string: " memory is not reachable after line 99, column 13"
+[-] Could not get pvar name and type
+	[+] Filtered patch 16 locations (optional): [675, 671, 670, 668, 667, 663, 662, 661, 660, 659, 654, 653, 650, 649, 645, 629]
+	[+] Patching at primary location: 663
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    fclose(f_temp);"
+		[+] Attempting to extract line 663 from file /home/vagrant/projects/armake/src/rapify.c
+		[+] Succesfully extracted "            errorf(\"Failed to open %s.\\n\", target);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/rapify.c_tmp_patched_diff
+
+Wrote to file /tmp/rapify.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/rapify.c /tmp/rapify.c_tmp_patched_diff > /tmp/udiff_b914ab.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_b914ab.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/armake/src/rapify.c
+			[*] Destination function: rapify_file
+			[*] Destination line insert: 663
+	[+] Wrote patch rapify_663_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/binarize.c]:[282] :[pointer returned by strrchr() could be null and is dereferenced by call to strncpy() at line 282, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname binarize
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SEARCH STORE SIZE 104
+SIZE OF ERRORS: 10
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/rapify.c]:[663] :[ resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 653, column 14 is not released after line 663, column 44"
+[+] ERROR LINE IS: 653
+[+] NOTE: pvar: return (heuristic from error message) and pvar f_temp (extracted from error message line number).
+[+] heurstic is return, but pvar is f_temp. Returning f_temp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f_temp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 104
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$117 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$117" and irvar' "_t$3"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$14 lookup gives pvar file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$14 lookup gives pvar file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$14 lookup gives pvar file.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$209 lookup gives pvar f_source.
+Comparing [tstruct] irvar "n$209" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$209 lookup gives pvar f_source.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$209 lookup gives pvar f_source.
+Comparing [tstruct] irvar "n$209" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$219 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$219" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$219 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$219" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$219 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$219" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$211 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$211" and irvar' "val$2"
+Comparing [tstruct] irvar "n$211" and irvar' "_t$134"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$211 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$211" and irvar' "_t$134"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$211 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$211" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$211" and irvar' "_t$134"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$146 lookup gives pvar f_temp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$25 lookup gives pvar f_target.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$25 lookup gives pvar f_target.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 7
+	[+] Candidate 0: n$26=_fun_fclose(n$25:) [line 103]
+	[+] Candidate 1: n$147=_fun_fclose(n$146:) [line 683]
+	[+] Candidate 2: n$212=_fun_fclose(n$211:) [line 1780]
+	[+] Candidate 3: n$220=_fun_fclose(n$219:) [line 1769]
+	[+] Candidate 4: n$210=_fun_fclose(n$209:) [line 1781]
+	[+] Candidate 5: n$15=_fun_fclose(n$14:) [line 194]
+	[+] Candidate 6: n$118=_fun_fclose(n$117:) [line 678]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/build.c
+			[*] Origin line num range: 102 - 103
+			[*] Origin function: write_header_to_pbo
+			[*] extracted:         fclose(f_target);
+	[&] Renaming fragment fixing var to pvar: f_target -> f_temp
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "        fclose(f_target);" "f_target" "f_temp" > /tmp/patch0d67b9.footpatch
+	[+] Filtered patch 16 locations (optional): [675, 671, 670, 668, 667, 663, 662, 661, 660, 659, 654, 653, 650, 649, 645, 629]
+	[+] Patching at primary location: 663
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    fclose(f_temp);"
+		[+] Attempting to extract line 663 from file /home/vagrant/projects/armake/src/rapify.c
+		[+] Succesfully extracted "            errorf(\"Failed to open %s.\\n\", target);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/rapify.c_tmp_patched_diff
+
+Wrote to file /tmp/rapify.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/rapify.c /tmp/rapify.c_tmp_patched_diff > /tmp/udiff_afac84.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_afac84.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/armake/src/rapify.c
+			[*] Destination function: rapify_file
+			[*] Destination line insert: 663
+	[+] Wrote patch rapify_663_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/binarize.c]:[282] :[pointer returned by strrchr() could be null and is dereferenced by call to strncpy() at line 282, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar by in pname binarize
+[=] I found these typs for pvar by
+[-] No type for pvar found
+SEARCH STORE SIZE 182
+SIZE OF ERRORS: 15
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/utils.c]:[462] :[pointer tmp last assigned on line 461 could be null and is dereferenced at line 462, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname escape_string
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/derapify.c]:[913] :[ resource of type _IO_FILE acquired by call to tmpfile() at line 881, column 20 is not released after line 913, column 9]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to tmpfile() at line 881, column 20 is not released after line 913, column 9"
+[+] ERROR LINE IS: 881
+[+] NOTE: pvar: return (heuristic from error message) and pvar f_source (extracted from error message line number).
+[+] heurstic is return, but pvar is f_source. Returning f_source
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f_source"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 182
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "val$2"
+Comparing [tstruct] irvar "n$66" and irvar' "val$30"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$44 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$44" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$44 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$44" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$44" and irvar' "@f$29"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$45=_fun_fclose(n$44:) [line 914]
+	[+] Candidate 1: n$67=_fun_fclose(n$66:) [line 903]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/derapify.c
+			[*] Origin line num range: 913 - 914
+			[*] Origin function: derapify_file
+			[*] extracted:         fclose(f_temp);
+	[&] Renaming fragment fixing var to pvar: f_temp -> f_source
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "        fclose(f_temp);" "f_temp" "f_source" > /tmp/patchb2622d.footpatch
+	[+] Filtered patch 28 locations (optional): [913, 898, 893, 892, 923, 921, 912, 911, 901, 900, 891, 162, 161, 158, 153, 152, 151, 145, 884, 883, 881, 875, 866, 863, 851, 850, 849, 831]
+	[+] Patching at primary location: 913
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    fclose(f_source);"
+		[+] Attempting to extract line 913 from file /home/vagrant/projects/armake/src/derapify.c
+		[+] Succesfully extracted "        errorf(\"Source file is not a rapified config.\\n\");"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/derapify.c_tmp_patched_diff
+
+Wrote to file /tmp/derapify.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/derapify.c /tmp/derapify.c_tmp_patched_diff > /tmp/udiff_a979b9.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_a979b9.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/armake/src/derapify.c
+			[*] Destination function: derapify_file
+			[*] Destination line insert: 913
+	[+] Wrote patch derapify_913_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/derapify.c]:[913] :[ resource of type _IO_FILE acquired by call to fopen() at line 900, column 20 is not released after line 913, column 9]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 900, column 20 is not released after line 913, column 9"
+[+] ERROR LINE IS: 900
+[+] NOTE: pvar: return (heuristic from error message) and pvar f_source (extracted from error message line number).
+[+] heurstic is return, but pvar is f_source. Returning f_source
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f_source"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 182
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "val$2"
+Comparing [tstruct] irvar "n$66" and irvar' "val$30"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$44 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$44" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$44 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$44" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$44" and irvar' "@f$29"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$45=_fun_fclose(n$44:) [line 914]
+	[+] Candidate 1: n$67=_fun_fclose(n$66:) [line 903]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/derapify.c
+			[*] Origin line num range: 913 - 914
+			[*] Origin function: derapify_file
+			[*] extracted:         fclose(f_temp);
+	[&] Renaming fragment fixing var to pvar: f_temp -> f_source
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "        fclose(f_temp);" "f_temp" "f_source" > /tmp/patch12336c.footpatch
+	[+] Filtered patch 28 locations (optional): [913, 898, 893, 892, 923, 921, 912, 911, 901, 900, 891, 162, 161, 158, 153, 152, 151, 145, 884, 883, 881, 875, 866, 863, 851, 850, 849, 831]
+	[+] Patching at primary location: 913
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "    fclose(f_source);"
+		[+] Attempting to extract line 913 from file /home/vagrant/projects/armake/src/derapify.c
+		[+] Succesfully extracted "        errorf(\"Source file is not a rapified config.\\n\");"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/derapify.c_tmp_patched_diff
+
+Wrote to file /tmp/derapify.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/derapify.c /tmp/derapify.c_tmp_patched_diff > /tmp/udiff_775862.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_775862.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/armake/src/derapify.c
+			[*] Destination function: derapify_file
+			[*] Destination line insert: 913
+	[+] Wrote patch derapify_913_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/derapify.c]:[884] :[ resource of type _IO_FILE acquired by call to tmpfile() at line 863, column 14 is not released after line 884, column 13]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to tmpfile() at line 863, column 14 is not released after line 884, column 13"
+[+] ERROR LINE IS: 863
+[+] NOTE: pvar: return (heuristic from error message) and pvar f_temp (extracted from error message line number).
+[+] heurstic is return, but pvar is f_temp. Returning f_temp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "f_temp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 182
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "val$2"
+Comparing [tstruct] irvar "n$66" and irvar' "val$30"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$66 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$66" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$44 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$44" and irvar' "@f$1"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$44 lookup gives pvar f_temp.
+Comparing [tstruct] irvar "n$44" and irvar' "@f$1"
+Comparing [tstruct] irvar "n$44" and irvar' "@f$29"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$45=_fun_fclose(n$44:) [line 914]
+	[+] Candidate 1: n$67=_fun_fclose(n$66:) [line 903]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/armake/src/derapify.c
+			[*] Origin line num range: 913 - 914
+			[*] Origin function: derapify_file
+			[*] extracted:         fclose(f_temp);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 28 locations (optional): [913, 898, 893, 892, 923, 921, 912, 911, 901, 900, 891, 162, 161, 158, 153, 152, 151, 145, 884, 883, 881, 875, 866, 863, 851, 850, 849, 831]
+	[+] Patching at primary location: 884
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/armake/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        fclose(f_temp);"
+		[+] Attempting to extract line 884 from file /home/vagrant/projects/armake/src/derapify.c
+		[+] Succesfully extracted "            errorf(\"Failed to open temp file.\\n\");"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/derapify.c_tmp_patched_diff
+
+Wrote to file /tmp/derapify.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/armake/src/derapify.c /tmp/derapify.c_tmp_patched_diff > /tmp/udiff_8f17ce.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_8f17ce.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/armake/src/derapify.c
+			[*] Destination function: derapify_file
+			[*] Destination line insert: 884
+	[+] Wrote patch derapify_884_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 174
+SIZE OF ERRORS: 8
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/p3d.c]:[399] :[pointer model_info->lod_resolutions last assigned on line 396 could be null and is dereferenced at line 399, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname build_model_info
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/p3d.c]:[697] :[pointer odol_lod->skeleton_to_subskeleton last assigned on line 693 could be null and is dereferenced at line 697, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname convert_lod
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/p3d.c]:[696] :[pointer odol_lod->subskeleton_to_skeleton last assigned on line 692 could be null and is dereferenced at line 696, column 9]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname convert_lod
+[=] I found these typs for pvar last
+[-] No type for pvar found

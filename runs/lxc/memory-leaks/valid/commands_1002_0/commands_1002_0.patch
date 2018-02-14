@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/lxc/src/lxc/commands.c	2018-01-03 20:48:26.216335948 +0000
+--- /home/vagrant/projects/lxc/src/lxc/commands.c	2018-01-03 20:48:26.216335948 +0000
+@@ -1000,6 +1000,7 @@
+ 	}
+ 
+ 	lxc_list_add_elem(tmplist, newclient);
++		free(newclient);
+ 	lxc_list_add_tail(&handler->state_clients, tmplist);
+ 
+ 	TRACE("added state client %d to state client list", fd);

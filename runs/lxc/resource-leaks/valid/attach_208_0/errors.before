@@ -1,0 +1,49 @@
+Found 14 issues
+
+src/lxc/af_unix.c:238: error: NULL_DEREFERENCE
+  pointer cmsg last assigned on line 237 could be null and is dereferenced at line 238, column 2
+
+src/lxc/attach.c:208: error: RESOURCE_LEAK
+   resource of type _IO_FILE acquired to proc_file by call to fopen() at line 201, column 14 is not released after line 208, column 7
+
+src/lxc/bdev/bdev.c:757: error: MEMORY_LEAK
+   memory dynamically allocated to mkfs by call to malloc() at line 752, column 9 is not reachable after line 757, column 17
+
+src/lxc/bdev/bdev.c:763: error: MEMORY_LEAK
+   memory dynamically allocated to return by call to malloc() at line 752, column 9 is not reachable after line 763, column 2
+
+src/lxc/bdev/lxcrsync.c:64: error: MEMORY_LEAK
+   memory dynamically allocated to s by call to malloc() at line 57, column 6 is not reachable after line 64, column 2
+
+src/lxc/commands.c:1002: error: MEMORY_LEAK
+   memory dynamically allocated to newclient by call to malloc() at line 988, column 39 is not reachable after line 1002, column 38
+
+src/lxc/commands.c:1003: error: MEMORY_LEAK
+   memory dynamically allocated to tmplist by call to malloc() at line 996, column 35 is not reachable after line 1003, column 2
+
+src/lxc/confile.c:2506: error: MEMORY_LEAK
+   memory dynamically allocated to dent by call to malloc() at line 2501, column 39 is not reachable after line 2506, column 2
+
+src/lxc/lxc_user_nic.c:171: error: MEMORY_LEAK
+   memory dynamically allocated to groupnames by call to malloc() at line 154, column 15 is not reachable after line 171, column 4
+
+src/lxc/lxccontainer.c:697: error: MEMORY_LEAK
+   memory dynamically allocated to argv by call to malloc() at line 692, column 10 is not reachable after line 697, column 28
+
+src/lxc/lxccontainer.c:1061: error: NULL_DEREFERENCE
+  pointer lxcpath last assigned on line 1060 could be null and is dereferenced by call to strlen() at line 1061, column 27
+
+src/lxc/monitor.c:234: error: RESOURCE_LEAK
+   resource acquired by call to socket() at line 218, column 7 is not released after line 234, column 8
+
+src/lxc/tools/lxc_usernsexec.c:92: error: RESOURCE_LEAK
+   resource acquired by call to open() at line 83, column 7 is not released after line 92, column 57
+
+src/lxc/utils.c:289: error: NULL_DEREFERENCE
+  pointer rundir last assigned on line 288 could be null and is dereferenced by call to sprintf() at line 289, column 2
+
+Summary of the reports
+
+       MEMORY_LEAK: 8
+  NULL_DEREFERENCE: 3
+     RESOURCE_LEAK: 3

@@ -1,0 +1,9 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/annotations/CategoryTextAnnotation.java	2017-08-26 03:07:25.181916167 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/annotations/CategoryTextAnnotation.java	2017-08-26 03:07:25.181916167 -0400
+@@ -190,6 +190,7 @@
+             int rendererIndex, PlotRenderingInfo info) {
+ 
+         CategoryDataset dataset = plot.getDataset();
++    if (dataset == null) {        throw new IllegalArgumentException("Null 'text' argument.");    }
+         int catIndex = dataset.getColumnIndex(this.category);
+         int catCount = dataset.getColumnCount();

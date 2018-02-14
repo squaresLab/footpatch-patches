@@ -1,0 +1,9 @@
+--- /home/rvt/Pinta/integrations/infer/swoole-src/src/core/hashmap.c	2017-08-25 11:49:50.957984946 -0400
+--- /home/rvt/Pinta/integrations/infer/swoole-src/src/core/hashmap.c	2017-08-25 11:49:50.957984946 -0400
+@@ -116,6 +116,7 @@
+     {
+         swWarn("malloc for table failed.");
+     swHashMap_node_free(hmap, root);
++        sw_free(hmap);
+         return NULL;
+     }

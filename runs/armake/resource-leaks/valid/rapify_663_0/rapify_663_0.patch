@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/armake/src/rapify.c	2018-01-03 20:46:50.228350787 +0000
+--- /home/vagrant/projects/armake/src/rapify.c	2018-01-03 20:46:50.228350787 +0000
+@@ -661,6 +661,7 @@
+         f_target = fopen(target, "wb");
+         if (!f_target) {
+             errorf("Failed to open %s.\n", target);
++    fclose(f_temp);
+             return 2;
+         }
+ 

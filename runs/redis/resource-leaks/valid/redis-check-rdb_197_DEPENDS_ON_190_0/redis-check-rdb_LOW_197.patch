@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/redis/src/redis-check-rdb.c	2017-08-25 15:37:23.191500338 -0400
+--- /home/rvt/Pinta/integrations/infer/redis/src/redis-check-rdb.c	2017-08-25 15:37:23.191500338 -0400
+@@ -195,6 +195,7 @@
+     buf[9] = '\0';
+     if (memcmp(buf,"REDIS",5) != 0) {
+         rdbCheckError("Wrong signature trying to load DB from file");
++    fclose(fp);
+         return 1;
+     }
+     rdbver = atoi(buf+5);

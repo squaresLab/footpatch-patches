@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/dial/DialPointer.java	2017-08-26 03:07:11.145930943 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/dial/DialPointer.java	2017-08-26 03:07:11.145930943 -0400
+@@ -290,6 +290,7 @@
+ 
+             double value = plot.getValue(this.datasetIndex);
+             DialScale scale = plot.getScaleForDataset(this.datasetIndex);
++    if (scale == null) {        throw new IllegalArgumentException("Null 'rect' argument.");    }
+             double angle = scale.valueToAngle(value);
+         
+             Arc2D arc = new Arc2D.Double(arcRect, angle, 0, Arc2D.OPEN);

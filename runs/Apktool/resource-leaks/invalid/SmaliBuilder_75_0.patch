@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/Apktool/brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java 2018-01-03 20:46:15.205869658 +0000
+--- /home/vagrant/projects/Apktool/brut.apktool/apktool-lib/src/main/java/brut/androlib/src/SmaliBuilder.java 2018-01-03 20:46:15.205869658 +0000
+@@ -73,6 +73,7 @@
+             try {
+                 if (!SmaliMod.assembleSmaliFile(inFile, dexBuilder, false, false)) {
+                     throw new AndrolibException("Could not smali file: " + fileName);
++        inStream.close();
+                 }
+             } catch (IOException | RecognitionException ex) {
+                 throw new AndrolibException(ex);

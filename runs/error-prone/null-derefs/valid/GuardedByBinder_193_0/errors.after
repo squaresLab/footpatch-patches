@@ -1,0 +1,924 @@
+Found 304 issues
+
+core/src/main/java/com/google/errorprone/EndPosTableUtil.java:108: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/EndPosTableUtil.java:108: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  int [_] cannot be cast to int [_]   at line 108
+
+core/src/main/java/com/google/errorprone/ErrorProneAnalyzer.java:51: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to checkNotNull(...) at line 51
+
+core/src/main/java/com/google/errorprone/ErrorProneAnalyzer.java:68: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to init(...) at line 68
+
+core/src/main/java/com/google/errorprone/ErrorProneCompiler.java:87: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to run(...) at line 87
+
+core/src/main/java/com/google/errorprone/ErrorProneCompiler.java:87: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+core/src/main/java/com/google/errorprone/ErrorProneCompiler.java:101: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to run(...) at line 101
+
+core/src/main/java/com/google/errorprone/ErrorProneCompiler.java:101: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+core/src/main/java/com/google/errorprone/ErrorProneJavacJavaCompiler.java:58: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to checkNotNull(...) at line 58
+
+core/src/main/java/com/google/errorprone/ErrorProneOptions.java:110: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to checkNotNull(...) at line 110
+
+core/src/main/java/com/google/errorprone/ErrorProneOptions.java:144: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to put(...) at line 144
+
+core/src/main/java/com/google/errorprone/ErrorProneOptions.java:164: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to checkNotNull(...) at line 164
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:101: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:101: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 101
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:164: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:164: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 164
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:181: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 181
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:181: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:200: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractJUnit4InitMethodNotRun.java:200: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCClassDecl    in call to getSymbol(...) at line 200
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractReturnValueIgnored.java:60: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/AbstractReturnValueIgnored.java:60: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 60
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayEquals.java:84: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayEquals.java:84: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 84
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayHashCode.java:104: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayHashCode.java:104: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 104
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayToString.java:61: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayToString.java:61: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 61
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayToStringCompoundAssignment.java:61: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayToStringCompoundAssignment.java:61: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.CompoundAssignmentTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 61
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayToStringConcatenation.java:62: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArrayToStringConcatenation.java:62: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BinaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 62
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArraysAsListPrimitiveArray.java:77: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ArraysAsListPrimitiveArray.java:77: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 77
+
+core/src/main/java/com/google/errorprone/bugpatterns/BadShiftAmount.java:102: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BinaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 102
+
+core/src/main/java/com/google/errorprone/bugpatterns/BadShiftAmount.java:102: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/CannotMockFinalClass.java:85: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/CannotMockFinalClass.java:85: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.VariableTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 85
+
+core/src/main/java/com/google/errorprone/bugpatterns/CannotMockFinalClass.java:92: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 92
+
+core/src/main/java/com/google/errorprone/bugpatterns/CannotMockFinalClass.java:92: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ChainingConstructorIgnoresParameter.java:191: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to put(...) at line 191
+
+core/src/main/java/com/google/errorprone/bugpatterns/ChainingConstructorIgnoresParameter.java:209: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ChainingConstructorIgnoresParameter.java:209: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.HasIdentifier  cannot be cast to class com.google.errorprone.matchers.ChildMultiMatcher   in expression hasIdentifier(identifierMatcher)  in call to matches(...) at line 209
+
+core/src/main/java/com/google/errorprone/bugpatterns/CheckReturnValue.java:57: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object method last assigned on line 56 could be null and is dereferenced at line 57
+
+core/src/main/java/com/google/errorprone/bugpatterns/ClassCanBeStatic.java:83: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ClassCanBeStatic.java:83: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.Matchers$4  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression allOf(__new_array(class com.google.errorprone.matchers.Matcher *[_]))  in call to matches(...) at line 83
+
+core/src/main/java/com/google/errorprone/bugpatterns/ClassCanBeStatic.java:113: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ClassCanBeStatic.java:113: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.ClassTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 113
+
+core/src/main/java/com/google/errorprone/bugpatterns/CollectionIncompatibleType.java:82: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/CollectionIncompatibleType.java:82: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 82
+
+core/src/main/java/com/google/errorprone/bugpatterns/ComparisonOutOfRange.java:173: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ComparisonOutOfRange.java:173: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BinaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 173
+
+core/src/main/java/com/google/errorprone/bugpatterns/CovariantEquals.java:92: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/CovariantEquals.java:92: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 92
+
+core/src/main/java/com/google/errorprone/bugpatterns/DeadException.java:73: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/DeadException.java:73: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.NewClassTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 73
+
+core/src/main/java/com/google/errorprone/bugpatterns/DivZero.java:64: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/DivZero.java:64: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.Matchers$5  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression anyOf(__new_array(class com.google.errorprone.matchers.Matcher *[_]))  in call to matches(...) at line 64
+
+core/src/main/java/com/google/errorprone/bugpatterns/ElementsCountedInLoop.java:93: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ElementsCountedInLoop.java:93: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.IsSubtypeOf  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression isSubtypeOf("java.util.Collection")  in call to matches(...) at line 93
+
+core/src/main/java/com/google/errorprone/bugpatterns/ElementsCountedInLoop.java:139: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ElementsCountedInLoop.java:139: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.tools.javac.tree.JCTree$JCExpression  cannot be cast to class com.sun.source.tree.IdentifierTree    at line 139
+
+core/src/main/java/com/google/errorprone/bugpatterns/FallThroughSuppression.java:58: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/FallThroughSuppression.java:58: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 58
+
+core/src/main/java/com/google/errorprone/bugpatterns/Finally.java:127: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer path was dereferenced at line 125 and is tested for null at line 127
+
+core/src/main/java/com/google/errorprone/bugpatterns/Finally.java:233: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.TryTree  cannot be cast to class com.sun.source.tree.Tree    in call to matchAncestor(...) at line 233
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedInjectScoping.java:112: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedInjectScoping.java:112: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.ClassTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 112
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedParameters.java:56: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedParameters.java:56: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.VariableTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 56
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedParameters.java:62: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedParameters.java:62: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.VariableTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 62
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedParameters.java:110: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceAssistedParameters.java:110: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCClassDecl    in call to getSymbol(...) at line 110
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceInjectOnFinalField.java:70: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceInjectOnFinalField.java:70: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.VariableTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 70
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceInjectOnFinalField.java:90: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by findEnclosingNode(state.getPath(),com.sun.source.tree.ClassTree) could be null and is dereferenced at line 90
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceOverridesGuiceInjectableMethod.java:74: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceOverridesGuiceInjectableMethod.java:74: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 74
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceOverridesJavaxInjectableMethod.java:71: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceOverridesJavaxInjectableMethod.java:71: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 71
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceOverridesJavaxInjectableMethod.java:104: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.tools.javac.code.Type  cannot be cast to class com.sun.tools.javac.code.Symbol$MethodSymbol    at line 104
+
+core/src/main/java/com/google/errorprone/bugpatterns/GuiceOverridesJavaxInjectableMethod.java:104: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectAssistedInjectAndInjectOnConstructors.java:84: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectAssistedInjectAndInjectOnConstructors.java:84: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &tree  in call to getSymbol(...) at line 84
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectAssistedInjectAndInjectOnSameConstructor.java:71: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &tree  in call to getSymbol(...) at line 71
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectAssistedInjectAndInjectOnSameConstructor.java:71: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectAssistedInjectAndInjectOnSameConstructor.java:80: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectAssistedInjectAndInjectOnSameConstructor.java:80: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 80
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectInvalidTargetingOnScopingAnnotation.java:67: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectInvalidTargetingOnScopingAnnotation.java:67: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.tools.javac.tree.JCTree$JCClassDecl  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 67
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectInvalidTargetingOnScopingAnnotation.java:99: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectInvalidTargetingOnScopingAnnotation.java:99: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCClassDecl    in call to getSymbol(...) at line 99
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectInvalidTargetingOnScopingAnnotation.java:103: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to describeMatch(...) at line 103
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectInvalidTargetingOnScopingAnnotation.java:103: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectJavaxInjectOnAbstractMethod.java:57: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectJavaxInjectOnAbstractMethod.java:57: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &tree  in call to getSymbol(...) at line 57
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectJavaxInjectOnAbstractMethod.java:64: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectJavaxInjectOnAbstractMethod.java:64: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 64
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectJavaxInjectOnFinalField.java:63: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectJavaxInjectOnFinalField.java:63: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 63
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectJavaxInjectOnFinalField.java:78: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by findEnclosingNode(state.getPath(),com.sun.source.tree.ClassTree) could be null and is dereferenced at line 78
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectMoreThanOneInjectableConstructor.java:69: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectMoreThanOneInjectableConstructor.java:69: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.tools.javac.tree.JCTree$JCMethodDecl  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 69
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectMoreThanOneQualifier.java:57: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectMoreThanOneQualifier.java:57: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 57
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectMoreThanOneScopeAnnotationOnClass.java:65: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectMoreThanOneScopeAnnotationOnClass.java:65: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 65
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectOverlappingQualifierAndScopeAnnotation.java:75: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectOverlappingQualifierAndScopeAnnotation.java:75: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &tree  in call to getSymbol(...) at line 75
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectOverlappingQualifierAndScopeAnnotation.java:85: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 85
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectOverlappingQualifierAndScopeAnnotation.java:85: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectScopeAnnotationOnInterfaceOrAbstractClass.java:72: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 72
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectScopeAnnotationOnInterfaceOrAbstractClass.java:72: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectScopeOrQualifierAnnotationRetention.java:66: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectScopeOrQualifierAnnotationRetention.java:66: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.tools.javac.tree.JCTree$JCClassDecl  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 66
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectedConstructorAnnotations.java:64: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectedConstructorAnnotations.java:64: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.Matchers$20  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression hasAnnotation("com.google.inject.BindingAnnotation")  in call to matches(...) at line 64
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectedConstructorAnnotations.java:77: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectedConstructorAnnotations.java:77: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 77
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectedConstructorAnnotations.java:101: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InjectedConstructorAnnotations.java:101: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 101
+
+core/src/main/java/com/google/errorprone/bugpatterns/InvalidPatternSyntax.java:101: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/InvalidPatternSyntax.java:101: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 101
+
+core/src/main/java/com/google/errorprone/bugpatterns/JUnit3TestNotRun.java:96: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/JUnit3TestNotRun.java:96: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 96
+
+core/src/main/java/com/google/errorprone/bugpatterns/JUnit4TestNotRun.java:72: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/JUnit4TestNotRun.java:72: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 72
+
+core/src/main/java/com/google/errorprone/bugpatterns/JUnitAmbiguousTestClass.java:52: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.ClassTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 52
+
+core/src/main/java/com/google/errorprone/bugpatterns/JUnitAmbiguousTestClass.java:52: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/LongLiteralLowerCaseSuffix.java:90: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/LongLiteralLowerCaseSuffix.java:90: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.LiteralTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 90
+
+core/src/main/java/com/google/errorprone/bugpatterns/MalformedFormatString.java:122: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/MalformedFormatString.java:122: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 122
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedFormattingLogger.java:331: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedFormattingLogger.java:331: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.Matchers$11  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression isArrayType()  in call to matches(...) at line 331
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedFormattingLogger.java:451: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedFormattingLogger.java:451: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 451
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedFormattingLogger.java:490: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to setType(...) at line 490
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedFormattingLogger.java:495: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to setType(...) at line 495
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedWeekYear.java:89: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 89
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedWeekYear.java:89: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedWeekYear.java:104: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.NewClassTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 104
+
+core/src/main/java/com/google/errorprone/bugpatterns/MisusedWeekYear.java:104: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ModifyingCollectionWithItself.java:83: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ModifyingCollectionWithItself.java:83: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 83
+
+core/src/main/java/com/google/errorprone/bugpatterns/ModifyingCollectionWithItself.java:110: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ModifyingCollectionWithItself.java:110: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.ExpressionTree *  in expression &expressionTree  in call to getReceiver(...) at line 110
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:316: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:316: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.Matchers$4  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression allOf(__new_array(class com.google.errorprone.matchers.Matcher *[_]))  in call to matches(...) at line 316
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:337: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object methodSymbol last assigned on line 336 could be null and is dereferenced at line 337
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:386: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:386: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.UnaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 386
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:393: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:393: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.NewArrayTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 393
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:403: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:403: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.NewClassTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 403
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:413: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:413: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 413
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:425: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:425: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BinaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 425
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:435: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:435: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.CompoundAssignmentTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 435
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:446: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:446: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.EnhancedForLoopTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 446
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:457: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AssignmentTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 457
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:457: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:468: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.VariableTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 468
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:468: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:479: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:479: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.TypeCastTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 479
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:490: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:490: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.ReturnTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 490
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:501: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NoAllocationChecker.java:501: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.UnaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 501
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonAtomicVolatileUpdate.java:140: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonAtomicVolatileUpdate.java:140: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.UnaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 140
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonAtomicVolatileUpdate.java:162: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonAtomicVolatileUpdate.java:162: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.CompoundAssignmentTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 162
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonAtomicVolatileUpdate.java:190: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonAtomicVolatileUpdate.java:190: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.Matchers$4  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression assignmentIncrementDecrementMatcher(tree.getVariable())  in call to matches(...) at line 190
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonRuntimeAnnotation.java:55: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/NonRuntimeAnnotation.java:55: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 55
+
+core/src/main/java/com/google/errorprone/bugpatterns/Overrides.java:103: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to addFix(...) at line 103
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsCheckNotNull.java:63: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsCheckNotNull.java:63: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 63
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsCheckNotNullPrimitive.java:90: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsCheckNotNullPrimitive.java:90: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 90
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsCheckNotNullPrimitive.java:134: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.source.tree.BinaryTree  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCExpression    at line 134
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsCheckNotNullPrimitive.java:159: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to addStaticImport(...) at line 159
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsExpensiveString.java:84: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsExpensiveString.java:84: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 84
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsInvalidPlaceholder.java:69: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsInvalidPlaceholder.java:69: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 69
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsInvalidPlaceholder.java:97: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/PreconditionsInvalidPlaceholder.java:97: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.source.tree.LiteralTree  cannot be cast to class com.sun.tools.javac.tree.JCTree    at line 97
+
+core/src/main/java/com/google/errorprone/bugpatterns/PrimitiveArrayPassedToVarargsMethod.java:105: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/PrimitiveArrayPassedToVarargsMethod.java:105: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 105
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:104: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:104: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 104
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:124: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:124: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 124
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:139: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 139
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:139: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:181: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldNullComparison.java:181: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BinaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 181
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:99: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:99: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 99
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:119: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:119: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 119
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:134: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:134: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 134
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:139: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoFieldPreconditionsCheckNotNull.java:139: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 139
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoStringFieldReferenceEquality.java:59: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by state.getSourceForNode(tree.getLeftOperand()) could be null and is dereferenced at line 59
+
+core/src/main/java/com/google/errorprone/bugpatterns/ProtoStringFieldReferenceEquality.java:60: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by state.getSourceForNode(tree.getRightOperand()) could be null and is dereferenced at line 60
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfAssignment.java:117: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfAssignment.java:117: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.MethodInvocationMethodSelect  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression methodSelect(staticMethod("com.google.common.base.Preconditions","checkNotNull"))  in call to matches(...) at line 117
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfAssignment.java:214: warning: CONDITION_ALWAYS_TRUE (backend/symExec.ml:1057:83-90:)
+  Boolean condition  !(0!=0) is always true at line 214
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfAssignment.java:222: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer path was dereferenced at line 155 and is tested for null at line 222
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfAssignment.java:225: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer path was dereferenced at line 155 and is tested for null at line 225
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfEquality.java:64: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfEquality.java:64: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BinaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 64
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfEquals.java:126: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfEquals.java:126: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 126
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfEquals.java:129: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 129
+
+core/src/main/java/com/google/errorprone/bugpatterns/SelfEquals.java:129: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:120: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:120: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 120
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:126: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:126: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MemberSelectTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 126
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:199: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:199: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.ExpressionTree *  in expression &expressionTree  in call to getReceiver(...) at line 199
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:212: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SizeGreaterThanOrEqualsZero.java:212: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.ExpressionTree *  in expression &expressionTree  in call to getReceiver(...) at line 212
+
+core/src/main/java/com/google/errorprone/bugpatterns/StaticAccessedFromInstance.java:68: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/StaticAccessedFromInstance.java:68: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MemberSelectTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 68
+
+core/src/main/java/com/google/errorprone/bugpatterns/StringBuilderInitWithChar.java:50: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/StringBuilderInitWithChar.java:50: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.IsSameType  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression isSameType(instance(state.context).stringBuilderType)  in call to matches(...) at line 50
+
+core/src/main/java/com/google/errorprone/bugpatterns/StringEquality.java:87: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/StringEquality.java:87: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BinaryTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 87
+
+core/src/main/java/com/google/errorprone/bugpatterns/SuppressWarningsDeprecated.java:58: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/SuppressWarningsDeprecated.java:58: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 58
+
+core/src/main/java/com/google/errorprone/bugpatterns/TryFailThrowable.java:167: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/TryFailThrowable.java:167: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.VariableTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 167
+
+core/src/main/java/com/google/errorprone/bugpatterns/TypeParameterUnusedInFormals.java:125: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/TypeParameterUnusedInFormals.java:125: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.source.tree.MethodTree  cannot be cast to class com.sun.tools.javac.tree.JCTree    at line 125
+
+core/src/main/java/com/google/errorprone/bugpatterns/WaitNotInLoop.java:114: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/WaitNotInLoop.java:114: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 114
+
+core/src/main/java/com/google/errorprone/bugpatterns/WrongParameterPackage.java:116: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer builder was dereferenced at line 110 and is tested for null at line 116
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/GuardedByBinder.java:185: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B2] object method last assigned on line 184 could be null and is dereferenced by call to bindSelect(...) at line 185
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:162: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:162: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MemberSelectTree * cannot be cast to class com.sun.source.tree.ExpressionTree *  in expression &tree  in call to checkMatch(...) at line 162
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:168: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:168: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.IdentifierTree * cannot be cast to class com.sun.source.tree.ExpressionTree *  in expression &tree  in call to checkMatch(...) at line 168
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:191: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.tools.javac.tree.JCTree$JCVariableDecl  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCExpression    at line 191
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:191: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.tools.javac.tree.JCTree$JCMethodDecl  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCExpression    at line 191
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:254: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:254: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 254
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:281: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/HeldLockAnalyzer.java:281: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &tree  in call to getAnnotation(...) at line 281
+
+core/src/main/java/com/google/errorprone/dataflow/DataFlow.java:132: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to checkArgument(...) at line 132
+
+core/src/main/java/com/google/errorprone/dataflow/DataFlow.java:132: warning: ANALYSIS_STOPS (backend/tabulation.ml:1207:60-67:)
+  exception: PRECONDITION_NOT_MET
+
+core/src/main/java/com/google/errorprone/dataflow/DataFlow.java:136: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to checkNotNull(...) at line 136
+
+core/src/main/java/com/google/errorprone/dataflow/nullnesspropagation/AbstractNullnessPropagationTransfer.java:311: error: NULL_DEREFERENCE (backend/rearrange.ml:1291:57-64:)
+  [B2] object returned by tryGetMethodSymbol(node.getTree()) could be null and is dereferenced at line 311
+
+core/src/main/java/com/google/errorprone/dataflow/nullnesspropagation/NullnessPropagationTransfer.java:293: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B1] object targetField last assigned on line 292 could be null and is dereferenced by call to setReceiverNullness(...) at line 293
+
+core/src/main/java/com/google/errorprone/dataflow/nullnesspropagation/NullnessPropagationTransfer.java:337: error: NULL_DEREFERENCE (backend/tabulation.ml:1179:65-72:)
+  [B2] object accessed last assigned on line 336 could be null and is dereferenced by call to setReceiverNullness(...) at line 337
+
+core/src/main/java/com/google/errorprone/dataflow/nullnesspropagation/NullnessPropagationTransfer.java:350: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/dataflow/nullnesspropagation/NullnessPropagationTransfer.java:350: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.dataflow.nullnesspropagation.NullnessPropagationTransfer$ClassAndMethod * cannot be cast to class com.google.errorprone.dataflow.nullnesspropagation.NullnessPropagationTransfer$Member *  in expression &member  in call to setReceiverNullness(...) at line 350
+
+core/src/main/java/com/google/errorprone/dataflow/nullnesspropagation/NullnessPropagationTransfer.java:471: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/dataflow/nullnesspropagation/NullnessPropagationTransfer.java:471: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.dataflow.nullnesspropagation.NullnessPropagationTransfer$ClassAndMethod * cannot be cast to class java.lang.Object *  in expression &$bcvar1  in call to apply(...) at line 471
+
+core/src/main/java/com/google/errorprone/fixes/AppliedFix.java:97: error: RESOURCE_LEAK (backend/abs.ml:1139:19-26:)
+   resource of type java.io.LineNumberReader acquired to lineNumberReader by call to new() at line 89 is not released after line 97
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:182: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:182: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.source.tree.Tree  cannot be cast to class com.sun.tools.javac.util.JCDiagnostic$DiagnosticPosition    at line 182
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:219: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:219: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.source.tree.Tree  cannot be cast to class com.sun.tools.javac.util.JCDiagnostic$DiagnosticPosition    at line 219
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:223: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:223: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.source.tree.Tree  cannot be cast to class com.sun.tools.javac.util.JCDiagnostic$DiagnosticPosition    at line 223
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:233: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/fixes/SuggestedFix.java:233: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.source.tree.Tree  cannot be cast to class com.sun.tools.javac.util.JCDiagnostic$DiagnosticPosition    at line 233
+
+core/src/main/java/com/google/errorprone/matchers/Description.java:154: warning: RETURN_VALUE_IGNORED (backend/symExec.ml:1559:60-67:)
+  after call to checkNotNull(...) at line 154
+
+core/src/main/java/com/google/errorprone/matchers/Enclosing.java:94: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/matchers/Enclosing.java:94: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.BlockTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 94
+
+core/src/main/java/com/google/errorprone/matchers/Enclosing.java:96: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/matchers/Enclosing.java:96: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.CaseTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 96
+
+core/src/main/java/com/google/errorprone/matchers/JUnitMatchers.java:241: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/matchers/JUnitMatchers.java:241: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.ClassTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 241
+
+core/src/main/java/com/google/errorprone/matchers/JUnitMatchers.java:254: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/matchers/JUnitMatchers.java:254: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.google.errorprone.matchers.Matchers$21  cannot be cast to class com.google.errorprone.bugpatterns.AbstractReturnValueIgnored$1   in expression hasAnnotationOnAnyOverriddenMethod("org.junit.Test")  in call to matches(...) at line 254
+
+core/src/main/java/com/google/errorprone/matchers/Matchers.java:700: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/matchers/Matchers.java:700: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 700
+
+core/src/main/java/com/google/errorprone/matchers/Matchers.java:808: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/matchers/Matchers.java:808: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodTree  cannot be cast to class com.sun.source.tree.IdentifierTree    in call to matches(...) at line 808
+
+core/src/main/java/com/google/errorprone/matchers/Matchers.java:1037: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/matchers/Matchers.java:1037: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.VariableTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &$bcvar1  in call to matches(...) at line 1037
+
+core/src/main/java/com/google/errorprone/matchers/NextStatement.java:48: warning: NULL_TEST_AFTER_DEREFERENCE (backend/symExec.ml:467:55-62:)
+  Pointer path was dereferenced at line 46 and is tested for null at line 48
+
+core/src/main/java/com/google/errorprone/matchers/NextStatement.java:57: warning: CONDITION_ALWAYS_TRUE (backend/symExec.ml:1057:83-90:)
+  Boolean condition  !(0!=0) is always true at line 57
+
+core/src/main/java/com/google/errorprone/matchers/NextStatement.java:68: warning: PRECONDITION_NOT_MET (backend/tabulation.ml:1207:60-67:)
+  in call to matches(...) at line 68
+
+core/src/main/java/com/google/errorprone/util/ASTHelpers.java:228: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCClassDecl   in expression expr  in call to getSymbol(...) at line 228
+
+core/src/main/java/com/google/errorprone/util/ASTHelpers.java:228: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.MethodInvocationTree  cannot be cast to class com.sun.tools.javac.tree.JCTree$JCClassDecl    in call to getSymbol(...) at line 228
+
+core/src/main/java/com/google/errorprone/util/ASTHelpers.java:385: warning: ANALYSIS_STOPS (backend/modelBuiltins.ml:247:10-17:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/util/ASTHelpers.java:385: error: CLASS_CAST_EXCEPTION (backend/modelBuiltins.ml:247:10-17:)
+  class com.sun.tools.javac.code.Type  cannot be cast to class com.sun.tools.javac.code.Symbol$MethodSymbol    at line 385
+
+core/src/main/java/com/google/errorprone/util/ASTHelpers.java:485: warning: ANALYSIS_STOPS (backend/tabulation.ml:1201:76-83:)
+  exception: CLASS_CAST_EXCEPTION
+
+core/src/main/java/com/google/errorprone/util/ASTHelpers.java:485: error: CLASS_CAST_EXCEPTION (backend/tabulation.ml:1201:76-83:)
+  class com.sun.source.tree.AnnotationTree * cannot be cast to class com.sun.source.tree.Tree *  in expression &tree  in call to getSymbol(...) at line 485
+
+Summary of the reports
+
+         CLASS_CAST_EXCEPTION: 135
+               ANALYSIS_STOPS: 133
+         RETURN_VALUE_IGNORED: 13
+             NULL_DEREFERENCE: 10
+  NULL_TEST_AFTER_DEREFERENCE: 5
+         PRECONDITION_NOT_MET: 5
+        CONDITION_ALWAYS_TRUE: 2
+                RESOURCE_LEAK: 1

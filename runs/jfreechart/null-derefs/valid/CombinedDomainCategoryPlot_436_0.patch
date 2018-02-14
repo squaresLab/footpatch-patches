@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/CombinedDomainCategoryPlot.java	2017-08-26 03:06:50.365952784 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/CombinedDomainCategoryPlot.java	2017-08-26 03:06:50.365952784 -0400
+@@ -433,6 +433,7 @@
+         CategoryAxis axis = getDomainAxis();
+         RectangleEdge domainEdge = getDomainAxisEdge();
+         double cursor = RectangleEdge.coordinate(dataArea, domainEdge);
++    if (axis == null) {        throw new IllegalArgumentException("Null 'object' argument.");    }
+         AxisState axisState = axis.draw(g2, cursor, area, dataArea, 
+                 domainEdge, info);
+         if (parentState == null) {

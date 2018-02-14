@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/memory/Table.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/memory/Table.c	2018-01-03 20:45:23.739613999 +0000
+@@ -123,6 +123,7 @@
+         break;
+     default:
+         swWarn("unkown column type.");
++    sw_free(col->name);
+         return SW_ERR;
+     }
+     col->index = table->item_size;

@@ -1,0 +1,1028 @@
+SEARCH STORE SIZE 99
+SIZE OF ERRORS: 0
+Doing cluster xcl2.cluster
+Doing cluster xcl1.cluster
+SEARCH STORE SIZE 99
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 99
+SIZE OF ERRORS: 23
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/dablooms.c]:[248] :[ resource acquired to fd by call to open() at line 241, column 15 is not released after line 248, column 5]
+[+] Complete err string: " resource acquired to fd by call to open() at line 241, column 15 is not released after line 248, column 5"
+[+] ERROR LINE IS: 241
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$31=_fun_close(n$30:) [line 368]
+	[+] Candidate 1: n$25=_fun_close(n$24:) [line 558]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Origin line num range: 367 - 368
+			[*] Origin function: new_counting_bloom_from_file
+			[*] extracted:         close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 19 locations (optional): [233, 231, 230, 228, 227, 226, 225, 224, 223, 222, 248, 234, 220, 219, 218, 214, 247, 241, 236]
+	[+] Patching at primary location: 248
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        close(fd);"
+		[+] Attempting to extract line 248 from file /home/vagrant/projects/dablooms/src/dablooms.c
+		[+] Succesfully extracted "    cur_bloom->bitmap = new_bitmap(fd, cur_bloom->num_bytes);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/dablooms.c_tmp_patched_diff
+
+Wrote to file /tmp/dablooms.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/dablooms/src/dablooms.c /tmp/dablooms.c_tmp_patched_diff > /tmp/udiff_d4eb9f.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_d4eb9f.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Destination function: new_counting_bloom
+			[*] Destination line insert: 248
+	[+] Wrote patch dablooms_248_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/dablooms.c]:[248] :[pointer cur_bloom last assigned on line 247 could be null and is dereferenced at line 248, column 40]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname new_counting_bloom
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/dablooms.c]:[382] :[ resource acquired to fd by call to open() at line 362, column 15 is not released after line 382, column 10]
+[+] Complete err string: " resource acquired to fd by call to open() at line 362, column 15 is not released after line 382, column 10"
+[+] ERROR LINE IS: 362
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$31=_fun_close(n$30:) [line 368]
+	[+] Candidate 1: n$25=_fun_close(n$24:) [line 558]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Origin line num range: 367 - 368
+			[*] Origin function: new_counting_bloom_from_file
+			[*] extracted:         close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 24 locations (optional): [382, 378, 233, 231, 230, 228, 227, 226, 225, 224, 223, 222, 377, 234, 220, 219, 218, 214, 375, 372, 371, 366, 362, 355]
+	[+] Patching at primary location: 382
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        close(fd);"
+		[+] Attempting to extract line 382 from file /home/vagrant/projects/dablooms/src/dablooms.c
+		[+] Succesfully extracted "    if ((bloom->bitmap = new_bitmap(fd, size)) == NULL) {"
+			[+] Line does not contain {
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/dablooms.c_tmp_patched_diff
+
+Wrote to file /tmp/dablooms.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/dablooms/src/dablooms.c /tmp/dablooms.c_tmp_patched_diff > /tmp/udiff_6ddc44.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_6ddc44.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Destination function: new_counting_bloom_from_file
+			[*] Destination line insert: 382
+	[+] Wrote patch dablooms_382_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/dablooms.c]:[378] :[ resource acquired by call to open() at line 362, column 15 is not released after line 378, column 29]
+[+] Complete err string: " resource acquired by call to open() at line 362, column 15 is not released after line 378, column 29"
+[+] ERROR LINE IS: 362
+[+] NOTE: pvar: return (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] heurstic is return, but pvar is fd. Returning fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$31=_fun_close(n$30:) [line 368]
+	[+] Candidate 1: n$25=_fun_close(n$24:) [line 558]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Origin line num range: 367 - 368
+			[*] Origin function: new_counting_bloom_from_file
+			[*] extracted:         close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 24 locations (optional): [382, 378, 233, 231, 230, 228, 227, 226, 225, 224, 223, 222, 377, 234, 220, 219, 218, 214, 375, 372, 371, 366, 362, 355]
+	[+] Patching at primary location: 378
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        close(fd);"
+		[+] Attempting to extract line 378 from file /home/vagrant/projects/dablooms/src/dablooms.c
+		[+] Succesfully extracted "        free_counting_bloom(bloom);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/dablooms.c_tmp_patched_diff
+
+Wrote to file /tmp/dablooms.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/dablooms/src/dablooms.c /tmp/dablooms.c_tmp_patched_diff > /tmp/udiff_94f110.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_94f110.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Destination function: new_counting_bloom_from_file
+			[*] Destination line insert: 378
+	[+] Wrote patch dablooms_378_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/dablooms.c]:[377] :[pointer bloom last assigned on line 375 could be null and is dereferenced at line 377, column 17]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname new_counting_bloom_from_file
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/dablooms.c]:[540] :[pointer bloom last assigned on line 530 could be null and is dereferenced at line 540, column 5]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname new_scaling_bloom
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/dablooms.c]:[530] :[ resource acquired to fd by call to open() at line 524, column 15 is not released after line 530, column 5]
+[+] Complete err string: " resource acquired to fd by call to open() at line 524, column 15 is not released after line 530, column 5"
+[+] ERROR LINE IS: 524
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$31=_fun_close(n$30:) [line 368]
+	[+] Candidate 1: n$25=_fun_close(n$24:) [line 558]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Origin line num range: 367 - 368
+			[*] Origin function: new_counting_bloom_from_file
+			[*] extracted:         close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 11 locations (optional): [540, 538, 537, 532, 515, 498, 497, 493, 530, 524, 517]
+	[+] Patching at primary location: 530
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        close(fd);"
+		[+] Attempting to extract line 530 from file /home/vagrant/projects/dablooms/src/dablooms.c
+		[+] Succesfully extracted "    bloom = scaling_bloom_init(capacity, error_rate, filename, fd);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/dablooms.c_tmp_patched_diff
+
+Wrote to file /tmp/dablooms.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/dablooms/src/dablooms.c /tmp/dablooms.c_tmp_patched_diff > /tmp/udiff_bf3343.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_bf3343.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Destination function: new_scaling_bloom
+			[*] Destination line insert: 530
+	[+] Wrote patch dablooms_530_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/dablooms.c]:[573] :[ memory dynamically allocated to bloom by call to scaling_bloom_init() at line 565, column 13 is not reachable after line 573, column 13]
+[+] Complete err string: " memory dynamically allocated to bloom by call to scaling_bloom_init() at line 565, column 13 is not reachable after line 573, column 13"
+[+] ERROR LINE IS: 565
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "bloom"
+[+] pvar TYPE not freed: "struct scaling_bloom_t *"
+	[=] This spec matches against Type "struct scaling_bloom_t *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$36 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$20 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$20 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$19 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$19 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bitmap.
+[+] type "structbitmap_t" does not match needed typ of spec "structscaling_bloom_t"
+[+] Filtered candidates: 0
+[+] Prioritizing compatibility for type: struct scaling_bloom_t *
+[+] No specific candidate for type struct scaling_bloom_t *. Returning 0 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 0
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/dablooms.c]:[573] :[ resource acquired by call to open() at line 552, column 15 is not released after line 573, column 13]
+[+] Complete err string: " resource acquired by call to open() at line 552, column 15 is not released after line 573, column 13"
+[+] ERROR LINE IS: 552
+[+] NOTE: pvar: return (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] heurstic is return, but pvar is fd. Returning fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$31=_fun_close(n$30:) [line 368]
+	[+] Candidate 1: n$25=_fun_close(n$24:) [line 558]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Origin line num range: 367 - 368
+			[*] Origin function: new_counting_bloom_from_file
+			[*] extracted:         close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 25 locations (optional): [573, 572, 571, 569, 568, 567, 514, 512, 511, 510, 509, 508, 507, 506, 500, 515, 498, 497, 493, 565, 562, 561, 556, 552, 544]
+	[+] Patching at primary location: 573
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        close(fd);"
+		[+] Attempting to extract line 573 from file /home/vagrant/projects/dablooms/src/dablooms.c
+		[+] Succesfully extracted "            free_scaling_bloom(bloom);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/dablooms.c_tmp_patched_diff
+
+Wrote to file /tmp/dablooms.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/dablooms/src/dablooms.c /tmp/dablooms.c_tmp_patched_diff > /tmp/udiff_7afef2.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_7afef2.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Destination function: new_scaling_bloom_from_file
+			[*] Destination line insert: 573
+	[+] Wrote patch dablooms_573_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [src/dablooms.c]:[337] :[pointer cur_bloom last assigned on line 334 could be null and is dereferenced at line 337, column 87]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname new_counting_bloom_from_scale
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [src/dablooms.c]:[565] :[ resource acquired to fd by call to open() at line 552, column 15 is not released after line 565, column 5]
+[+] Complete err string: " resource acquired to fd by call to open() at line 552, column 15 is not released after line 565, column 5"
+[+] ERROR LINE IS: 552
+[+] NOTE: pvar: fd (heuristic from error message) and pvar fd (extracted from error message line number).
+[+] pvar is fd and heurstic is fd. Using pvar fd
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fd"
+[+] adding spec for type:  "int "
+[+] Spec asked to look for type "int"
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$24 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] irvar n$30 lookup gives pvar fd.
+[?] Comparing HPRED TYPE of IRVAR int and PVAR type int.
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$31=_fun_close(n$30:) [line 368]
+	[+] Candidate 1: n$25=_fun_close(n$24:) [line 558]
+[+] Prioritizing compatibility for type: int 
+[+] Found candidate containing type int 
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Origin line num range: 367 - 368
+			[*] Origin function: new_counting_bloom_from_file
+			[*] extracted:         close(fd);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 25 locations (optional): [573, 572, 571, 569, 568, 567, 514, 512, 511, 510, 509, 508, 507, 506, 500, 515, 498, 497, 493, 565, 562, 561, 556, 552, 544]
+	[+] Patching at primary location: 565
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/dablooms/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "        close(fd);"
+		[+] Attempting to extract line 565 from file /home/vagrant/projects/dablooms/src/dablooms.c
+		[+] Succesfully extracted "    bloom = scaling_bloom_init(capacity, error_rate, filename, fd);"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/dablooms.c_tmp_patched_diff
+
+Wrote to file /tmp/dablooms.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/dablooms/src/dablooms.c /tmp/dablooms.c_tmp_patched_diff > /tmp/udiff_1ab0f4.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_1ab0f4.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Destination function: new_scaling_bloom_from_file
+			[*] Destination line insert: 565
+	[+] Wrote patch dablooms_565_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/dablooms.c]:[414] :[ memory is not reachable after line 414, column 21]
+[+] Complete err string: " memory is not reachable after line 414, column 21"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [src/dablooms.c]:[105] :[ memory dynamically allocated by call to malloc() at line 97, column 31 is not reachable after line 105, column 10]
+[+] Complete err string: " memory dynamically allocated by call to malloc() at line 97, column 31 is not reachable after line 105, column 10"
+[+] ERROR LINE IS: 97
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "bitmap"
+[+] pvar TYPE not freed: "struct bitmap_t *"
+	[=] This spec matches against Type "struct bitmap_t *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 99
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$36 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$20 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$20 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$19 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$19 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$0 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$9 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$1 to pvar bloom.
+[+] type "structcounting_bloom_t" does not match needed typ of spec "structbitmap_t"
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$3 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$9 to pvar bitmap.
+[+] typ matches needed typ of spec struct bitmap_t *
+[+] Filtered candidates: 7
+	[+] Candidate 0: _fun_free_bitmap(n$9:) [line 81]
+	[+] Candidate 1: n$8=_fun_close(n$7:) [line 82]
+	[+] Candidate 2: _fun_free(n$0:) [line 35]
+	[+] Candidate 3: n$19=_fun_close(n$18:) [line 64]
+	[+] Candidate 4: _fun_free_bitmap(n$20:) [line 63]
+	[+] Candidate 5: _fun_free_bitmap(n$36:) [line 50]
+	[+] Candidate 6: n$35=_fun_close(n$34:) [line 51]
+[+] Prioritizing compatibility for type: struct bitmap_t *
+[+] Found candidate containing type struct bitmap_t *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Origin line num range: 80 - 81
+			[*] Origin function: bitmap_resize
+			[*] extracted:             free_bitmap(bitmap);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 6 locations (optional): [105, 103, 102, 101, 97, 93]
+	[+] Patching at primary location: 105
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/dablooms/infer-out/footpatch/memory_leak_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/dablooms/infer-out/footpatch/memory_leak_with_type/patches.
+		[+] Have fragment "            free_bitmap(bitmap);"
+		[+] Attempting to extract line 105 from file /home/vagrant/projects/dablooms/src/dablooms.c
+		[+] Succesfully extracted "    if ((bitmap = bitmap_resize(bitmap, 0, bytes)) == NULL) {"
+			[+] Line does not contain {
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/dablooms.c_tmp_patched_diff
+
+Wrote to file /tmp/dablooms.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/dablooms/src/dablooms.c /tmp/dablooms.c_tmp_patched_diff > /tmp/udiff_236766.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_236766.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/dablooms/src/dablooms.c
+			[*] Destination function: new_bitmap
+			[*] Destination line insert: 105
+	[+] Wrote patch dablooms_105_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------

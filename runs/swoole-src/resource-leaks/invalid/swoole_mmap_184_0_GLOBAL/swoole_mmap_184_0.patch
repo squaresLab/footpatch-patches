@@ -1,0 +1,15 @@
+--- /home/vagrant/projects/swoole-src/swoole_mmap.c	2018-01-03 20:45:23.747609998 +0000
+--- /home/vagrant/projects/swoole-src/swoole_mmap.c	2018-01-03 20:45:23.747609998 +0000
+@@ -181,7 +181,11 @@
+         struct stat _stat;
+         if (fstat(fd, &_stat) < 0)
+         {
+-            swoole_php_sys_error(E_WARNING, "fstat(%s) failed.", filename);
++            swoole_php_sys_error(E_WARNING, "fstat(%s) {
++    close(fd);
++failed.", filename);
++}
++
+             RETURN_FALSE;
+         }
+         if (_stat.st_size == 0)

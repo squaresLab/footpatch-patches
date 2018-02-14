@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/memory/Table.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/memory/Table.c	2018-01-03 20:45:23.739613999 +0000
+@@ -86,6 +86,7 @@
+     col->name = swString_dup(name, len);
+     if (!col->name)
+     {
++    sw_free(col);
+         return SW_ERR;
+     }
+     switch(type)

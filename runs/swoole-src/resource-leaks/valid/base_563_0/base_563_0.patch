@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/core/base.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/core/base.c	2018-01-03 20:45:23.739613999 +0000
+@@ -560,6 +560,7 @@
+     swString *content = swString_new(filesize);
+     if (!content)
+     {
++                close(fd);
+         return NULL;
+     }
+ 

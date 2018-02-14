@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+@@ -2794,6 +2794,7 @@
+ 
+         ValueAxis yAxis = getRangeAxis();
+         double y = this.quadrantOrigin.getY();
++    if (yAxis == null) {        throw new IllegalArgumentException("Null 'stream' argument.");    }
+         double yy = yAxis.valueToJava2D(y, area, getRangeAxisEdge());
+ 
+         double xmin = xAxis.getLowerBound();

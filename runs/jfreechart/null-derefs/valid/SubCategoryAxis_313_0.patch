@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/axis/SubCategoryAxis.java	2017-08-26 03:06:26.505977806 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/axis/SubCategoryAxis.java	2017-08-26 03:06:26.505977806 -0400
+@@ -310,6 +310,7 @@
+         g2.setPaint(this.subLabelPaint);
+         CategoryPlot plot = (CategoryPlot) getPlot();
+         CategoryDataset dataset = plot.getDataset();
++    if (dataset == null) {        throw new IllegalArgumentException("Null 'edge' argument.");    }
+         int categoryCount = dataset.getColumnCount();
+ 
+         double maxdim = getMaxDim(g2, edge);

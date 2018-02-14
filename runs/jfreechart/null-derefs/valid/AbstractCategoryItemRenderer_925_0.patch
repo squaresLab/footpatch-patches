@@ -1,0 +1,12 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java	2017-08-26 03:05:52.246013620 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java	2017-08-26 03:05:52.246013620 -0400
+@@ -922,6 +922,9 @@
+ 
+         Comparable category = marker.getKey();
+         CategoryDataset dataset = plot.getDataset(plot.getIndexOf(this));
++        if (dataset == null) {
++            throw new IllegalArgumentException("Null 'dataset' argument.");
++        }
+         int columnIndex = dataset.getColumnIndex(category);
+         if (columnIndex < 0) {
+             return;

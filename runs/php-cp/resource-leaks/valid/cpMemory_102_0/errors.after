@@ -1,0 +1,151 @@
+Found 48 issues
+
+connect_pool_client.c:48: error: RESOURCE_LEAK
+   resource acquired to fd by call to open() at line 43, column 18 is not released after line 48, column 14
+
+connect_pool_client.c:75: error: RESOURCE_LEAK
+   resource acquired to cli->sock by call to cpClient_create() at line 64, column 9 is not released after line 75, column 9
+
+connect_pool_client.c:199: error: NULL_DEREFERENCE
+  pointer workerid2writefd last assigned on line 192 could be null and is dereferenced at line 199, column 9
+
+connect_pool_client.c:228: error: NULL_DEREFERENCE
+  pointer workerid2readfd last assigned on line 221 could be null and is dereferenced at line 228, column 9
+
+connect_pool_client.c:257: error: NULL_DEREFERENCE
+  pointer semid2attbuf last assigned on line 250 could be null and is dereferenced at line 257, column 9
+
+connect_pool_client.c:264: error: RESOURCE_LEAK
+   resource acquired to fd by call to open() at line 259, column 18 is not released after line 264, column 14
+
+connect_pool_client.c:519: error: NULL_DEREFERENCE
+  pointer cli last assigned on line 505 could be null and is dereferenced at line 519, column 5
+
+connect_pool_client.c:649: error: NULL_DEREFERENCE
+  pointer real_data_source_arr last assigned on line 616 could be null and is dereferenced at line 649, column 23
+
+cpClientNet.c:28: error: NULL_DEREFERENCE
+  pointer p last assigned on line 28 could be null and is dereferenced at line 28, column 9
+
+cpClientNet.c:116: error: NULL_DEREFERENCE
+  pointer p last assigned on line 116 could be null and is dereferenced at line 116, column 13
+
+cpClientNet.c:121: error: NULL_DEREFERENCE
+  pointer p last assigned on line 121 could be null and is dereferenced at line 121, column 13
+
+cpFunction.c:47: error: NULL_DEREFERENCE
+  pointer p last assigned on line 47 could be null and is dereferenced at line 47, column 9
+
+cpFunction.c:205: error: NULL_DEREFERENCE
+  pointer p last assigned on line 205 could be null and is dereferenced at line 205, column 9
+
+cpFunction.c:257: error: NULL_DEREFERENCE
+  pointer p last assigned on line 257 could be null and is dereferenced at line 257, column 13
+
+cpFunction.c:264: error: NULL_DEREFERENCE
+  pointer p last assigned on line 264 could be null and is dereferenced at line 264, column 9
+
+cpFunction.c:280: error: NULL_DEREFERENCE
+  pointer p last assigned on line 280 could be null and is dereferenced at line 280, column 9
+
+cpFunction.c:347: error: NULL_DEREFERENCE
+  pointer ser_data.c last assigned on line 344 could be null and is dereferenced by call to memcpy() at line 347, column 5
+
+cpFunction.c:360: error: NULL_DEREFERENCE
+  pointer ser_data.c last assigned on line 357 could be null and is dereferenced by call to memcpy() at line 360, column 5
+
+cpFunction.c:398: error: NULL_DEREFERENCE
+  pointer p last assigned on line 398 could be null and is dereferenced at line 398, column 9
+
+cpMemory.c:48: error: NULL_DEREFERENCE
+  pointer p last assigned on line 48 could be null and is dereferenced at line 48, column 9
+
+cpMemory.c:98: error: NULL_DEREFERENCE
+  pointer p last assigned on line 98 could be null and is dereferenced at line 98, column 9
+
+cpMemory.c:110: error: NULL_DEREFERENCE
+  pointer p last assigned on line 110 could be null and is dereferenced at line 110, column 9
+
+cpNetWork.c:47: error: NULL_DEREFERENCE
+  pointer p last assigned on line 47 could be null and is dereferenced at line 47, column 9
+
+cpPingWorker.c:155: error: NULL_DEREFERENCE
+  pointer p last assigned on line 155 could be null and is dereferenced at line 155, column 9
+
+cpServer.c:121: error: NULL_DEREFERENCE
+  pointer p last assigned on line 121 could be null and is dereferenced at line 121, column 13
+
+cpServer.c:300: error: NULL_DEREFERENCE
+  pointer p last assigned on line 300 could be null and is dereferenced at line 300, column 25
+
+cpServer.c:364: error: NULL_DEREFERENCE
+  pointer p last assigned on line 364 could be null and is dereferenced at line 364, column 21
+
+cpServer.c:371: error: NULL_DEREFERENCE
+  pointer p last assigned on line 371 could be null and is dereferenced at line 371, column 13
+
+cpServer.c:468: error: NULL_DEREFERENCE
+  pointer p last assigned on line 468 could be null and is dereferenced at line 468, column 13
+
+cpServer.c:490: error: NULL_DEREFERENCE
+  pointer pre last assigned on line 469 could be null and is dereferenced at line 490, column 25
+
+cpServer.c:495: error: NULL_DEREFERENCE
+  pointer pre last assigned on line 469 could be null and is dereferenced at line 495, column 25
+
+cpServer.c:578: error: NULL_DEREFERENCE
+  pointer p last assigned on line 578 could be null and is dereferenced at line 578, column 13
+
+cpServer.c:628: error: NULL_DEREFERENCE
+  pointer index last assigned on line 627 could be null and is dereferenced at line 628, column 9
+
+cpServer.c:629: error: MEMORY_LEAK
+   memory dynamically allocated to index by call to malloc() at line 627, column 29 is not reachable after line 629, column 13
+
+cpServer.c:631: error: NULL_DEREFERENCE
+  pointer p last assigned on line 631 could be null and is dereferenced at line 631, column 13
+
+cpServer.c:697: error: NULL_DEREFERENCE
+  pointer p last assigned on line 697 could be null and is dereferenced at line 697, column 13
+
+cpServer.c:708: error: NULL_DEREFERENCE
+  pointer p last assigned on line 708 could be null and is dereferenced at line 708, column 25
+
+cpServer.c:736: error: NULL_DEREFERENCE
+  pointer p last assigned on line 736 could be null and is dereferenced at line 736, column 9
+
+cpServer.c:746: error: NULL_DEREFERENCE
+  pointer p last assigned on line 746 could be null and is dereferenced at line 746, column 9
+
+cpServer.c:756: error: NULL_DEREFERENCE
+  pointer p last assigned on line 756 could be null and is dereferenced at line 756, column 9
+
+cpWorker.c:31: error: NULL_DEREFERENCE
+  pointer p last assigned on line 31 could be null and is dereferenced at line 31, column 13
+
+cpWorker.c:76: error: NULL_DEREFERENCE
+  pointer p last assigned on line 76 could be null and is dereferenced at line 76, column 13
+
+cpWorker.c:80: error: NULL_DEREFERENCE
+  pointer p last assigned on line 80 could be null and is dereferenced at line 80, column 13
+
+cpWorker.c:101: error: NULL_DEREFERENCE
+  pointer p last assigned on line 101 could be null and is dereferenced at line 101, column 9
+
+cpWorker.c:147: error: NULL_DEREFERENCE
+  pointer p last assigned on line 147 could be null and is dereferenced at line 147, column 25
+
+cpWorker.c:185: error: NULL_DEREFERENCE
+  pointer p last assigned on line 185 could be null and is dereferenced at line 185, column 21
+
+cpWorker.c:368: error: NULL_DEREFERENCE
+  pointer p last assigned on line 368 could be null and is dereferenced at line 368, column 17
+
+cpWorker.c:372: error: NULL_DEREFERENCE
+  pointer p last assigned on line 372 could be null and is dereferenced at line 372, column 21
+
+Summary of the reports
+
+  NULL_DEREFERENCE: 44
+     RESOURCE_LEAK: 3
+       MEMORY_LEAK: 1

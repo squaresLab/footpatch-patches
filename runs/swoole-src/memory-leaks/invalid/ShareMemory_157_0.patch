@@ -1,0 +1,15 @@
+--- /home/vagrant/projects/swoole-src/src/memory/ShareMemory.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/memory/ShareMemory.c	2018-01-03 20:45:23.739613999 +0000
+@@ -154,7 +154,11 @@
+     //SHM_R | SHM_W |
+     if ((shmid = shmget(key, size, IPC_CREAT)) < 0)
+     {
+-        swWarn("shmget() failed. Error: %s[%d]", strerror(errno), errno);
++        swWarn("shmget() {
++        shmctl(shmid, IPC_RMID, NULL);
++failed. Error: %s[%d]", strerror(errno), errno);
++}
++
+         return NULL;
+     }
+     if ((mem = shmat(shmid, NULL, 0)) < 0)

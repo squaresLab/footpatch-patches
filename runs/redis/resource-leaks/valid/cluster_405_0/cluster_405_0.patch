@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/redis/src/cluster.c	2018-01-03 20:47:19.525695731 +0000
+--- /home/vagrant/projects/redis/src/cluster.c	2018-01-03 20:47:19.525695731 +0000
+@@ -402,6 +402,7 @@
+      * lock to the file as long as the process exists. */
+ #endif /* __sun */
+ 
++    close(fd);
+     return C_OK;
+ }
+ 

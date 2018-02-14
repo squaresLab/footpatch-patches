@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+--- /home/vagrant/projects/dablooms/src/dablooms.c	2018-01-03 20:45:34.882040358 +0000
+@@ -246,6 +246,7 @@
+     
+     cur_bloom = counting_bloom_init(capacity, error_rate, 0);
+     cur_bloom->bitmap = new_bitmap(fd, cur_bloom->num_bytes);
++        close(fd);
+     cur_bloom->header = (counting_bloom_header_t *)(cur_bloom->bitmap->array);
+     return cur_bloom;
+ }

@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/redis/src/redis-check-rdb.c	2017-08-25 15:39:41.039328847 -0400
+--- /home/rvt/Pinta/integrations/infer/redis/src/redis-check-rdb.c	2017-08-25 15:39:41.039328847 -0400
+@@ -200,6 +200,7 @@
+     }
+     rdbver = atoi(buf+5);
+     if (rdbver < 1 || rdbver > RDB_VERSION) {
++    fclose(fp);
+         rdbCheckError("Can't handle RDB format version %d",rdbver);
+         return 1;
+     }

@@ -1,0 +1,577 @@
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 0
+Doing cluster xcl9.cluster
+Doing cluster xcl6.cluster
+Doing cluster xcl3.cluster
+Doing cluster xcl10.cluster
+Doing cluster xcl1.cluster
+Doing cluster xcl11.cluster
+Doing cluster xcl8.cluster
+Doing cluster xcl5.cluster
+Doing cluster xcl4.cluster
+Doing cluster xcl2.cluster
+Doing cluster xcl7.cluster
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 1
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 2
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[32] :[ memory is not reachable after line 32, column 4]
+[+] Complete err string: " memory is not reachable after line 32, column 4"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 0
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 1
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[88] :[ memory is not reachable after line 88, column 23]
+[+] Complete err string: " memory is not reachable after line 88, column 23"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 5
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[88] :[ memory is not reachable after line 88, column 23]
+[+] Complete err string: " memory is not reachable after line 88, column 23"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [exedir.c]:[32] :[ memory is not reachable after line 32, column 6]
+[+] Complete err string: " memory is not reachable after line 32, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [exedir.c]:[23] :[ memory is not reachable after line 23, column 27]
+[+] Complete err string: " memory is not reachable after line 23, column 27"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 4
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[32] :[ memory is not reachable after line 32, column 4]
+[+] Complete err string: " memory is not reachable after line 32, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[66] :[ memory is not reachable after line 66, column 23]
+[+] Complete err string: " memory is not reachable after line 66, column 23"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[88] :[ memory is not reachable after line 88, column 23]
+[+] Complete err string: " memory is not reachable after line 88, column 23"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 3
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pipe.c]:[66] :[ memory dynamically allocated by call to xmalloc() at line 52, column 23 is not reachable after line 66, column 12]
+[+] Complete err string: " memory dynamically allocated by call to xmalloc() at line 52, column 23 is not reachable after line 66, column 12"
+[+] ERROR LINE IS: 52
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "raw"
+[+] pvar TYPE not freed: "unsigned char *"
+	[=] This spec matches against Type "unsigned char *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 193
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ptr.
+[?] Comparing HPRED TYPE of IRVAR void and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$2 to pvar ptr.
+[?] Comparing HPRED TYPE of IRVAR void and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Filtered candidates: 6
+	[+] Candidate 0: _fun_free(n$17:) [line 80]
+	[+] Candidate 1: n$2=_fun_close(n$1:) [line 132]
+	[+] Candidate 2: _fun_free(n$7:) [line 119]
+	[+] Candidate 3: _fun_free(n$11:) [line 71]
+	[+] Candidate 4: _fun_perror("fork":) [line 124]
+	[+] Candidate 5: n$6=_fun_fork() [line 121]
+[+] Prioritizing compatibility for type: unsigned char *
+[+] No specific candidate for type unsigned char *. Returning 6 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 6
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/rappel/pipe.c
+			[*] Origin line num range: 79 - 80
+			[*] Origin function: read_bytecode
+			[*] extracted: 		free(raw);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 7 locations (optional): [66, 65, 64, 59, 54, 52, 47]
+	[+] Patching at primary location: 66
+	[+] Create dir /home/vagrant/projects/rappel/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/rappel/infer-out/footpatch/memory_leak_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/rappel/infer-out/footpatch/memory_leak_with_type/patches.
+		[+] Have fragment "\t\tfree(raw);"
+		[+] Attempting to extract line 66 from file /home/vagrant/projects/rappel/pipe.c
+		[+] Succesfully extracted "\t\t\tfprintf(stderr, \"Too much bytecode to copy, exiting...\\n\");"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/pipe.c_tmp_patched_diff
+
+Wrote to file /tmp/pipe.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/rappel/pipe.c /tmp/pipe.c_tmp_patched_diff > /tmp/udiff_0934cc.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_0934cc.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/rappel/pipe.c
+			[*] Destination function: read_bytecode
+			[*] Destination line insert: 66
+	[+] Wrote patch pipe_66_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[66] :[ memory is not reachable after line 66, column 23]
+[+] Complete err string: " memory is not reachable after line 66, column 23"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 2
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[32] :[ memory is not reachable after line 32, column 4]
+[+] Complete err string: " memory is not reachable after line 32, column 4"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 7
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[88] :[ memory is not reachable after line 88, column 23]
+[+] Complete err string: " memory is not reachable after line 88, column 23"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [exedir.c]:[32] :[ memory is not reachable after line 32, column 6]
+[+] Complete err string: " memory is not reachable after line 32, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [exedir.c]:[23] :[ memory is not reachable after line 23, column 27]
+[+] Complete err string: " memory is not reachable after line 23, column 27"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[32] :[ memory is not reachable after line 32, column 4]
+[+] Complete err string: " memory is not reachable after line 32, column 4"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 193
+SIZE OF ERRORS: 11
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[88] :[ memory is not reachable after line 88, column 23]
+[+] Complete err string: " memory is not reachable after line 88, column 23"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [exedir.c]:[32] :[ memory is not reachable after line 32, column 6]
+[+] Complete err string: " memory is not reachable after line 32, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [exedir.c]:[23] :[ memory is not reachable after line 23, column 27]
+[+] Complete err string: " memory is not reachable after line 23, column 27"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[32] :[ memory is not reachable after line 32, column 4]
+[+] Complete err string: " memory is not reachable after line 32, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pipe.c]:[66] :[ memory dynamically allocated by call to xmalloc() at line 52, column 23 is not reachable after line 66, column 12]
+[+] Complete err string: " memory dynamically allocated by call to xmalloc() at line 52, column 23 is not reachable after line 66, column 12"
+[+] ERROR LINE IS: 52
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "raw"
+[+] pvar TYPE not freed: "unsigned char *"
+	[=] This spec matches against Type "unsigned char *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 193
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$11 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$0 to pvar ptr.
+[?] Comparing HPRED TYPE of IRVAR void and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$2 to pvar ptr.
+[?] Comparing HPRED TYPE of IRVAR void and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$7 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$1 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar @f$2 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$4 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar val$5 to pvar elf.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$17 to pvar raw.
+[?] Comparing HPRED TYPE of IRVAR unsignedchar and PVAR type unsignedchar.
+[+] Filtered candidates: 6
+	[+] Candidate 0: _fun_free(n$17:) [line 80]
+	[+] Candidate 1: n$2=_fun_close(n$1:) [line 132]
+	[+] Candidate 2: _fun_free(n$7:) [line 119]
+	[+] Candidate 3: _fun_free(n$11:) [line 71]
+	[+] Candidate 4: _fun_perror("fork":) [line 124]
+	[+] Candidate 5: n$6=_fun_fork() [line 121]
+[+] Prioritizing compatibility for type: unsigned char *
+[+] No specific candidate for type unsigned char *. Returning 6 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 6
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/rappel/pipe.c
+			[*] Origin line num range: 79 - 80
+			[*] Origin function: read_bytecode
+			[*] extracted: 		free(raw);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 7 locations (optional): [66, 65, 64, 59, 54, 52, 47]
+	[+] Patching at primary location: 66
+	[+] Create dir /home/vagrant/projects/rappel/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/rappel/infer-out/footpatch/memory_leak_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/rappel/infer-out/footpatch/memory_leak_with_type/patches.
+		[+] Have fragment "\t\tfree(raw);"
+		[+] Attempting to extract line 66 from file /home/vagrant/projects/rappel/pipe.c
+		[+] Succesfully extracted "\t\t\tfprintf(stderr, \"Too much bytecode to copy, exiting...\\n\");"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment was NOT if-bracketed
+Reading from file /tmp/pipe.c_tmp_patched_diff
+
+Wrote to file /tmp/pipe.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/rappel/pipe.c /tmp/pipe.c_tmp_patched_diff > /tmp/udiff_0884c6.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_0884c6.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/rappel/pipe.c
+			[*] Destination function: read_bytecode
+			[*] Destination line insert: 66
+	[+] Wrote patch pipe_66_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [common.c]:[66] :[ memory is not reachable after line 66, column 23]
+[+] Complete err string: " memory is not reachable after line 66, column 23"
+[-] Could not get pvar name and type

@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/error-prone/core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/GuardedByBinder.java	2018-01-03 20:47:58.000000000 +0000
+--- /home/vagrant/projects/error-prone/core/src/main/java/com/google/errorprone/bugpatterns/threadsafety/GuardedByBinder.java	2018-01-03 20:47:58.000000000 +0000
+@@ -182,6 +182,7 @@
+               IdentifierTree identifier = (IdentifierTree) methodSelect;
+               Symbol.MethodSymbol method =
+                   context.resolver.resolveMethod(node, identifier.getName());
++    checkGuardedBy(method != null, "Could not resolve: %s", node);
+               return bindSelect(computeBase(context, method), method);
+             }
+             case MEMBER_SELECT: {

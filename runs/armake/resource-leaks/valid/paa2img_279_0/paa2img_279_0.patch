@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/armake/src/paa2img.c	2018-01-03 20:46:50.228350787 +0000
+--- /home/vagrant/projects/armake/src/paa2img.c	2018-01-03 20:46:50.228350787 +0000
+@@ -277,6 +277,7 @@
+         taggsig[4] = 0x00;
+         if (strcmp(taggsig, "GGAT")) {
+             errorf("Failed to find MIPMAP pointer.\n");
++    fclose(f);
+             return 2;
+         }
+ 

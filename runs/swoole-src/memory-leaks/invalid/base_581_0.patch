@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/core/base.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/core/base.c	2018-01-03 20:45:23.739613999 +0000
+@@ -579,6 +579,7 @@
+             {
+                 swSysError("pread(%d, %ld, %d) failed.", fd, filesize - readn, readn);
+                 swString_free(content);
++    sw_free(content);
+                 close(fd);
+                 return NULL;
+             }

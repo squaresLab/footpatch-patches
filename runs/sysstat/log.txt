@@ -1,0 +1,720 @@
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl7.cluster
+Doing cluster xcl1.cluster
+Doing cluster xcl2.cluster
+Doing cluster xcl14.cluster
+Doing cluster xcl13.cluster
+Doing cluster xcl9.cluster
+Doing cluster xcl3.cluster
+Doing cluster xcl10.cluster
+Doing cluster xcl4.cluster
+Doing cluster xcl11.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl6.cluster
+Doing cluster xcl5.cluster
+Doing cluster xcl16.cluster
+Doing cluster xcl15.cluster
+Doing cluster xcl18.cluster
+SEARCH STORE SIZE 0
+SIZE OF ERRORS: 0
+Doing cluster xcl8.cluster
+Doing cluster xcl12.cluster
+Doing cluster xcl17.cluster
+SEARCH STORE SIZE 9
+SIZE OF ERRORS: 2
+SEARCH STORE SIZE 23
+SIZE OF ERRORS: 3
+SEARCH STORE SIZE 30
+SIZE OF ERRORS: 12
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [rd_stats.c]:[1763] :[ resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3"
+[+] ERROR LINE IS: 1759
+[+] NOTE: pvar: return (heuristic from error message) and pvar fp (extracted from error message line number).
+[+] heurstic is return, but pvar is fp. Returning fp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 30
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 1
+	[+] Candidate 0: n$1=_fun_fclose(n$0:) [line 1769]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Origin line num range: 1768 - 1769
+			[*] Origin function: read_uptime
+			[*] extracted: 	fclose(fp);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 6 locations (optional): [1763, 1766, 1765, 1762, 1759, 1753]
+	[+] Patching at primary location: 1763
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "\tfclose(fp);"
+		[+] Attempting to extract line 1763 from file /home/vagrant/projects/sysstat/rd_stats.c
+		[+] Succesfully extracted "\t\treturn;"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment is return. Doing if bracket atlocation-1 if needed
+		[+] NEW Fragment was if-bracketed:	if (fgets(line, 128, fp) == NULL) {
+	fclose(fp);
+		return;
+}
+
+
+Reading from file /tmp/rd_stats.c_tmp_patched_diff
+
+Wrote to file /tmp/rd_stats.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/sysstat/rd_stats.c /tmp/rd_stats.c_tmp_patched_diff > /tmp/udiff_f52601.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_f52601.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Destination function: read_uptime
+			[*] Destination line insert: 1763
+	[+] Wrote patch rd_stats_1763_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 36
+SIZE OF ERRORS: 8
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [common.c]:[104] :[pointer ltm last assigned on line 102 could be null and is dereferenced at line 104, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_gmtime
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [common.c]:[81] :[pointer ltm last assigned on line 79 could be null and is dereferenced at line 81, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_localtime
+[=] I found these typs for pvar last
+[-] No type for pvar found
+SEARCH STORE SIZE 35
+SIZE OF ERRORS: 15
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [common.c]:[81] :[pointer ltm last assigned on line 79 could be null and is dereferenced at line 81, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_localtime
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [rd_stats.c]:[1763] :[ resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3"
+[+] ERROR LINE IS: 1759
+[+] NOTE: pvar: return (heuristic from error message) and pvar fp (extracted from error message line number).
+[+] heurstic is return, but pvar is fp. Returning fp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 35
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 1
+	[+] Candidate 0: n$1=_fun_fclose(n$0:) [line 1769]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Origin line num range: 1768 - 1769
+			[*] Origin function: read_uptime
+			[*] extracted: 	fclose(fp);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 6 locations (optional): [1763, 1766, 1765, 1762, 1759, 1753]
+	[+] Patching at primary location: 1763
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "\tfclose(fp);"
+		[+] Attempting to extract line 1763 from file /home/vagrant/projects/sysstat/rd_stats.c
+		[+] Succesfully extracted "\t\treturn;"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment is return. Doing if bracket atlocation-1 if needed
+		[+] NEW Fragment was if-bracketed:	if (fgets(line, 128, fp) == NULL) {
+	fclose(fp);
+		return;
+}
+
+
+Reading from file /tmp/rd_stats.c_tmp_patched_diff
+
+Wrote to file /tmp/rd_stats.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/sysstat/rd_stats.c /tmp/rd_stats.c_tmp_patched_diff > /tmp/udiff_2ade7e.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_2ade7e.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Destination function: read_uptime
+			[*] Destination line insert: 1763
+	[+] Wrote patch rd_stats_1763_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [nfsiostat.c]:[96] :[ memory is not reachable after line 96, column 6]
+[+] Complete err string: " memory is not reachable after line 96, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [nfsiostat.c]:[96] :[ memory is not reachable after line 96, column 11]
+[+] Complete err string: " memory is not reachable after line 96, column 11"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 76
+SIZE OF ERRORS: 13
+SEARCH STORE SIZE 127
+SIZE OF ERRORS: 32
+SEARCH STORE SIZE 96
+SIZE OF ERRORS: 6
+SEARCH STORE SIZE 47
+SIZE OF ERRORS: 12
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [iostat.c]:[109] :[ memory is not reachable after line 109, column 6]
+[+] Complete err string: " memory is not reachable after line 109, column 6"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [iostat.c]:[109] :[ memory is not reachable after line 109, column 11]
+[+] Complete err string: " memory is not reachable after line 109, column 11"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 68
+SIZE OF ERRORS: 22
+SEARCH STORE SIZE 146
+SIZE OF ERRORS: 20
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [sar.c]:[572] :[ return is not reachable after line 572, column 4]
+[+] Complete err string: " return is not reachable after line 572, column 4"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 100
+SIZE OF ERRORS: 35
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rd_stats.c]:[2085] :[ memory dynamically allocated to line by call to realloc() at line 2081, column 2 is not reachable after line 2085, column 7]
+[+] Complete err string: " memory dynamically allocated to line by call to realloc() at line 2081, column 2 is not reachable after line 2085, column 7"
+[+] ERROR LINE IS: 2081
+[+] Patch generation routine started for bug "MEMORY_LEAK".
+[+] pvar NAME not freed: "_p_"
+[+] pvar TYPE not freed: "char *"
+	[=] This spec matches against Type "char *". Compare to pvar TYPE
+	[=] Attempting patching with spec "memory_leak_with_type"
+	[+] Footpatch_spec : Store size 100
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$2 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Malloced memory FREED found in POST
+
+[+] irvar n$2 to pvar line.
+[?] Comparing HPRED TYPE of IRVAR char and PVAR type char.
+[+] Filtered candidates: 1
+	[+] Candidate 0: _fun_free(n$2:) [line 2094]
+[+] Prioritizing compatibility for type: char *
+[+] No specific candidate for type char *. Returning 1 additional candidates. (multiple candidates will issue patch_1, patch_2...)
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Origin line num range: 2093 - 2094
+			[*] Origin function: get_irqcpu_nr
+			[*] extracted: 		free(line);
+	[&] Renaming fragment fixing var to pvar: line -> _p_
+	[&]FFF Running cmd for rename: /home/vagrant/footpatch/infer-linux64-v0.9.3/patching/rename/rename "\t\tfree(line);" "line" "_p_" > /tmp/patch391214.footpatch
+	[&] Error renaming
+	[-] No candidates found.
+-------------------------FIN-----------------------------------
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [rd_stats.c]:[2083] :[pointer line last assigned on line 2074 could be null and is dereferenced by call to fgets() at line 2083, column 10]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_irqcpu_nr
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [rd_stats.c]:[1763] :[ resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3"
+[+] ERROR LINE IS: 1759
+[+] NOTE: pvar: return (heuristic from error message) and pvar fp (extracted from error message line number).
+[+] heurstic is return, but pvar is fp. Returning fp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 100
+[+] irvar n$2 lookup gives pvar fp.
+Comparing [tstruct] irvar "n$2" and irvar' "@f$0"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$2 lookup gives pvar fp.
+Comparing [tstruct] irvar "n$2" and irvar' "@f$0"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$2 lookup gives pvar fp.
+Comparing [tstruct] irvar "n$2" and irvar' "@f$0"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$2 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$12 lookup gives pvar fp.
+Comparing [tstruct] irvar "n$12" and irvar' "@f$0"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$12 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$29 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$22 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$1 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$3 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$3 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 10
+	[+] Candidate 0: n$4=_fun_fclose(n$3:) [line 2091]
+	[+] Candidate 1: n$1=_fun_fclose(n$0:) [line 723]
+	[+] Candidate 2: n$2=_fun_fclose(n$1:) [line 1835]
+	[+] Candidate 3: n$2=_fun_fclose(n$1:) [line 2124]
+	[+] Candidate 4: n$23=_fun_fclose(n$22:) [line 650]
+	[+] Candidate 5: n$30=_fun_fclose(n$29:) [line 643]
+	[+] Candidate 6: n$1=_fun_fclose(n$0:) [line 1769]
+	[+] Candidate 7: n$13=_fun_fclose(n$12:) [line 662]
+	[+] Candidate 8: n$1=_fun_fclose(n$0:) [line 773]
+	[+] Candidate 9: n$3=_fun_fclose(n$2:) [line 674]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Origin line num range: 2090 - 2091
+			[*] Origin function: get_irqcpu_nr
+			[*] extracted: 	fclose(fp);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 6 locations (optional): [1763, 1766, 1765, 1762, 1759, 1753]
+	[+] Patching at primary location: 1763
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "\tfclose(fp);"
+		[+] Attempting to extract line 1763 from file /home/vagrant/projects/sysstat/rd_stats.c
+		[+] Succesfully extracted "\t\treturn;"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment is return. Doing if bracket atlocation-1 if needed
+		[+] NEW Fragment was if-bracketed:	if (fgets(line, 128, fp) == NULL) {
+	fclose(fp);
+		return;
+}
+
+
+Reading from file /tmp/rd_stats.c_tmp_patched_diff
+
+Wrote to file /tmp/rd_stats.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/sysstat/rd_stats.c /tmp/rd_stats.c_tmp_patched_diff > /tmp/udiff_6c0261.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_6c0261.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Destination function: read_uptime
+			[*] Destination line insert: 1763
+	[+] Wrote patch rd_stats_1763_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 202
+SIZE OF ERRORS: 38
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pidstat.c]:[659] :[ memory is not reachable after line 659, column 7]
+[+] Complete err string: " memory is not reachable after line 659, column 7"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pidstat.c]:[760] :[ memory is not reachable after line 760, column 25]
+[+] Complete err string: " memory is not reachable after line 760, column 25"
+[-] Could not get pvar name and type
+[+] Found error: NULL_DEREFERENCE
+[+] Patchable error: [common.c]:[81] :[pointer ltm last assigned on line 79 could be null and is dereferenced at line 81, column 13]
+[+] Patch generation routine started for bug "NULL_DEREF".
+[+] Looking for pvar last in pname get_localtime
+[=] I found these typs for pvar last
+[-] No type for pvar found
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [sar.c]:[572] :[ return is not reachable after line 572, column 4]
+[+] Complete err string: " return is not reachable after line 572, column 4"
+[-] Could not get pvar name and type
+[+] Found error: RESOURCE_LEAK
+[+] Patchable error: [rd_stats.c]:[1763] :[ resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3]
+[+] Complete err string: " resource of type _IO_FILE acquired by call to fopen() at line 1759, column 12 is not released after line 1763, column 3"
+[+] ERROR LINE IS: 1759
+[+] NOTE: pvar: return (heuristic from error message) and pvar fp (extracted from error message line number).
+[+] heurstic is return, but pvar is fp. Returning fp
+[+] Patch generation routine started for bug "RESOURCE_LEAK".
+[+] pvar NAME is leaked: "fp"
+[+] adding spec for type:  "struct _IO_FILE *"
+[+] Spec asked to look for type "struct_IO_FILE "
+	[=] Attempting patching with spec "close_file_resource_with_type"
+	[+] Footpatch_spec : Store size 202
+[+] irvar n$21 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$21 lookup gives pvar fp.
+Comparing [tstruct] irvar "n$21" and irvar' "val$2"
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$21 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$21 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$21 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] irvar n$0 lookup gives pvar fp.
+[?] Comparing HPRED TYPE of IRVAR struct_IO_FILE  and PVAR type struct_IO_FILE .
+[+] Filtered candidates: 2
+	[+] Candidate 0: n$1=_fun_fclose(n$0:) [line 1769]
+	[+] Candidate 1: n$22=_fun_fclose(n$21:) [line 320]
+[+] Prioritizing compatibility for type: struct _IO_FILE *
+[+] Found candidate containing type struct _IO_FILE *
+[+] Filtered candidates by type: 1
+--------------Patch routine for 1 candidate------------------
+		[*] Origin filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Origin line num range: 1768 - 1769
+			[*] Origin function: read_uptime
+			[*] extracted: 	fclose(fp);
+	[&] No need to rename fragment fixing var
+	[+] Filtered patch 6 locations (optional): [1763, 1766, 1765, 1762, 1759, 1753]
+	[+] Patching at primary location: 1763
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch
+	[+] Create dir /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches
+	[+] Success creating dir!
+	[+] Writing patches to /home/vagrant/projects/sysstat/infer-out/footpatch/close_file_resource_with_type/patches.
+		[+] Have fragment "\tfclose(fp);"
+		[+] Attempting to extract line 1763 from file /home/vagrant/projects/sysstat/rd_stats.c
+		[+] Succesfully extracted "\t\treturn;"
+			 [+] No match for line containing {
+		[-]not modifying fragment
+		[+] Fragment is return. Doing if bracket atlocation-1 if needed
+		[+] NEW Fragment was if-bracketed:	if (fgets(line, 128, fp) == NULL) {
+	fclose(fp);
+		return;
+}
+
+
+Reading from file /tmp/rd_stats.c_tmp_patched_diff
+
+Wrote to file /tmp/rd_stats.c_tmp_patched_diff
+		[p] Patch command 1: "diff -u /home/vagrant/projects/sysstat/rd_stats.c /tmp/rd_stats.c_tmp_patched_diff > /tmp/udiff_4b632e.footpatch" 
+		[p] Patch command 2: "sed -i '1p;2d' /tmp/udiff_4b632e.footpatch" 
+		[*] Destination filename: /home/vagrant/projects/sysstat/rd_stats.c
+			[*] Destination function: read_uptime
+			[*] Destination line insert: 1763
+	[+] Wrote patch rd_stats_1763_0.patch
+	[+] Patching complete for spec with bucket 0
+-------------------------FIN-----------------------------------
+SEARCH STORE SIZE 187
+SIZE OF ERRORS: 46
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[615] :[ sic is not reachable after line 615, column 2]
+[+] Complete err string: " sic is not reachable after line 615, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[457] :[ sic is not reachable after line 457, column 5]
+[+] Complete err string: " sic is not reachable after line 457, column 5"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[1699] :[ snetc is not reachable after line 1699, column 2]
+[+] Complete err string: " snetc is not reachable after line 1699, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[1190] :[ snnc is not reachable after line 1190, column 2]
+[+] Complete err string: " snnc is not reachable after line 1190, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[1652] :[ sntc is not reachable after line 1652, column 2]
+[+] Complete err string: " sntc is not reachable after line 1652, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[2153] :[ snuc is not reachable after line 2153, column 2]
+[+] Complete err string: " snuc is not reachable after line 2153, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[1741] :[ snuc is not reachable after line 1741, column 2]
+[+] Complete err string: " snuc is not reachable after line 1741, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[420] :[ spc is not reachable after line 420, column 2]
+[+] Complete err string: " spc is not reachable after line 420, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [rndr_stats.c]:[497] :[ ssc is not reachable after line 497, column 2]
+[+] Complete err string: " ssc is not reachable after line 497, column 2"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 114
+SIZE OF ERRORS: 53
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[357] :[ sic is not reachable after line 357, column 4]
+[+] Complete err string: " sic is not reachable after line 357, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1587] :[ sneic is not reachable after line 1587, column 2]
+[+] Complete err string: " sneic is not reachable after line 1587, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1190] :[ sneic is not reachable after line 1190, column 2]
+[+] Complete err string: " sneic is not reachable after line 1190, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1465] :[ sneic is not reachable after line 1465, column 2]
+[+] Complete err string: " sneic is not reachable after line 1465, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1080] :[ sneic is not reachable after line 1080, column 2]
+[+] Complete err string: " sneic is not reachable after line 1080, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1288] :[ snetc is not reachable after line 1288, column 2]
+[+] Complete err string: " snetc is not reachable after line 1288, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1520] :[ snic is not reachable after line 1520, column 2]
+[+] Complete err string: " snic is not reachable after line 1520, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1129] :[ snic is not reachable after line 1129, column 2]
+[+] Complete err string: " snic is not reachable after line 1129, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1412] :[ snic is not reachable after line 1412, column 2]
+[+] Complete err string: " snic is not reachable after line 1412, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1031] :[ snic is not reachable after line 1031, column 2]
+[+] Complete err string: " snic is not reachable after line 1031, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[887] :[ snnc is not reachable after line 887, column 2]
+[+] Complete err string: " snnc is not reachable after line 887, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[932] :[ snndc is not reachable after line 932, column 2]
+[+] Complete err string: " snndc is not reachable after line 932, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1247] :[ sntc is not reachable after line 1247, column 2]
+[+] Complete err string: " sntc is not reachable after line 1247, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1642] :[ snuc is not reachable after line 1642, column 2]
+[+] Complete err string: " snuc is not reachable after line 1642, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[1331] :[ snuc is not reachable after line 1331, column 2]
+[+] Complete err string: " snuc is not reachable after line 1331, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [xml_stats.c]:[409] :[ spc is not reachable after line 409, column 2]
+[+] Complete err string: " spc is not reachable after line 409, column 2"
+[-] Could not get pvar name and type
+SEARCH STORE SIZE 139
+SIZE OF ERRORS: 72
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[365] :[ sip is not reachable after line 365, column 2]
+[+] Complete err string: " sip is not reachable after line 365, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[365] :[ sic is not reachable after line 365, column 2]
+[+] Complete err string: " sic is not reachable after line 365, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[268] :[ sic is not reachable after line 268, column 4]
+[+] Complete err string: " sic is not reachable after line 268, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1611] :[ sneip is not reachable after line 1611, column 2]
+[+] Complete err string: " sneip is not reachable after line 1611, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1611] :[ sneic is not reachable after line 1611, column 2]
+[+] Complete err string: " sneic is not reachable after line 1611, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1264] :[ sneip is not reachable after line 1264, column 2]
+[+] Complete err string: " sneip is not reachable after line 1264, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1264] :[ sneic is not reachable after line 1264, column 2]
+[+] Complete err string: " sneic is not reachable after line 1264, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1526] :[ sneip is not reachable after line 1526, column 2]
+[+] Complete err string: " sneip is not reachable after line 1526, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1526] :[ sneic is not reachable after line 1526, column 2]
+[+] Complete err string: " sneic is not reachable after line 1526, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1186] :[ sneip is not reachable after line 1186, column 2]
+[+] Complete err string: " sneip is not reachable after line 1186, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1186] :[ sneic is not reachable after line 1186, column 2]
+[+] Complete err string: " sneic is not reachable after line 1186, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1334] :[ snetp is not reachable after line 1334, column 2]
+[+] Complete err string: " snetp is not reachable after line 1334, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1334] :[ snetc is not reachable after line 1334, column 2]
+[+] Complete err string: " snetc is not reachable after line 1334, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1566] :[ snip is not reachable after line 1566, column 2]
+[+] Complete err string: " snip is not reachable after line 1566, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1566] :[ snic is not reachable after line 1566, column 2]
+[+] Complete err string: " snic is not reachable after line 1566, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1222] :[ snip is not reachable after line 1222, column 2]
+[+] Complete err string: " snip is not reachable after line 1222, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1222] :[ snic is not reachable after line 1222, column 2]
+[+] Complete err string: " snic is not reachable after line 1222, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1488] :[ snip is not reachable after line 1488, column 2]
+[+] Complete err string: " snip is not reachable after line 1488, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1488] :[ snic is not reachable after line 1488, column 2]
+[+] Complete err string: " snic is not reachable after line 1488, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1151] :[ snip is not reachable after line 1151, column 2]
+[+] Complete err string: " snip is not reachable after line 1151, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1151] :[ snic is not reachable after line 1151, column 2]
+[+] Complete err string: " snic is not reachable after line 1151, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[981] :[ snnp is not reachable after line 981, column 2]
+[+] Complete err string: " snnp is not reachable after line 981, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[981] :[ snnc is not reachable after line 981, column 2]
+[+] Complete err string: " snnc is not reachable after line 981, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1014] :[ snndp is not reachable after line 1014, column 2]
+[+] Complete err string: " snndp is not reachable after line 1014, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1014] :[ snndc is not reachable after line 1014, column 2]
+[+] Complete err string: " snndc is not reachable after line 1014, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1303] :[ sntp is not reachable after line 1303, column 2]
+[+] Complete err string: " sntp is not reachable after line 1303, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1303] :[ sntc is not reachable after line 1303, column 2]
+[+] Complete err string: " sntc is not reachable after line 1303, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1649] :[ snup is not reachable after line 1649, column 2]
+[+] Complete err string: " snup is not reachable after line 1649, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1649] :[ snuc is not reachable after line 1649, column 2]
+[+] Complete err string: " snuc is not reachable after line 1649, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1366] :[ snup is not reachable after line 1366, column 2]
+[+] Complete err string: " snup is not reachable after line 1366, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[1366] :[ snuc is not reachable after line 1366, column 2]
+[+] Complete err string: " snuc is not reachable after line 1366, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[325] :[ spp is not reachable after line 325, column 2]
+[+] Complete err string: " spp is not reachable after line 325, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[325] :[ spc is not reachable after line 325, column 2]
+[+] Complete err string: " spc is not reachable after line 325, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[216] :[ spp is not reachable after line 216, column 2]
+[+] Complete err string: " spp is not reachable after line 216, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[216] :[ spc is not reachable after line 216, column 2]
+[+] Complete err string: " spc is not reachable after line 216, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[785] :[ ssc is not reachable after line 785, column 4]
+[+] Complete err string: " ssc is not reachable after line 785, column 4"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[296] :[ ssp is not reachable after line 296, column 2]
+[+] Complete err string: " ssp is not reachable after line 296, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[296] :[ ssc is not reachable after line 296, column 2]
+[+] Complete err string: " ssc is not reachable after line 296, column 2"
+[-] Could not get pvar name and type
+[+] Found error: MEMORY_LEAK
+[+] Patchable error: [pr_stats.c]:[410] :[ smp is not reachable after line 410, column 3]
+[+] Complete err string: " smp is not reachable after line 410, column 3"
+[-] Could not get pvar name and type

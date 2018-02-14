@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/title/PaintScaleLegend.java	2017-08-26 03:05:36.086030468 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/title/PaintScaleLegend.java	2017-08-26 03:05:36.086030468 -0400
+@@ -405,6 +405,7 @@
+                 throw new RuntimeException("Not yet implemented.");                 
+             }
+         }
++    if (contentSize == null) {        throw new IllegalArgumentException("Null 'stream' argument.");    }
+         return new Size2D(calculateTotalWidth(contentSize.getWidth()),
+                 calculateTotalHeight(contentSize.getHeight()));
+     }

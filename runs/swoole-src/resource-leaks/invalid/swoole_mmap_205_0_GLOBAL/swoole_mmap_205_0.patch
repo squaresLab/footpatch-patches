@@ -1,0 +1,15 @@
+--- /home/vagrant/projects/swoole-src/swoole_mmap.c	2018-01-03 20:45:23.747609998 +0000
+--- /home/vagrant/projects/swoole-src/swoole_mmap.c	2018-01-03 20:45:23.747609998 +0000
+@@ -202,7 +202,11 @@
+     void *addr = mmap(NULL, size, PROT_WRITE | PROT_READ, MAP_SHARED, fd, offset);
+     if (addr == NULL)
+     {
+-        swoole_php_sys_error(E_WARNING, "mmap(%ld) failed.", size);
++        swoole_php_sys_error(E_WARNING, "mmap(%ld) {
++    close(fd);
++failed.", size);
++}
++
+         RETURN_FALSE;
+     }
+ 

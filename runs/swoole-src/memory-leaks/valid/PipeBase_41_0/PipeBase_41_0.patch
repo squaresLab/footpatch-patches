@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/pipe/PipeBase.c	2018-01-03 20:45:23.743611998 +0000
+--- /home/vagrant/projects/swoole-src/src/pipe/PipeBase.c	2018-01-03 20:45:23.743611998 +0000
+@@ -39,6 +39,7 @@
+     if (ret < 0)
+     {
+         swWarn("pipe create fail. Error: %s[%d]", strerror(errno), errno);
++    sw_free(object);
+         return -1;
+     }
+     else

@@ -1,0 +1,15 @@
+--- /home/vagrant/projects/php-cp/cpServer.c	2018-01-03 20:45:46.320318726 +0000
+--- /home/vagrant/projects/php-cp/cpServer.c	2018-01-03 20:45:46.320318726 +0000
+@@ -626,7 +626,11 @@
+     {
+         int *index = (int*) malloc(sizeof (int));
+         *index = i;
+-        if (pthread_create(&pidt, NULL, (void * (*)(void *)) cpReactor_thread_loop, (void *) index) < 0)
++        if (pthread_create(&pidt, NULL, (void * (*)(void *)) cpReactor_thread_loop, (void *) index) {
++    free(index);
++< 0)
++}
++
+         {
+             cpLog("pthread_create[tcp_reactor] fail");
+         }

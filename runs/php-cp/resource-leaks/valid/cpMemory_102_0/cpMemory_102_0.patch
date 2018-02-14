@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/php-cp/cpMemory.c	2018-01-03 20:45:46.316320726 +0000
+--- /home/vagrant/projects/php-cp/cpMemory.c	2018-01-03 20:45:46.316320726 +0000
+@@ -100,6 +100,7 @@
+ 
+     }
+     void *mem = mmap(NULL, object->size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
++    close(fd);
+ #ifdef MAP_FAILED
+     if (mem == MAP_FAILED)
+ #else

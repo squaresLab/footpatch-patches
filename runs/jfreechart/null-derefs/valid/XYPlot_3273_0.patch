@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/plot/XYPlot.java	2017-08-26 03:07:37.101903602 -0400
+@@ -3270,6 +3270,7 @@
+     protected void drawZeroDomainBaseline(Graphics2D g2, Rectangle2D area) {
+         if (isDomainZeroBaselineVisible()) {
+             XYItemRenderer r = getRenderer();
++    if (r == null) {        throw new IllegalArgumentException("Null 'stream' argument.");    }
+             r.drawDomainLine(g2, this, getDomainAxis(), area, 0.0, 
+                     this.domainZeroBaselinePaint, 
+                     this.domainZeroBaselineStroke);

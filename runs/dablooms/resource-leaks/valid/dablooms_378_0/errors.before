@@ -1,0 +1,43 @@
+Found 12 issues
+
+src/dablooms.c:105: error: MEMORY_LEAK
+   memory dynamically allocated by call to malloc() at line 97, column 31 is not reachable after line 105, column 10
+
+src/dablooms.c:248: error: NULL_DEREFERENCE
+  pointer cur_bloom last assigned on line 247 could be null and is dereferenced at line 248, column 40
+
+src/dablooms.c:248: error: RESOURCE_LEAK
+   resource acquired to fd by call to open() at line 241, column 15 is not released after line 248, column 5
+
+src/dablooms.c:337: error: NULL_DEREFERENCE
+  pointer cur_bloom last assigned on line 334 could be null and is dereferenced at line 337, column 87
+
+src/dablooms.c:377: error: NULL_DEREFERENCE
+  pointer bloom last assigned on line 375 could be null and is dereferenced at line 377, column 17
+
+src/dablooms.c:378: error: RESOURCE_LEAK
+   resource acquired by call to open() at line 362, column 15 is not released after line 378, column 29
+
+src/dablooms.c:382: error: RESOURCE_LEAK
+   resource acquired to fd by call to open() at line 362, column 15 is not released after line 382, column 10
+
+src/dablooms.c:530: error: RESOURCE_LEAK
+   resource acquired to fd by call to open() at line 524, column 15 is not released after line 530, column 5
+
+src/dablooms.c:540: error: NULL_DEREFERENCE
+  pointer bloom last assigned on line 530 could be null and is dereferenced at line 540, column 5
+
+src/dablooms.c:565: error: RESOURCE_LEAK
+   resource acquired to fd by call to open() at line 552, column 15 is not released after line 565, column 5
+
+src/dablooms.c:573: error: MEMORY_LEAK
+   memory dynamically allocated to bloom by call to scaling_bloom_init() at line 565, column 13 is not reachable after line 573, column 13
+
+src/dablooms.c:573: error: RESOURCE_LEAK
+   resource acquired by call to open() at line 552, column 15 is not released after line 573, column 13
+
+Summary of the reports
+
+     RESOURCE_LEAK: 6
+  NULL_DEREFERENCE: 4
+       MEMORY_LEAK: 2

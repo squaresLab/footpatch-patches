@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/axis/CategoryAxis.java	2017-08-26 03:06:40.285963363 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/axis/CategoryAxis.java	2017-08-26 03:06:40.285963363 -0400
+@@ -1027,6 +1027,7 @@
+             }
+                   
+             float l = 0.0f;
++    if (position == null) {        throw new IllegalArgumentException("Null 'category' argument.");    }
+             if (position.getWidthType() == CategoryLabelWidthType.CATEGORY) {
+                 l = (float) calculateCategorySize(categories.size(), dataArea, 
+                         edge);  

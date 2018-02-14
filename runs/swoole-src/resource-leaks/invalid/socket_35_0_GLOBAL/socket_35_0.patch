@@ -1,0 +1,15 @@
+--- /home/vagrant/projects/swoole-src/src/core/socket.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/core/socket.c	2018-01-03 20:45:23.739613999 +0000
+@@ -32,7 +32,11 @@
+     struct stat file_stat;
+     if (fstat(file_fd, &file_stat) < 0)
+     {
+-        swWarn("fstat() failed. Error: %s[%d]", strerror(errno), errno);
++        swWarn("fstat() {
++    close(file_fd);
++failed. Error: %s[%d]", strerror(errno), errno);
++}
++
+         return SW_ERR;
+     }
+ 

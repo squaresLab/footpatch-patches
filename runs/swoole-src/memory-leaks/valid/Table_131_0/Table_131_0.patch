@@ -1,0 +1,10 @@
+--- /home/vagrant/projects/swoole-src/src/memory/Table.c	2018-01-03 20:45:23.739613999 +0000
+--- /home/vagrant/projects/swoole-src/src/memory/Table.c	2018-01-03 20:45:23.739613999 +0000
+@@ -128,6 +128,7 @@
+     col->index = table->item_size;
+     table->item_size += col->size;
+     table->column_num ++;
++    sw_free(col);
+     return swHashMap_add(table->columns, name, len, col);
+ }
+ 

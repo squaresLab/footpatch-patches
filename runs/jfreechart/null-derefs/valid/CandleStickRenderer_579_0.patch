@@ -1,0 +1,10 @@
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/renderer/xy/CandlestickRenderer.java	2017-08-26 03:07:15.421926444 -0400
+--- /home/rvt/Pinta/integrations/infer/chart_19_buggy/source/org/jfree/chart/renderer/xy/CandlestickRenderer.java	2017-08-26 03:07:15.421926444 -0400
+@@ -576,6 +576,7 @@
+           
+         // calculate the maximum allowed candle width from the axis...
+         ValueAxis axis = plot.getDomainAxis();
++    if (axis == null) {        throw new IllegalArgumentException("Null 'numberFormatter' argument.");    }
+         double x1 = axis.getLowerBound();
+         double x2 = x1 + this.maxCandleWidthInMilliseconds;
+         RectangleEdge edge = plot.getDomainAxisEdge();
